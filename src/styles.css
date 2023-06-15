@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+.div-card {
+   @apply mx-auto w-auto max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl p-10 pt-20;
+ }
+
+.div-card-img {
+  @apply mt-16 -ml-3;
+}
+
+.icons {
+  @apply border border-[#d63953] p-1.5 rounded-full;
+}
+}
+
