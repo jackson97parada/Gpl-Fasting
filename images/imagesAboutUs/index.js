@@ -1,1 +1,3 @@
-export { default as firstProfile } from "./pexel.jpg";
+import firstProfile from "/images/imagesAboutUs/pexel.jpg";
+
+export { firstProfile };

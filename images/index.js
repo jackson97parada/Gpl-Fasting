@@ -1,1 +1,3 @@
-export { default as imageHeader } from "./image-header.png";
+import imageHeader from "/images/image-header.png";
+
+export { imageHeader };
