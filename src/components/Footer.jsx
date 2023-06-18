@@ -1,34 +1,47 @@
-import { CgFacebook } from "react-icons/cg";
+import { TiSocialFacebook } from "react-icons/ti";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { SlSocialInstagram } from "react-icons/sl";
+import { SocialMedias } from "./SocialMedias";
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer id="CONTACTO">
       <div className="bg-[#101010] text-center space-y-8 pb-6">
-        <ul className="flex justify-center pb-12 [&>li]:icons ">
+        <ul className="flex justify-center gap-2 box-content pb-12 [&>li]:icons [&>li>div]:div-icons [&>li>div>a>i]:icon">
           <li>
-            <div href="#" className="rounded-full bg-[#d63953]">
-              <a href="">
-                <i className="text-2xl text-[#161616]">
-                  <CgFacebook />
+            <div>
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="text-[25px]">
+                  <TiSocialFacebook />
                 </i>
               </a>
             </div>
           </li>
           <li>
-            <div className="rounded-full bg-[#d63953]">
-              <a href="#">
-                <i className="text-sm">
+            <div>
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="text-base">
                   <AiOutlineTwitter />
                 </i>
               </a>
             </div>
           </li>
           <li>
-            <div className="rounded-full bg-[#d63953]">
-              <a href="#">
-                <i>
+            <div>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="text-base">
                   <SlSocialInstagram />
                 </i>
               </a>
@@ -56,6 +69,7 @@ export const Footer = () => {
       <h5 className="text-sm text-white text-center font-extralight bg-black p-10">
         2023, todos los derechos reservados.
       </h5>
+      <SocialMedias />
     </footer>
   );
 };

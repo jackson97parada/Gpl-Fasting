@@ -1,4 +1,4 @@
-import { firstProfile } from "./../../assets/imagesAboutUs";
+import { firstProfile } from "../../assets/imagesAboutUs";
 
 export const AboutUsDetails = [
   {

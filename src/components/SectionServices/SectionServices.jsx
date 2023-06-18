@@ -16,7 +16,7 @@ export const SectionServices = () => {
   };
 
   return (
-    <section className="bg-[#101010] py-24 pb-32 px-6">
+    <section id="SERVICIOS" className="bg-[#101010] py-24 pb-32 px-6">
       <div className="text-center space-y-8">
         <div className="text-start space-y-5">
           <h1 className="text-3xl text-white font-bold">SERVICIOS</h1>

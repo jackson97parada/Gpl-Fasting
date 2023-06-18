@@ -1,9 +1,9 @@
-import { imageHeader } from "./../assets";
-import { firstCard, secondCard, threeCard } from "./../assets/cardsHeader";
+import { imageHeader } from "../assets";
+import { firstCard, secondCard, threeCard } from "../assets/cardsHeader";
 
 export const Header = () => {
   return (
-    <div className="pt-10 pb-36">
+    <div className="pt-10 pb-36" id="INICIO">
       <div className="text-center space-y-4">
         <h1 className="text-[35px] text-start font-bold leading-10 px-6">
           AMAMOS LO QUE HACEMOS

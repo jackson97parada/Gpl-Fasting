@@ -14,5 +14,17 @@
 .icons {
   @apply border border-[#d63953] p-1.5 rounded-full;
 }
+
+.div-icons {
+  @apply w-7 h-7 bg-[#d63953] rounded-full hover:bg-blue-500 hover:text-white transition-all;
+}
+
+.icon {
+  @apply relative left-1.5 top-1.5;
+}
+
+.social-medias {
+  @apply flex items-center justify-center w-10 h-10 rounded-lg text-white text-3xl;
+}
 }
 

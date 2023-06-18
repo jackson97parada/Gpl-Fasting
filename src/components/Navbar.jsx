@@ -1,14 +1,38 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
-const links = ["INICIO", "SERVICIOS", "NOSOTROS", "CLIENTES", "CONTACTO"];
+const links = [
+  { name: "INICIO" },
+  {
+    name: "SERVICIOS",
+    services: ["GPL FASTING", "BELLEZA ESTETICA", "CUIDADO POST"],
+  },
+  { name: "NOSOTROS" },
+  { name: "CLIENTES" },
+  { name: "CONTACTO" },
+];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleHover = () => {
+    setShowDropdown(true);
+  };
+
+  const handleLeave = () => {
+    setShowDropdown(false);
+  };
+
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
-    <nav className="p-6 pt-4">
+    <nav className="px-11 fixed top-0 left-0 right-0 bg-white w-[100vw] lg:h-28 z-50 shadow-lg p-6 pt-4">
       <menu className="flex flex-wrap justify-between items-center">
-        <a href="#">LOGO</a>
+        <a href="/">LOGO</a>
 
         {/* MENU */}
         <button className="h-full" onClick={() => setIsOpen(!isOpen)}>
@@ -57,11 +81,39 @@ export const Navbar = () => {
               isOpen ? "block" : "hidden"
             }`}
           >
-            {links.map((link) => (
-              <li key={link}>
-                <a className="font-bold" href={link}>
-                  {link}
-                </a>
+            {links.map(({ name, services }) => (
+              <li
+                key={name}
+                onMouseEnter={name === "SERVICIOS" ? handleHover : undefined}
+                onMouseLeave={name === "SERVICIOS" ? handleLeave : undefined}
+              >
+                <ScrollLink
+                  activeClass="active"
+                  smooth={true}
+                  spy={true}
+                  className="font-bold cursor-pointer"
+                  to={name}
+                >
+                  {name}
+                </ScrollLink>
+                {services && services.length > 0 && (
+                  <ul
+                    className={` ${
+                      showDropdown && name === "SERVICIOS" ? "block" : "hidden"
+                    }`}
+                  >
+                    {services.map((servicio, index) => (
+                      <li key={index}>
+                        <Link
+                          to={`/Gpl-Fasting/Servicio/${index}`}
+                          onClick={handleLinkClick}
+                        >
+                          <h1>{servicio}</h1>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

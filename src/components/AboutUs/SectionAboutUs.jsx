@@ -16,7 +16,7 @@ export const SectionAboutUs = () => {
   };
 
   return (
-    <section className="py-20 px-6">
+    <section id="NOSOTROS" className="py-20 px-6">
       <hr className="border border-[#d63953] w-14 relative bottom-5 left-2" />
       <div className="space-y-5">
         <h1 className="text-3xl font-bold pt-3">Nosotros</h1>

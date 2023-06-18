@@ -1,4 +1,4 @@
-import { firstService } from "./../../assets/imagesServices";
+import { firstService } from "../../assets/imagesServices";
 
 export const ServicesDetails = [
   {
