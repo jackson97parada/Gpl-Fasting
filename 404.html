@@ -10,7 +10,7 @@
     <script>
       const { pathname } = window.location;
       const page = pathname.slice(1);
-      import(`/path/to/${page}.js`)
+      import(`/components/${page}.jsx`)
         .then(module => {
           const component = module.default;
           ReactDOM.render(component, document.getElementById('root'));
