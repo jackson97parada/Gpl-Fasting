@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const { pathname } = window.location;
+      const page = pathname.slice(1);
+      import(`/path/to/${page}.js`)
+        .then(module => {
+          const component = module.default;
+          ReactDOM.render(component, document.getElementById('root'));
+        })
+        .catch(() => {
+          window.location.href = '/';
+        });
+    </script>
+  </body>
+</html>
