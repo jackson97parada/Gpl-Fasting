@@ -31,11 +31,11 @@ export const Navbar = () => {
 
   return (
     <nav className="px-11 fixed top-0 left-0 right-0 bg-white w-[100vw] lg:h-28 z-50 shadow-lg p-6 pt-4">
-      <menu className="flex flex-wrap justify-between items-center">
-        <a href="/">LOGO</a>
+      <menu className="flex flex-wrap lg:flex-nowrap justify-between items-center lg:h-[60px] mx-auto max-w-[1300px]">
+        <a href="/Gpl-Fasting/">LOGO</a>
 
         {/* MENU */}
-        <button className="h-full" onClick={() => setIsOpen(!isOpen)}>
+        <button className="h-full lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             <svg
               className="w-10 h-10 text-black"
@@ -72,13 +72,13 @@ export const Navbar = () => {
         </button>
         {/* ==== */}
         <div
-          className={`md:flex md:justify-between w-full space-y-8 md:space-y-0 md:pt-0 gap-10 transition-all duration-500 ${
-            isOpen ? "max-h-[500px]" : "max-h-0"
+          className={`md:flex md:justify-between w-full lg:w-auto space-y-8 md:space-y-0 md:pt-0 gap-10 transition-all duration-500 ${
+            isOpen ? "max-h-[500px]" : "max-h-0 lg:h-auto "
           }`}
         >
           <ul
-            className={`w-full text-center space-y-8 ${
-              isOpen ? "block" : "hidden"
+            className={`w-full lg:w-auto lg:flex lg:gap-24 text-center space-y-8 lg:space-y-0 ${
+              isOpen ? "block" : "hidden lg:block"
             }`}
           >
             {links.map(({ name, services }) => (
@@ -98,12 +98,12 @@ export const Navbar = () => {
                 </ScrollLink>
                 {services && services.length > 0 && (
                   <ul
-                    className={` ${
+                    className={` lg:bg-white lg:rounded-3xl lg:absolute lg:top-[66px] lg:space-y-4 lg:right-[39.5%] lg:py-5 lg:px-4 lg:shadow-xl ${
                       showDropdown && name === "SERVICIOS" ? "block" : "hidden"
                     }`}
                   >
                     {services.map((servicio, index) => (
-                      <li key={index}>
+                      <li className="font-bold" key={index}>
                         <Link
                           to={`/Gpl-Fasting/Servicio/${index}`}
                           onClick={handleLinkClick}
@@ -119,7 +119,7 @@ export const Navbar = () => {
           </ul>
         </div>
       </menu>
-      <hr className="border border-[#d6395398] w-14 absolute top-20" />
+      <hr className="border border-[#d6395398] w-14 lg:hidden absolute top-20" />
     </nav>
   );
 };

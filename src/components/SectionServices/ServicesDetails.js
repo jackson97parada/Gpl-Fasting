@@ -22,4 +22,25 @@ export const ServicesDetails = [
       imgService: firstService,
     },
   },
+  {
+    id: 4,
+    data: {
+      title: "CUIDADO DEL POSOPERATORIO",
+      imgService: firstService,
+    },
+  },
+  {
+    id: 5,
+    data: {
+      title: "CUIDADO DEL POSOPERATORIO",
+      imgService: firstService,
+    },
+  },
+  {
+    id: 6,
+    data: {
+      title: "CUIDADO DEL POSOPERATORIO",
+      imgService: firstService,
+    },
+  },
 ];

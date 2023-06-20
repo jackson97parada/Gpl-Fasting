@@ -6,7 +6,7 @@ import { SocialMedias } from "./SocialMedias";
 export const Footer = () => {
   return (
     <footer id="CONTACTO">
-      <div className="bg-[#101010] text-center space-y-8 pb-6">
+      <div className="bg-[#101010] text-center space-y-8 pt-16 pb-6">
         <ul className="flex justify-center gap-2 box-content pb-12 [&>li]:icons [&>li>div]:div-icons [&>li>div>a>i]:icon">
           <li>
             <div>

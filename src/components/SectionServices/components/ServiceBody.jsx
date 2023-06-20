@@ -19,12 +19,11 @@ export const ServiceBody = ({
   descriptionStatus,
 }) => {
   return (
-    <main>
-      <h1>{title}</h1>
-      <p>{description}</p>
+    <main className="px-10 py-20 space-y-10">
+      <h1 className="text-4xl font-bold">{title}</h1>
+      <p className="text-justify">{description}</p>
       <Slider {...settings}>
         <div>
-          1
           <img
             className="rounded-[3.5rem] mt-12 mx-auto h-[336px]"
             width={320}
@@ -33,7 +32,6 @@ export const ServiceBody = ({
           />
         </div>
         <div>
-          2
           <img
             className="rounded-[3.5rem] mt-12 mx-auto h-[336px]"
             width={320}
@@ -42,11 +40,11 @@ export const ServiceBody = ({
           />
         </div>
       </Slider>
-      <div>
-        <h2>ESTADISTICAS</h2>
-        <div className="flex">
-          <img src="" alt="IMAGE STATUS" />
-          <p>{descriptionStatus}</p>
+      <div className="pt-20 space-y-10">
+        <h2 className="text-3xl font-bold">ESTADISTICAS</h2>
+        <div className="space-y-10">
+          <img src={image} alt="IMAGE STATUS" />
+          <p className="text-justify">{descriptionStatus}</p>
         </div>
       </div>
     </main>
@@ -56,6 +54,6 @@ export const ServiceBody = ({
 ServiceBody.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
+  image: PropTypes.string,
   descriptionStatus: PropTypes.string.isRequired,
 };

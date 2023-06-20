@@ -6,7 +6,7 @@ export const SocialMedias = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed bottom-[3rem] right-[2.5rem] bg-white shadow-lg px-2 rounded-lg z-50">
-      <button className="h-10" onClick={() => setIsOpen(!isOpen)}>
+      <button className="h-10" onMouseEnter={() => setIsOpen(!isOpen)}>
         {isOpen ? (
           <svg
             className="w-8 h-8 relative left-1 text-red-500"
@@ -45,6 +45,7 @@ export const SocialMedias = () => {
         className={`flex flex-col pb-2 [&>a]:social-medias text-center space-y-3 ${
           isOpen ? "block" : "hidden"
         }`}
+        onMouseLeave={() => setIsOpen(!isOpen)}
       >
         <a
           href="tel:+30012213432"

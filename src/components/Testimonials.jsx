@@ -8,7 +8,7 @@ const testimonialsDetail = {
 
 export const Testimonials = () => {
   return (
-    <section id="CLIENTES" className="bg-[#101010] py-12 px-6">
+    <section id="CLIENTES" className="bg-[#101010] pt-12 px-6">
       <hr className="border border-[#d63953] w-14 rotate-90 relative left-[42%] bottom-12" />
       <div>
         <img className="rounded-[3.5rem] h-[336px]" src={firstService} alt="" />
