@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { createServiceRoute } from "../constants/routes";
 
 const links = [
   { name: "INICIO" },
@@ -73,7 +74,7 @@ export const Navbar = () => {
         {/* ==== */}
         <div
           className={`md:flex md:justify-between w-full lg:w-auto space-y-8 md:space-y-0 md:pt-0 gap-10 transition-all duration-500 ${
-            isOpen ? "max-h-[500px]" : "max-h-0 lg:h-auto "
+            isOpen ? "max-h-[500px]" : "max-h-0 lg:h-auto"
           }`}
         >
           <ul
@@ -90,6 +91,7 @@ export const Navbar = () => {
                 <ScrollLink
                   activeClass="active"
                   smooth={true}
+                  offset={-70}
                   spy={true}
                   className="font-bold cursor-pointer"
                   to={name}
@@ -105,7 +107,7 @@ export const Navbar = () => {
                     {services.map((servicio, index) => (
                       <li className="font-bold" key={index}>
                         <Link
-                          to={`/Gpl-Fasting/Servicio/${index}`}
+                          to={createServiceRoute(servicio)}
                           onClick={handleLinkClick}
                         >
                           <h1>{servicio}</h1>

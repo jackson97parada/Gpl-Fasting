@@ -1,18 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import "./styles.css";
 import { Service } from "./components/SectionServices";
+import { ROUTES } from "./constants/routes.js";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/Gpl-Fasting",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/Gpl-Fasting/servicio/:serviceId",
+    path: ROUTES.service,
     element: <Service />,
   },
 ]);
