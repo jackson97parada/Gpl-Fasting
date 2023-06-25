@@ -3,7 +3,7 @@ import { firstCard, secondCard, threeCard } from "../assets/cardsHeader";
 
 export const Header = () => {
   return (
-    <div className="pt-10 pb-36 mt-20 lg:mt-52" id="INICIO">
+    <div className="pb-36 pt-32 lg:pt-52" id="INICIO">
       <div className="lg:flex">
         <hr className="border-2 border-[#d63953] w-14 hidden lg:block absolute top-48 left-32 z-10" />
         <div className="text-center lg:text-start lg:px-10 space-y-4 lg:space-y-24 lg:w-[45%]">

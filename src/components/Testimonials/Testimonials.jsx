@@ -10,7 +10,7 @@ export const Testimonials = () => {
   return (
     <section
       id="CLIENTES"
-      className="bg-[#101010] pt-12 px-6 lg:px-10 lg:pb-20"
+      className="bg-[#101010] pt-32 lg:pt-[135px] px-6 lg:px-10 lg:pb-20"
     >
       <hr className="border border-[#d63953] w-14 rotate-90 relative left-[42%] bottom-12" />
       <div className="lg:flex lg:justify-center">

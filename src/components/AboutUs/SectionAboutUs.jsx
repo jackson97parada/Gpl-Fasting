@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "../slick.css";
 import "../slick-theme.css";
 import { AboutUsDetails, ImagesAboutUs } from "./AboutUsDetails";
+import { settings } from "../";
 
 export const SectionAboutUs = () => {
   const [maxWords, setMaxWords] = useState(20);
@@ -20,17 +21,6 @@ export const SectionAboutUs = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  const settings = {
-    dots: true,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-  };
 
   return (
     <section id="NOSOTROS" className="py-20 lg:py-52 px-6 lg:px-10">

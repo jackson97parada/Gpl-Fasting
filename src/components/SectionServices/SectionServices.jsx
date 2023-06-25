@@ -1,51 +1,16 @@
 import Slider from "react-slick";
 import "../slick.css";
 import "../slick-theme.css";
-import { ServicesDetails } from "./ServicesDetails";
-
-const settings = {
-  dots: true,
-  arrows: false,
-  centerMode: true,
-  centerPadding: "10px",
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerPadding: "-80px",
-        autoplay: true,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        centerPadding: "-0px",
-      },
-    },
-  ],
-};
+import { settings } from "../";
+import { Card } from "./components/Card";
+import { ServiceDetail } from "./components/ServiceDetail";
 
 export const SectionServices = () => {
   return (
-    <section id="SERVICIOS" className="bg-[#101010] py-24 pb-32 px-6 lg:px-10">
+    <section
+      id="SERVICIOS"
+      className="bg-[#101010] lg:pt-36 py-24 pb-32 px-6 lg:px-10"
+    >
       <div className="text-center space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center">
         <div className="text-start space-y-5">
           <h1 className="text-3xl lg:text-4xl text-white font-bold">
@@ -62,15 +27,12 @@ export const SectionServices = () => {
       </div>
 
       <Slider {...settings}>
-        {ServicesDetails.map(({ id, data }) => (
-          <div key={id}>
-            <img
-              className="rounded-[3.5rem] mt-12 lg:mt-14 mx-auto lg:w-[370px] h-[370px]"
-              width={320}
-              src={data.imgService}
-              alt={data.title}
-            />
-          </div>
+        {ServiceDetail.map(({ id, data }) => (
+          <Card
+            key={id}
+            imgService={data.imgService}
+            serviceTitle={data.title}
+          />
         ))}
       </Slider>
       <hr className="border border-[#d63953] w-16 rotate-90 relative left-[40%] top-32" />

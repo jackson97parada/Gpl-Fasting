@@ -16,6 +16,7 @@ export const SocialMedias = () => {
       <div
         className="fixed bottom-[3rem] right-[2.5rem] bg-white shadow-lg px-2 rounded-lg z-50"
         onMouseEnter={!isMobile ? () => setIsOpen(!isOpen) : undefined}
+        onMouseLeave={() => setIsOpen(false)}
         onClick={isMobile ? () => setIsOpen(!isOpen) : undefined}
       >
         <button className="h-10">

@@ -1,18 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
+
 import { createServiceRoute } from "../constants/routes";
+import { ServiceDetail } from "./SectionServices/components/ServiceDetail";
 
 const links = [
   { name: "INICIO" },
   {
     name: "SERVICIOS",
-    services: ["GPL FASTING", "BELLEZA ESTETICA", "CUIDADO POST"],
   },
   { name: "NOSOTROS" },
   { name: "CLIENTES" },
   { name: "CONTACTO" },
 ];
+
+const Service = ServiceDetail.map((service) => {
+  service.data.subTitle;
+});
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,35 +87,38 @@ export const Navbar = () => {
               isOpen ? "block" : "hidden lg:block"
             }`}
           >
-            {links.map(({ name, services }) => (
+            {links.map(({ name }) => (
               <li
                 key={name}
                 onMouseEnter={name === "SERVICIOS" ? handleHover : undefined}
                 onMouseLeave={name === "SERVICIOS" ? handleLeave : undefined}
               >
-                <ScrollLink
-                  activeClass="active"
-                  smooth={true}
-                  offset={-70}
-                  spy={true}
-                  className="font-bold cursor-pointer"
-                  to={name}
+                <HashLink
+                  className="cursor-pointer font-bold"
+                  to={`/#${name}`}
+                  smooth
+                  scroll={(el) =>
+                    el.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
                 >
                   {name}
-                </ScrollLink>
-                {services && services.length > 0 && (
+                </HashLink>
+                {Service && Service.length > 0 && (
                   <ul
                     className={` lg:bg-white lg:rounded-3xl lg:absolute lg:top-[66px] lg:space-y-4 lg:right-[39.5%] lg:py-5 lg:px-4 lg:shadow-xl ${
                       showDropdown && name === "SERVICIOS" ? "block" : "hidden"
                     }`}
                   >
-                    {services.map((servicio, index) => (
-                      <li className="font-bold" key={index}>
+                    {ServiceDetail.map(({ id, data }) => (
+                      <li className="font-bold" key={id}>
                         <Link
-                          to={createServiceRoute(servicio)}
+                          to={createServiceRoute(data.title)}
                           onClick={handleLinkClick}
                         >
-                          <h1>{servicio}</h1>
+                          <h1>{data.subTitle}</h1>
                         </Link>
                       </li>
                     ))}
