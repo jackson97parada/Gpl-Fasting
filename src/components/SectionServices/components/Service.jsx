@@ -25,7 +25,7 @@ export const Service = () => {
               <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 <li className="inline-flex items-center">
                   <a
-                    href="/"
+                    href="/Gpl-Fasting/"
                     className="inline-flex items-center text-[#c43953] text-base font-medium"
                   >
                     INICIO

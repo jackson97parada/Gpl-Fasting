@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
 import { createServiceRoute } from "../constants/routes";
 import { ServiceDetail } from "./SectionServices/components/ServiceDetail";
 
@@ -34,6 +33,13 @@ export const Navbar = () => {
   const handleLinkClick = () => {
     window.scrollTo(0, 0);
   };
+
+  const locationHash = window.location.hash;
+  const serviceTitle = ServiceDetail.find(
+    ({ data }) => `#/servicios/${data.title}` === locationHash
+  )?.data.title;
+
+  const dropdown = locationHash === `#/servicios/${serviceTitle}`;
 
   return (
     <nav className="px-11 fixed top-0 left-0 right-0 bg-white w-[100vw] lg:h-28 z-50 shadow-lg p-6 pt-4">
@@ -90,12 +96,16 @@ export const Navbar = () => {
             {links.map(({ name }) => (
               <li
                 key={name}
-                onMouseEnter={name === "SERVICIOS" ? handleHover : undefined}
-                onMouseLeave={name === "SERVICIOS" ? handleLeave : undefined}
+                onMouseEnter={
+                  name === "SERVICIOS" && dropdown ? handleHover : undefined
+                }
+                onMouseLeave={
+                  name === "SERVICIOS" && dropdown ? handleLeave : undefined
+                }
               >
                 <HashLink
                   className="cursor-pointer font-bold"
-                  to={`/#${name}`}
+                  to={`/#${name.toLowerCase()}`}
                   smooth
                   scroll={(el) =>
                     el.scrollIntoView({
@@ -107,8 +117,9 @@ export const Navbar = () => {
                   {name}
                 </HashLink>
                 {Service && Service.length > 0 && (
+                  // DROPDOWN
                   <ul
-                    className={` lg:bg-white lg:rounded-3xl lg:absolute lg:top-[66px] lg:space-y-4 lg:right-[39.5%] lg:py-5 lg:px-4 lg:shadow-xl ${
+                    className={`dropdown lg:bg-white lg:rounded-3xl lg:absolute lg:top-[66px] lg:space-y-4 lg:right-[39.5%] lg:py-5 lg:px-4 lg:shadow-xl ${
                       showDropdown && name === "SERVICIOS" ? "block" : "hidden"
                     }`}
                   >

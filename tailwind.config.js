@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        heroService: "url('./src/assets/imagesServices/pexel.jpg')",
+        heroService: "url('/Gpl-Fasting/assets/pexel-16cf111e.jpg')",
       },
     },
   },

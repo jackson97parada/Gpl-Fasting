@@ -5,6 +5,8 @@ import "../slick-theme.css";
 import { AboutUsDetails, ImagesAboutUs } from "./AboutUsDetails";
 import { settings } from "../";
 
+const images = ImagesAboutUs.map((image) => image.data.imgProfile);
+
 export const SectionAboutUs = () => {
   const [maxWords, setMaxWords] = useState(20);
 
@@ -23,7 +25,7 @@ export const SectionAboutUs = () => {
   }, []);
 
   return (
-    <section id="NOSOTROS" className="py-20 lg:py-52 px-6 lg:px-10">
+    <section id="nosotros" className="py-20 lg:py-52 px-6 lg:px-10">
       <hr className="border lg:border-2 border-[#d63953] w-14 relative bottom-5 left-2" />
       <div className="lg:flex justify-between">
         <div className="space-y-5">
@@ -41,6 +43,24 @@ export const SectionAboutUs = () => {
             : ""}
         </p>
       </div>
+
+      <div className="hidden lg:flex lg:justify-center lg:flex-wrap">
+        <div className="relative bottom-[130px]">
+          <img src={images[0]} className="w-[360px]" alt="" />
+        </div>
+        <div className="flex gap-24 pb-20 [&>div>img]:w-[360px]">
+          <div>
+            <img src={images[0]} alt="" />
+          </div>
+          <div>
+            <img src={images[0]} alt="" />
+          </div>
+          <div>
+            <img src={images[0]} alt="" />
+          </div>
+        </div>
+      </div>
+
       <Slider {...settings} className="lg:hidden">
         {ImagesAboutUs.map(({ id, data }) => (
           <div key={id}>

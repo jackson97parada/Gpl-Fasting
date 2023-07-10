@@ -8,7 +8,7 @@ import { ServiceDetail } from "./components/ServiceDetail";
 export const SectionServices = () => {
   return (
     <section
-      id="SERVICIOS"
+      id="servicios"
       className="bg-[#101010] lg:pt-36 py-24 pb-32 px-6 lg:px-10"
     >
       <div className="text-center space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center">
@@ -32,6 +32,7 @@ export const SectionServices = () => {
             key={id}
             imgService={data.imgService}
             serviceTitle={data.title}
+            serviceSubtitle={data.subTitle}
           />
         ))}
       </Slider>
