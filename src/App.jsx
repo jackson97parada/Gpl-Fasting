@@ -6,7 +6,6 @@ import {
   SectionServices,
   Testimonials,
 } from "./components";
-import { BarsCharts } from "./graphs/BarsCharts";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
       <SectionAboutUs />
       <Testimonials />
       <Footer />
-      <BarsCharts />
     </div>
   );
 }

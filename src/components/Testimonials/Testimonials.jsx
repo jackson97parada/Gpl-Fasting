@@ -37,18 +37,19 @@ export const Testimonials = () => {
   return (
     <section
       id="clientes"
-      className="bg-[#101010] pt-0 lg:pt-10 px-6 lg:px-10 lg:pb-20"
+      className="bg-[#191f40] pt-0 lg:pt-10 px-6 lg:px-10 lg:pb-16"
     >
-      <hr className="border-2 border-[#d63953] w-14 rotate-90 relative left-[50%] bottom-[135px]" />
-
       <div className="lg:w-[50%] space-y-4 relative top-[500px] lg:left-[48%] lg:top-32">
+        <hr className="border-2 border-[#0378a6] w-16 relative bottom-5" />
+
         <h1 className="w-[80%] lg:w-auto text-3xl lg:text-4xl text-white font-bold">
           Lo que dicen nuestros clientes
         </h1>
-        <h1 className="text-xs lg:text-base text-[#d63953] font-bold">
+        <h1 className="text-xs lg:text-base text-white font-bold">
           Somos mas que un grupo empresarial
         </h1>
       </div>
+
       <Slider {...settings} className="flex">
         {testimonialsData.map(({ id, data }) => (
           <div key={id} className="relative lg:left-[13.5%]">
@@ -62,15 +63,17 @@ export const Testimonials = () => {
                 <p className="text-xs text-[#9daca2] lg:text-sm text-justify lg:font-medium pt-4 lg:w-[70%] lg:pt-10">
                   {data.description}
                 </p>
-                <hr className="border border-white w-8 relative right-2 top-8" />
-                <h1 className="text-sm text-white lg:text-[#d63953] font-bold pt-10 pb-5">
+                <hr className="border border-[#0378a6] w-8 relative right-2 top-8" />
+                <h1 className="text-sm text-white lg:text-white font-bold pt-10 pb-5">
                   {data.user}
                 </h1>
               </div>
             </div>
+            <div className="relative bottom-[85px] -z-10 left-[305px] bg-[#0378a6] w-[100px] h-[100px] rounded-md"></div>
           </div>
         ))}
       </Slider>
+
       <hr className="w-[80%] mx-auto border border-[#554e50] mt-10 lg:mt-28" />
     </section>
   );

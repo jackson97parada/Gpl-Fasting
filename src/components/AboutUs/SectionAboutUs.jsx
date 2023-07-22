@@ -7,6 +7,17 @@ import { settings } from "../";
 
 const images = ImagesAboutUs.map((image) => image.data.imgProfile);
 
+const dataTitle = AboutUsDetails.map((aboutUs) => aboutUs.data.title);
+const dataDescription = AboutUsDetails.map(
+  (aboutUs) => aboutUs.data.description
+);
+const dataImage = AboutUsDetails.map((aboutUs) => aboutUs.data.imgAbout);
+
+const SECTIONDETAILS = {
+  descriptionMobile:
+    "erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+};
+
 export const SectionAboutUs = () => {
   const [maxWords, setMaxWords] = useState(20);
 
@@ -25,39 +36,33 @@ export const SectionAboutUs = () => {
   }, []);
 
   return (
-    <section id="nosotros" className="py-20 lg:py-52 px-6 lg:px-10">
-      <hr className="border lg:border-2 border-[#d63953] w-14 relative bottom-5 left-2" />
+    <section id="nosotros" className="lg:pt-28 py-20 lg:py-20 px-6 lg:px-10">
       <div className="lg:flex justify-between">
         <div className="space-y-5">
-          <h1 className="text-3xl lg:text-4xl font-bold pt-3">Nosotros</h1>
-          <h2 className="text-[11px] lg:text-base text-[#d63953] font-bold">
-            CONOCENOS UN POCO MÁS
+          <h1 className="text-3xl lg:text-6xl text-[#024873] font-extrabold pt-3">
+            Nosotros
+          </h1>
+          <h2 className="text-[11px] lg:text-base text-[#191f40] font-bold">
+            “EL QUE NO VIVE PARA SERVIR NO SIRVE PARA VIVIR”
           </h2>
         </div>
 
         <p className="text-xs lg:text-base lg:font-light lg:text-black text-justify text-gray-600 mt-6 mb-14 lg:w-[27%]">
-          Lorem ipsum dolor sit amet, consectetuer adi- piscing elit, sed diam
-          nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam{" "}
-          {maxWords === 50
-            ? "erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
-            : ""}
+          {SECTIONDETAILS.description}{" "}
+          {maxWords === 50 ? SECTIONDETAILS.descriptionMobile : ""}
         </p>
       </div>
 
       <div className="hidden lg:flex lg:justify-center lg:flex-wrap">
-        <div className="relative bottom-[130px]">
+        <div className="relative top-[50px]">
           <img src={images[0]} className="w-[360px]" alt="" />
         </div>
-        <div className="flex gap-24 pb-20 [&>div>img]:w-[360px]">
-          <div>
-            <img src={images[0]} alt="" />
-          </div>
-          <div>
-            <img src={images[0]} alt="" />
-          </div>
-          <div>
-            <img src={images[0]} alt="" />
-          </div>
+        <div className="flex gap-24 pt-32 pb-20 [&>div>img]:w-[360px]">
+          {ImagesAboutUs.map(({ id, data }) => (
+            <div key={id}>
+              <img src={data.imgProfile} />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -69,16 +74,39 @@ export const SectionAboutUs = () => {
         ))}
       </Slider>
 
-      <div className="mt-20 lg:flex lg:gap-32">
-        {AboutUsDetails.map(({ id, data }) => (
-          <div key={id} className="space-y-10">
-            <h1 className="text-3xl font-bold pt-14">{data.title}</h1>
-            <p className="text-xs lg:text-base lg:font-medium lg:text-black text-justify text-gray-600 mt-6 mb-14">
-              {data.descriptionTwo}
-              {maxWords === 50 ? data.description : undefined}
-            </p>
+      <hr className="border-2 border-[#024873] w-14 hidden lg:block relative top-10 left-10 z-10" />
+
+      <div className="mt-20">
+        <section className="space-y-10">
+          <div className="flex gap-10 justify-center items-center">
+            <img src={dataImage[0]} className="w-[529px]" alt="" />
+            <div className="w-[40%] text-center space-y-10">
+              <h1 className="text-2xl text-[#191f40] font-bold">
+                {dataTitle[0]}
+              </h1>
+              <p className="text-justify">{dataDescription[0]}</p>
+            </div>
           </div>
-        ))}
+          <div className="flex gap-10 justify-center items-center">
+            <div className="w-[40%] text-center space-y-10">
+              <h1 className="text-2xl text-[#191f40] font-bold">
+                {dataTitle[1]}
+              </h1>
+              <p className="text-justify">{dataDescription[1]}</p>
+            </div>
+            <img src={dataImage[1]} className="w-[529px]" alt="" />
+          </div>
+          <div className="flex gap-10 justify-center items-center">
+            <img src={dataImage[2]} className="w-[529px]" alt="" />
+            <div className="w-[40%] text-center space-y-10">
+              <h1 className="text-2xl text-[#191f40] font-bold">
+                {dataTitle[2]}
+              </h1>
+              <p className="text-justify">{dataDescription[2]}</p>
+            </div>
+          </div>
+        </section>
+        <hr className="border-[2.9px] rounded-full border-[#0378a6] w-16 rotate-90 relative left-[45%] top-20" />
       </div>
     </section>
   );

@@ -89,7 +89,7 @@ export const Navbar = () => {
           }`}
         >
           <ul
-            className={`w-full lg:w-auto lg:flex lg:gap-24 text-center space-y-8 lg:space-y-0 ${
+            className={`w-full lg:w-auto lg:flex lg:gap-24 text-center text-[#191f40] space-y-8 lg:space-y-0 ${
               isOpen ? "block" : "hidden lg:block"
             }`}
           >
@@ -129,7 +129,7 @@ export const Navbar = () => {
                           to={createServiceRoute(data.title)}
                           onClick={handleLinkClick}
                         >
-                          <h1>{data.subTitle}</h1>
+                          {data.subTitle}
                         </Link>
                       </li>
                     ))}
@@ -140,7 +140,6 @@ export const Navbar = () => {
           </ul>
         </div>
       </menu>
-      <hr className="border border-[#d6395398] w-14 lg:hidden absolute top-20" />
     </nav>
   );
 };

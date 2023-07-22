@@ -1,4 +1,5 @@
 import { Bar, ResponsiveContainer, BarChart } from "recharts";
+
 const data = [
   {
     name: "100 %",

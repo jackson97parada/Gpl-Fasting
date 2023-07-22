@@ -9,21 +9,17 @@ export const SectionServices = () => {
   return (
     <section
       id="servicios"
-      className="bg-[#101010] lg:pt-36 py-24 pb-32 px-6 lg:px-10"
+      className="bg-[#024873] lg:pt-32 py-24 pb-32 px-6 lg:px-10 lg:ps-16"
     >
       <div className="text-center space-y-8 lg:space-y-0 lg:flex lg:justify-between lg:items-center">
         <div className="text-start space-y-5">
-          <h1 className="text-3xl lg:text-4xl text-white font-bold">
+          <h1 className="text-3xl lg:text-[40px] text-white font-extrabold">
             SERVICIOS
           </h1>
-          <h2 className="text-xs lg:text-base text-[#d63953] font-bold">
-            TRABAJAMOS CONTIGO
+          <h2 className="text-xs lg:text-base text-white font-bold">
+            ¿Estás listo para transformar tu vida?
           </h2>
         </div>
-
-        <button className="border-4 border-[#d63953] rounded-lg px-24 lg:px-4 py-3 lg:py-1 text-xl lg:text-2xl text-white font-bold hover:bg-[#d63953] hover:shadow-lg hover:shadow-gray-600 transition">
-          Ver todos
-        </button>
       </div>
 
       <Slider {...settings}>
@@ -36,7 +32,8 @@ export const SectionServices = () => {
           />
         ))}
       </Slider>
-      <hr className="border border-[#d63953] w-16 rotate-90 relative left-[40%] top-32" />
+
+      <hr className="border-2 border-[#0378a6] w-16 rotate-90 relative left-[45%] top-32" />
     </section>
   );
 };

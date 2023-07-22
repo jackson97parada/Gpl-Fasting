@@ -11,6 +11,7 @@ import imageChat from "../assets/chat.png";
 export const SocialMedias = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isWOpen, setIsWOpen] = useState(false);
+
   return (
     <div>
       <div
@@ -22,7 +23,7 @@ export const SocialMedias = () => {
         <button className="h-10">
           {isOpen ? (
             <svg
-              className="w-8 h-8 relative left-1 text-red-500"
+              className="w-8 h-8 relative left-1 text-[rgb(2,28,115)]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -35,7 +36,7 @@ export const SocialMedias = () => {
               />
             </svg>
           ) : (
-            <BsWhatsapp className="w-8 h-8 text-[#29a71a]" />
+            <BsWhatsapp className="w-8 h-8 text-[#024873]" />
           )}
         </button>
         <div
@@ -47,7 +48,7 @@ export const SocialMedias = () => {
             href="tel:+30012213432"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#29a71a]"
+            className="bg-[#024873]"
           >
             <IoCall />
           </a>
@@ -55,12 +56,12 @@ export const SocialMedias = () => {
             href="https://www.instagram.com/gpl1fasting/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-yellow-500 to-pink-500"
+            className="bg-[#024873]"
           >
             <BsInstagram />
           </a>
           <a
-            className="bg-[#29a71a] cursor-pointer"
+            className="bg-[#024873] cursor-pointer"
             onClick={() => setIsWOpen(!isWOpen)}
           >
             <BsWhatsapp />
@@ -69,7 +70,7 @@ export const SocialMedias = () => {
       </div>
       {/* Windown Whatsapp */}
       <div
-        className={`bottom-[3rem] right-[6.5rem] ${
+        className={`bottom-[6rem] right-[2.5rem] ${
           isWOpen ? "fixed" : "hidden"
         }`}
       >

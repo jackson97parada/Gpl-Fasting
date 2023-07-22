@@ -1,12 +1,18 @@
-import { firstProfile } from "../../assets/imagesAboutUs";
+import {
+  firstProfile,
+  firstAbout,
+  twoAbout,
+  thirdAbout,
+} from "../../assets/imagesAboutUs";
 
 export const AboutUsDetails = [
   {
     id: 1,
     data: {
-      title: "Quienes somos",
+      imgAbout: firstAbout,
+      title: "¿QUIÉNES SOMOS?",
       description:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+        "Somos un equipo multidisciplinario dedicado a desarrollar técnicas y tratamientos para el control de la obesidad, ansiedad y ralentizando el envejecimiento basándonos en conocimientos y tecnología de van- guardia.",
       descriptionTwo:
         "Lorem ipsum dolor sit amet, consecte- tuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     },
@@ -14,9 +20,10 @@ export const AboutUsDetails = [
   {
     id: 2,
     data: {
-      title: "Nuestra filosofia",
+      imgAbout: twoAbout,
+      title: "NUESTRA FILOSOFIA",
       description:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+        "La filosofía que implementamos está en contra de promover imáge- nes corporales pobres y estereotipadas o dietas inalcanzables, bajas en calorías y de sacrificio extremo, precisamente porque nuestra larga experiencia nos ha demostrado que las restricciones extremas no son sostenibles en el tiempo y finalmente los pacientes vuelven a recaer en antiguos hábitos. Proponemos y defendemos fielmente el logar un cambio permanente donde se tenga un estilo de vida salu- dable, flexible, equilibrado y lenteciendo el envejecimiento celular, basado en teorías y conocimientos científicos probados, la imple- mentación de tecnología farmacéutica de punta y/o procedimientos estéticos mínimamente invasivos de detalle usando equipos de última generación.",
       descriptionTwo:
         "Lorem ipsum dolor sit amet, consecte- tuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     },
@@ -24,9 +31,10 @@ export const AboutUsDetails = [
   {
     id: 3,
     data: {
-      title: "Como trabajamos",
+      imgAbout: thirdAbout,
+      title: "¿CÓMO TRABAJAMOS?",
       description:
-        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis- mod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+        "A lo largo de nuestra experiencia, hemos venido reconociendo que prima el individuo sobre la sociedad, por lo que trazamos objetivos personalizados y alcanzables con cada uno de los pacientes. Así mismo, hemos venido trabajando en la construcción, desarrollo, diseño y actualización constante del programa GPL1, mezclando tecnología farmacéutica junto a un estilo de vida saludable, ayuno intermitente, actividad física con alternativa de Láser mínimamente invasivo de detalle.",
       descriptionTwo:
         "Lorem ipsum dolor sit amet, consecte- tuer adipiscing elit, sed diam nonum- my nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.",
     },

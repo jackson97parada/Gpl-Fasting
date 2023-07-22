@@ -4,7 +4,7 @@
 
 @layer components {
 .div-card {
-   @apply mx-auto w-auto lg:w-[386px] max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl p-10 pt-20;
+   @apply mx-auto w-auto lg:w-[386px] max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl p-10 pt-12;
  }
 
 .div-card-img {
@@ -12,15 +12,15 @@
 }
 
 .icons {
-  @apply border border-[#d63953] p-1.5 rounded-full;
+  @apply border border-white p-1.5 rounded-full;
 }
 
 .div-icons {
-  @apply w-7 h-7 bg-[#d63953] rounded-full hover:bg-blue-500 hover:text-white transition-all;
+  @apply w-7 h-7 bg-white rounded-full hover:bg-blue-500 hover:text-white transition-all;
 }
 
 .icon {
-  @apply relative left-1.5 top-1.5;
+  @apply relative text-[#024873] left-1.5 top-1.5;
 }
 
 .social-medias {
