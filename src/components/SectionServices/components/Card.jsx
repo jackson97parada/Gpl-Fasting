@@ -7,15 +7,15 @@ const handleLinkClick = () => {
 
 export const Card = ({ imgService, serviceTitle, serviceSubtitle }) => {
   return (
-    <div className="hover:translate-y-3 duration-300">
+    <div className="duration-300 hover:translate-y-3">
       <Link to={`/servicios/${serviceTitle}`} onClick={handleLinkClick}>
         <img
-          className="rounded-[3.5rem] hover:shadow-lg hover:shadow-[#0378a6] duration-300 mt-12 lg:mt-14 mx-auto lg:w-[370px] h-[370px] -z-10"
+          className="-z-10 mx-auto mt-12 h-[370px] rounded-[3.5rem] duration-300 hover:shadow-lg hover:shadow-[#0378a6] lg:mt-14 lg:w-[370px]"
           width={320}
           src={imgService}
           alt="image-carrousel"
         />
-        <h1 className="text-2xl text-white font-bold relative bottom-48 left-[105px] z-10">
+        <h1 className="relative bottom-48 z-10 text-center text-2xl font-bold text-white">
           {serviceSubtitle}
         </h1>
       </Link>

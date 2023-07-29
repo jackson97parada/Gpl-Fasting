@@ -15,7 +15,7 @@ export const SocialMedias = () => {
   return (
     <div>
       <div
-        className="fixed bottom-[3rem] right-[2.5rem] bg-white shadow-lg px-2 rounded-lg z-50"
+        className="fixed bottom-[3rem] right-[2.5rem] z-50 rounded-lg bg-white px-2 shadow-lg"
         onMouseEnter={!isMobile ? () => setIsOpen(!isOpen) : undefined}
         onMouseLeave={() => setIsOpen(false)}
         onClick={isMobile ? () => setIsOpen(!isOpen) : undefined}
@@ -23,10 +23,11 @@ export const SocialMedias = () => {
         <button className="h-10">
           {isOpen ? (
             <svg
-              className="w-8 h-8 relative left-1 text-[rgb(2,28,115)]"
+              className="relative left-1 h-8 w-8 text-[rgb(2,28,115)]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              onClick={isOpen ? () => setIsOpen(false) : undefined}
             >
               <path
                 strokeLinecap="round"
@@ -36,11 +37,11 @@ export const SocialMedias = () => {
               />
             </svg>
           ) : (
-            <BsWhatsapp className="w-8 h-8 text-[#024873]" />
+            <BsWhatsapp className="h-8 w-8 text-[#024873]" />
           )}
         </button>
         <div
-          className={`flex flex-col pb-2 [&>a]:social-medias text-center space-y-3 ${
+          className={`[&>a]:social-medias flex flex-col space-y-3 pb-2 text-center ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -61,7 +62,7 @@ export const SocialMedias = () => {
             <BsInstagram />
           </a>
           <a
-            className="bg-[#024873] cursor-pointer"
+            className="cursor-pointer bg-[#024873]"
             onClick={() => setIsWOpen(!isWOpen)}
           >
             <BsWhatsapp />
@@ -74,13 +75,13 @@ export const SocialMedias = () => {
           isWOpen ? "fixed" : "hidden"
         }`}
       >
-        <header className="flex justify-between items-center bg-[#3a3a3a] p-2.5 rounded-t-xl">
-          <div className="flex items-center gap-2 text-white text-sm font-semibold">
-            <BsWhatsapp className="text-white text-2xl" />
+        <header className="flex items-center justify-between rounded-t-xl bg-[#3a3a3a] p-2.5">
+          <div className="flex items-center gap-2 text-sm font-semibold text-white">
+            <BsWhatsapp className="text-2xl text-white" />
             WhatsApp
           </div>
           <AiFillCloseCircle
-            className="text-white text-lg cursor-pointer"
+            className="cursor-pointer text-lg text-white"
             onClick={() => setIsWOpen(!isWOpen)}
           />
         </header>
@@ -89,15 +90,15 @@ export const SocialMedias = () => {
             <img src={imageChat} />
           </figure>
         </section>
-        <footer className="bg-[#f8f8f8] flex justify-end rounded-b-xl">
+        <footer className="flex justify-end rounded-b-xl bg-[#f8f8f8]">
           <a
             href="https://wa.me/+3001221432"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-full p-3 px-3.5 my-2 mr-1 text-xs text-white font-semibold bg-[#3a3a3a]"
+            className="my-2 mr-1 flex items-center gap-3 rounded-full bg-[#3a3a3a] p-3 px-3.5 text-xs font-semibold text-white"
           >
             Hablemos
-            <IoSendOutline className="text-white text-2xl" />
+            <IoSendOutline className="text-2xl text-white" />
           </a>
         </footer>
       </div>

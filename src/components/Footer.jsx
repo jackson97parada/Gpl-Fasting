@@ -47,17 +47,17 @@ const currentYear = new Date().getFullYear();
 export const Footer = () => {
   return (
     <footer id="contacto">
-      <div className="bg-[#101010] lg:bg-[#024873] text-center space-y-8 pt-16 pb-6 lg:pt-32 lg:pb-14 lg:px-32 lg:space-y-0">
+      <div className="space-y-8 bg-[#024873] pb-6 pt-16 text-center lg:space-y-0 lg:px-32 lg:pb-14 lg:pt-28">
         <a
           href="https://wa.me/+3001221432"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-2 border-[#0378a6] rounded-lg px-6 py-3 text-2xl text-white font-bold hover:bg-[#0378a6] hover:shadow-lg hover:shadow-gray-600 duration-300 transition"
+          className="rounded-lg border-2 border-[#0378a6] px-6 py-3 text-2xl font-bold text-white transition duration-300 hover:bg-[#0378a6] hover:shadow-lg hover:shadow-gray-600"
         >
           AGENDA TU CITA !
         </a>
 
-        <ul className="flex justify-center gap-16 box-content pt-16 lg:pb-0 [&>li]:icons [&>li>div]:div-icons [&>li>div>a>i]:icon">
+        <ul className="[&>li]:icons [&>li>div]:div-icons [&>li>div>a>i]:icon box-content flex justify-center gap-16 pb-10 pt-16 lg:pb-0">
           {FOOTERDETAILS.map(({ link, icon }, id) => (
             <li key={id}>
               <div className="cursor-pointer">
@@ -70,30 +70,32 @@ export const Footer = () => {
         </ul>
       </div>
 
-      <div className="bg-[#0378a6] text-center p-4 lg:py-12 space-y-7 lg:flex lg:space-y-0">
+      <div className="space-y-7 bg-[#0378a6] p-4 text-center lg:flex lg:space-y-0 lg:px-32 lg:py-12">
         {CONTACTUSDETAILS.map((data, id) => (
-          <div key={id} className="w-[67%]">
-            <h1 className="text-white font-bold pb-4">{data.title}</h1>
-            <div className=" [&>h1]:text-white [&>h1]:text-xs flex-col">
+          <div key={id} className="md:w-[67%]">
+            <h1 className="pb-4 font-bold text-white">{data.title}</h1>
+            <div className=" flex-col [&>h1]:text-xs [&>h1]:font-light [&>h1]:text-white ">
               <h1>{data.cell}</h1>
               <h1>{data.cellTwo}</h1>
-              <h1 className="font-bold relative top-2">{data.email}</h1>
+              <h2 className="relative top-2 text-xs font-medium text-white">
+                {data.email}
+              </h2>
             </div>
             <div>
-              <p className="text-xs text-white mx-auto w-[80%] text-justify">
+              <p className="mx-auto w-[80%] text-justify text-xs font-light text-white">
                 {" "}
-                <b>{data.city}</b> {data.address}
+                <b className="font-medium">{data.city}</b> {data.address}
               </p>
-              <p className="text-xs text-white pt-4 mx-auto w-[80%] text-justify">
+              <p className="mx-auto w-[80%] pt-4 text-justify text-xs font-light text-white">
                 {" "}
-                <b>{data.cityTwo}</b> {data.addressTwo}
+                <b className="font-medium">{data.cityTwo}</b> {data.addressTwo}
               </p>
             </div>
           </div>
         ))}
       </div>
 
-      <h5 className="text-sm text-white text-center font-bold bg-black p-10">
+      <h5 className="bg-black p-10 text-center text-sm font-bold text-white">
         {`${currentYear}, todos los derechos reservados.`}
       </h5>
       <SocialMedias />

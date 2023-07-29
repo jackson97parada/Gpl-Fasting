@@ -1,40 +1,39 @@
-import { imageHeader } from "../assets";
+import { firstAbout } from "../assets/imagesAboutUs";
 
 export const Header = () => {
   return (
-    <div className="pb-20 pt-32 lg:pt-52" id="inicio">
-      <div className="lg:flex">
-        <hr className="border-2 border-[#0378a6] w-14 hidden lg:block absolute top-48 left-10 z-10" />
-        <div className="text-center lg:text-start lg:px-10 space-y-4 lg:space-y-24 lg:w-[45%]">
-          <h1 className="text-[35px] lg:text-7xl text-[#191f40] text-start font-bold leading-10 lg:leading-tight px-6 lg:px-0">
-            AMAMOS LO QUE HACEMOS
+    <div className="pb-10 pt-32 lg:pt-48" id="inicio">
+      <hr className="relative left-10 top-4 z-10 w-14 border-2 border-[#0378a6] lg:-top-8" />
+      <hr className="relative left-[140px] top-[1690px] z-10 w-16 rotate-90 border-[2.5px] border-[#0378a6] lg:left-[650px] lg:top-[995px]" />
+      <div className="lg:mx-32 lg:mb-32 lg:flex">
+        <div className="z-30 text-center lg:px-10 lg:text-start">
+          <h1 className="px-6 pb-16 pt-10 text-start text-[35px] font-bold leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pt-0 lg:text-[50px] lg:leading-tight">
+            CONVIERTETE EN LO QUE SUEÑAS!
           </h1>
-          <button className="border-4 border-[#024873] rounded-lg px-24 py-2.5 lg:px-6 text-[#024873] hover:text-white text-xl lg:text-2xl font-bold hover:translate-y-2 hover:bg-[#024873] hover:shadow-2xl transition-all">
+          <a
+            href="https://wa.me/+3001221432"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg border-4 border-[#024873] px-24 py-4 text-xl font-bold text-[#024873] transition duration-500 hover:bg-[#024873] hover:text-white hover:shadow-2xl lg:px-6 lg:text-4xl"
+          >
             HABLEMOS!
-          </button>
+          </a>
         </div>
-        <div className="overflow-hidden">
-          <img
-            className="relative -z-10 -rotate-[23deg] left-[135px] lg:left-[100px] top-2 w-[350px] lg:w-[950px]"
-            src={imageHeader}
-          />
-        </div>
+        <img
+          className="hidden w-[350px] lg:block lg:w-[550px]"
+          src={firstAbout}
+        />
       </div>
 
-      <div className="relative bottom-[80px] lg:flex space-y-10 lg:space-y-0 px-6 lg:pt-20 lg:px-0 [&>div]:div-card [&>div>h1]:text-2xl [&>div>h1]:font-bold [&>div>img]:div-card-img">
+      <div className="[&>div]:div-card [&>div>img]:div-card-img relative bottom-[80px] mt-44 space-y-10 px-6 lg:mt-0 lg:flex lg:space-y-0 lg:px-0 lg:pt-20 [&>div>h1]:text-2xl [&>div>h1]:font-bold">
         <div className="bg-[#0378a6]"></div>
 
-        <div className="bg-white">
-          <div className="rotate-90 absolute left-14 lg:relative lg:left-0">
-            <div className="rotate-[270deg] absolute top-[175px] z-10 left-[133px] [&>div]:font-bold [&>div]:text-[#57596c] [&>div]:bg-[#e3e3e3] [&>div]:w-[70px] [&>div]:rounded-xl [&>div]:p-1 [&>div]:py-1.5 [&>div]:text-center [&>div]:text-xl"></div>
-          </div>
-        </div>
+        <div className="bg-white"></div>
 
         <div>
-          <div className="flex mt-10"></div>
+          <div className="mt-10 flex"></div>
         </div>
       </div>
-      <hr className="border-[2.5px] border-[#0378a6] w-16 rotate-90 relative left-[50%] top-[8.5%] z-10" />
     </div>
   );
 };

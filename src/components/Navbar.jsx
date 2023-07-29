@@ -10,7 +10,7 @@ const links = [
     name: "SERVICIOS",
   },
   { name: "NOSOTROS" },
-  { name: "CLIENTES" },
+  { name: "TESTIMONIOS" },
   { name: "CONTACTO" },
 ];
 
@@ -42,15 +42,15 @@ export const Navbar = () => {
   const dropdown = locationHash === `#/servicios/${serviceTitle}`;
 
   return (
-    <nav className="px-11 fixed top-0 left-0 right-0 bg-white w-[100vw] lg:h-28 z-50 shadow-lg p-6 pt-4">
-      <menu className="flex flex-wrap lg:flex-nowrap justify-between items-center lg:h-[60px] mx-auto max-w-[1300px]">
+    <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-11 pt-4 shadow-lg lg:h-28">
+      <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
         <a href="/Gpl-Fasting/">LOGO</a>
 
         {/* MENU */}
         <button className="h-full lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
             <svg
-              className="w-10 h-10 text-black"
+              className="h-10 w-10 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -68,7 +68,7 @@ export const Navbar = () => {
               type="button"
               aria-controls="navbar-default"
               aria-expanded="false"
-              className="w-10 h-10 text-black"
+              className="h-10 w-10 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -84,12 +84,12 @@ export const Navbar = () => {
         </button>
         {/* ==== */}
         <div
-          className={`md:flex md:justify-between w-full lg:w-auto space-y-8 md:space-y-0 md:pt-0 gap-10 transition-all duration-500 ${
+          className={`w-full gap-10 space-y-8 transition-all duration-500 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
             isOpen ? "max-h-[500px]" : "max-h-0 lg:h-auto"
           }`}
         >
           <ul
-            className={`w-full lg:w-auto lg:flex lg:gap-24 text-center text-[#191f40] space-y-8 lg:space-y-0 ${
+            className={`w-full space-y-8 text-center text-[#191f40] lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
               isOpen ? "block" : "hidden lg:block"
             }`}
           >
@@ -104,7 +104,7 @@ export const Navbar = () => {
                 }
               >
                 <HashLink
-                  className="cursor-pointer font-bold"
+                  className="border-[#04c4d9] pb-1 font-bold duration-75 hover:border-b-2"
                   to={`/#${name.toLowerCase()}`}
                   smooth
                   scroll={(el) =>
@@ -118,22 +118,39 @@ export const Navbar = () => {
                 </HashLink>
                 {Service && Service.length > 0 && (
                   // DROPDOWN
-                  <ul
-                    className={`dropdown lg:bg-white lg:rounded-3xl lg:absolute lg:top-[66px] lg:space-y-4 lg:right-[39.5%] lg:py-5 lg:px-4 lg:shadow-xl ${
-                      showDropdown && name === "SERVICIOS" ? "block" : "hidden"
-                    }`}
-                  >
-                    {ServiceDetail.map(({ id, data }) => (
-                      <li className="font-bold" key={id}>
-                        <Link
-                          to={createServiceRoute(data.title)}
-                          onClick={handleLinkClick}
+                  <div className="absolute">
+                    <ul
+                      className={`dropdown w-[200px] lg:relative lg:-top-1 lg:right-16 lg:space-y-4 lg:rounded-3xl lg:bg-white lg:px-4 lg:py-5 lg:shadow-xl ${
+                        showDropdown && name === "SERVICIOS"
+                          ? "block"
+                          : "hidden"
+                      }`}
+                    >
+                      {ServiceDetail.map(({ id, data }) => (
+                        <li
+                          className="border-[#04c4d9] font-bold duration-75 hover:border-b-2"
+                          key={id}
                         >
-                          {data.subTitle}
-                        </Link>
+                          <Link
+                            to={createServiceRoute(data.title)}
+                            onClick={handleLinkClick}
+                          >
+                            {data.subTitle}
+                          </Link>
+                        </li>
+                      ))}
+                      <li className="border-[#04c4d9] hover:border-b-2">
+                        <a
+                          href="https://www.instagram.com/gpl1fasting/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className=" font-bold duration-75 "
+                        >
+                          POST OP
+                        </a>
                       </li>
-                    ))}
-                  </ul>
+                    </ul>
+                  </div>
                 )}
               </li>
             ))}

@@ -36,16 +36,16 @@ const settings = {
 export const Testimonials = () => {
   return (
     <section
-      id="clientes"
-      className="bg-[#191f40] pt-0 lg:pt-10 px-6 lg:px-10 lg:pb-16"
+      id="testimonios"
+      className="bg-[#191f40] px-6 pb-10 pt-0 lg:px-10 lg:pb-16 lg:pt-10"
     >
-      <div className="lg:w-[50%] space-y-4 relative top-[500px] lg:left-[48%] lg:top-32">
-        <hr className="border-2 border-[#0378a6] w-16 relative bottom-5" />
+      <div className="relative top-[500px] space-y-4 lg:left-[48%] lg:top-32 lg:w-[50%]">
+        <hr className="relative bottom-5 w-16 border-2 border-[#0378a6]" />
 
-        <h1 className="w-[80%] lg:w-auto text-3xl lg:text-4xl text-white font-bold">
+        <h1 className="w-[80%] text-3xl font-bold text-white lg:w-auto lg:text-4xl">
           Lo que dicen nuestros clientes
         </h1>
-        <h1 className="text-xs lg:text-base text-white font-bold">
+        <h1 className="text-xs font-bold text-[#bfd6d9] lg:text-base">
           Somos mas que un grupo empresarial
         </h1>
       </div>
@@ -53,28 +53,28 @@ export const Testimonials = () => {
       <Slider {...settings} className="flex">
         {testimonialsData.map(({ id, data }) => (
           <div key={id} className="relative lg:left-[13.5%]">
-            <div className="flex flex-wrap lg:flex-nowrap gap-16">
+            <div className="flex flex-wrap gap-16 lg:flex-nowrap">
               <img
-                className="rounded-[3.5rem] lg:rounded-xl h-[336px] lg:h-[500px] lg:w-[386px] px-4 lg:px-0"
+                className="h-[336px] rounded-[3.5rem] px-4 lg:h-[500px] lg:w-[386px] lg:rounded-xl lg:px-0"
                 src={firstService}
                 alt={data.user}
               />
-              <div className="space-y-4 mt-36">
-                <p className="text-xs text-[#9daca2] lg:text-sm text-justify lg:font-medium pt-4 lg:w-[70%] lg:pt-10">
+              <div className="mt-36 space-y-4">
+                <p className="mx-4 pt-4 text-justify text-xs text-white lg:mx-0 lg:w-[70%] lg:pt-10 lg:text-sm lg:font-medium">
                   {data.description}
                 </p>
-                <hr className="border border-[#0378a6] w-8 relative right-2 top-8" />
-                <h1 className="text-sm text-white lg:text-white font-bold pt-10 pb-5">
+                <hr className="relative -right-4 top-8 w-8 border border-[#0378a6] md:block" />
+                <h1 className="pb-5 pt-10 text-sm font-bold text-white lg:text-white">
                   {data.user}
                 </h1>
               </div>
             </div>
-            <div className="relative bottom-[85px] -z-10 left-[305px] bg-[#0378a6] w-[100px] h-[100px] rounded-md"></div>
+            <div className="relative bottom-[85px] left-[305px] -z-10 hidden h-[100px] w-[100px] rounded-md bg-[#0378a6] md:block"></div>
           </div>
         ))}
       </Slider>
 
-      <hr className="w-[80%] mx-auto border border-[#554e50] mt-10 lg:mt-28" />
+      <hr className="mx-auto mt-10 w-[80%] border border-[#0378a6] lg:mt-28" />
     </section>
   );
 };

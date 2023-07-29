@@ -11,6 +11,7 @@
   @apply mt-16 -ml-3;
 }
 
+/* Iconos fb, ig, wp */
 .icons {
   @apply border border-white p-1.5 rounded-full;
 }
@@ -25,5 +26,23 @@
 
 .social-medias {
   @apply flex items-center justify-center w-10 h-10 rounded-lg text-white text-3xl;
+}
+
+/* Seccion de About Us */
+.section-about-div {
+  @apply flex items-center justify-center gap-10
+}
+
+.section-about-div-div {
+  @apply w-[40%] space-y-10 text-center
+}
+
+.section-about-div-h1 {
+  @apply text-2xl font-bold text-[#191f40]
+}
+
+/* SECTION SERVICE BOTOX */
+.section-service {
+  @apply text-[#024873] font-medium text-lg p-9 rounded-3xl text-justify
 }
 }

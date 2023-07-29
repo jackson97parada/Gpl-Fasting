@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 
-import { Navbar, Footer, settings } from "../../";
-import Slider from "react-slick";
+import PropTypes from "prop-types";
+
+import { Navbar, Footer /* settings */ } from "../../";
+// import Slider from "react-slick";
 import { ServiceDetail } from "./ServiceDetail";
 
 import { RxSlash } from "react-icons/rx";
@@ -13,12 +15,13 @@ export const Service = () => {
   );
 
   return (
-    <section className="mt-20 container w-full max-w-[1380px] mx-auto">
+    <section className="container mx-auto mt-20 w-full max-w-[1380px]">
       <Navbar />
+      <hr className="relative left-[80px] top-[140px] hidden w-14 border-[2.5px] border-[#0378a6] lg:block" />
       <main>
-        <header className="bg-heroService bg-black/20 bg-cover w-auto h-[91vh] lg:h-[580px] box-content">
-          <div className="flex flex-col px-10 lg:px-20 pt-52 space-y-20">
-            <h1 className="text-5xl lg:text-[51px] lg:text-black lg:leading-tight font-bold w-[20%]">
+        <header className="box-content h-[91vh] w-auto bg-black/20 bg-heroService bg-cover lg:h-[580px]">
+          <div className="flex flex-col space-y-20 px-10 pt-52 lg:px-20">
+            <h1 className="text-5xl font-bold lg:text-[51px] lg:leading-tight lg:text-black">
               {thisService.data.subTitle}
             </h1>
             <div className="flex" aria-label="Breadcrumb">
@@ -26,23 +29,23 @@ export const Service = () => {
                 <li className="inline-flex items-center">
                   <a
                     href="/Gpl-Fasting/"
-                    className="inline-flex items-center text-[#c43953] text-base font-medium"
+                    className="inline-flex items-center text-base font-medium text-[#04c4d9]"
                   >
                     INICIO
                   </a>
                 </li>
                 <li>
-                  <div className="flex items-center text-[#c43953]">
+                  <div className="flex items-center text-white">
                     <RxSlash />
-                    <h1 className="ml-1 text-base text-[#c43953] font-medium ">
+                    <h1 className="ml-1 text-base font-medium text-[#04c4d9] ">
                       SERVICIOS
                     </h1>
                   </div>
                 </li>
                 <li aria-current="page">
-                  <div className="flex items-center text-[#c43953]">
+                  <div className="flex items-center text-white">
                     <RxSlash />
-                    <span className="ml-1 text-base text-black font-medium">
+                    <span className="ml-1 text-base font-medium text-white">
                       {thisService.data.subTitle}
                     </span>
                   </div>
@@ -51,45 +54,19 @@ export const Service = () => {
             </div>
           </div>
         </header>
-        <main className="px-10 lg:px-20 py-20 space-y-10">
-          <h1 className="text-4xl lg:text-3xl text-[#82bede] lg:text-black font-bold">
-            {thisService.data.subTitle}
-          </h1>
-          <p className="lg:text-sm text-justify font-light">
-            {thisService.data.description}
-          </p>
-          <div className="lg:flex lg:flex-col-reverse">
-            <Slider {...settings}>
-              {ServiceDetail.map(({ id, data }) => (
-                <div key={id}>
-                  <img
-                    className="rounded-[3.5rem] mt-12 mb-8 mx-auto h-[336px] shadow-xl"
-                    width={320}
-                    src={data.imageDetail}
-                    alt={thisService.data.title}
-                  />
-                </div>
-              ))}
-            </Slider>
-            <div className="pt-32 lg:pt-0 space-y-10">
-              <h2 className="text-3xl text-[#c43953] lg:text-[28px] text-center font-bold">
-                ESTADISTICAS
-              </h2>
-              <div className="space-y-10 lg:space-y-0 lg:flex lg:justify-center lg:gap-32">
-                <img
-                  src={thisService.data.imageStatus}
-                  alt="IMAGE STATUS"
-                  className="h-[100px] mx-auto lg:mx-0"
-                />
-                <p className="text-justify lg:text-sm lg:w-2/4 font-light">
-                  {thisService.data.descriptionStatus}
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
+
+        {/* SECTION GRAPHS */}
+        <section>
+          {/* SERVICIOS INDEPENDIENTES */}
+          {thisService.data.body}
+        </section>
       </main>
       <Footer />
     </section>
   );
+};
+
+Service.propTypes = {
+  graph: PropTypes.string,
+  descriptionGraph: PropTypes.string,
 };

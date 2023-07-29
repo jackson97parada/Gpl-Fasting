@@ -9,7 +9,7 @@ import {
 
 function App() {
   return (
-    <div className="container w-full max-w-[1380px] mx-auto">
+    <div className="container mx-auto w-full max-w-[1380px] selection:bg-blue-600">
       <Navbar />
       <Header />
       <SectionServices />
