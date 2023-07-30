@@ -91,8 +91,8 @@ export const BotoxService = () => {
         </Slider>
       </header>
 
-      <header className="[&>div>p]:section-service hidden">
-        <div className="items-center">
+      <header className="[&>div>p]:section-service hidden md:block">
+        <div className="flex items-center">
           <img className="w-72" src={firstImageBotox} alt="" />
           <p className="bg-[#e6f9fb]">
             Está aprobada su utilización en medicina estética por la Agencia
@@ -100,7 +100,7 @@ export const BotoxService = () => {
             pretende es prevenir las arrugas de expresión.
           </p>
         </div>
-        <div className="items-center">
+        <div className="flex items-center">
           <p>
             Se recomienda iniciar con el bótox a partir de los 30-35 años porque
             es cuando comenzamos a notarnos esas arrugas de gesticulación que
@@ -108,7 +108,7 @@ export const BotoxService = () => {
           </p>
           <img className="w-72" src={firstImageBotox} alt="" />
         </div>
-        <div className="items-center">
+        <div className="flex items-center">
           <img className="w-72" src={firstImageBotox} alt="" />
           <p className="bg-[#e6f9fb]">
             Los resultados se empiezan a ver a partir de 48-72h una vez
@@ -116,7 +116,7 @@ export const BotoxService = () => {
             en instaurarse.
           </p>
         </div>
-        <div className="items-center justify-end gap-32">
+        <div className="flex items-center justify-end gap-32">
           <p>Se recomienda una cada seis meses, dos veces al año.</p>
           <img className="w-72" src={firstImageBotox} alt="" />
         </div>

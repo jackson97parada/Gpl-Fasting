@@ -89,7 +89,7 @@ export const Navbar = () => {
           }`}
         >
           <ul
-            className={`mt-10 w-full space-y-20 text-center text-[#191f40] lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
+            className={`mt-10 w-full space-y-20 text-center text-[#191f40] md:mt-0 lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
               isOpen ? "block" : "hidden lg:block"
             }`}
           >
