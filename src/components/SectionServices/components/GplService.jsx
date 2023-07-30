@@ -119,9 +119,61 @@ const imagesSlider = [
   },
 ];
 
+const settingsOff = {
+  dots: true,
+  customPaging: () => (
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        background: "#024873",
+        margin: "0 5px",
+      }}
+    ></div>
+  ),
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  centerMode: true,
+  centerPadding: "10px",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: "-80px",
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "-0px",
+      },
+    },
+  ],
+};
+
 export const GplService = () => {
   const [btnModal, setBtnModal] = useState(true);
   const [btnModalTwo, setBtnModalTwo] = useState(true);
+  const [btnModalMobile, setBtnModalMobile] = useState(true);
 
   const handleBtnModal = () => {
     setBtnModal(!btnModal);
@@ -131,9 +183,13 @@ export const GplService = () => {
     setBtnModalTwo(!btnModalTwo);
   };
 
+  const handleBtnModalMobile = () => {
+    setBtnModalMobile(!btnModalMobile);
+  };
+
   return (
-    <div className="mb-6 mt-14">
-      <header className="mx-32 grid grid-cols-2 gap-y-28 pb-52">
+    <div className="md:mb-6 md:mt-14">
+      <header className="hidden gap-y-40 pb-52 md:mx-32 md:grid md:grid-cols-2 md:gap-y-28">
         {GplDetails.map(({ id, data }) => (
           <Graph
             key={id}
@@ -143,15 +199,28 @@ export const GplService = () => {
         ))}
       </header>
 
-      <section className="bg-[#024873] py-20">
-        <h1 className="text-center text-2xl font-bold text-white">
+      {/* SLIDER MOBILE */}
+      <header className="md:hidden">
+        <Slider {...settingsOff}>
+          {GplDetails.map(({ id, data }) => (
+            <Graph
+              key={id}
+              percentaje={data.percentaje}
+              description={data.description}
+            />
+          ))}
+        </Slider>
+      </header>
+
+      <section className="mt-20 bg-[#024873] pb-20 md:mt-0 md:pb-20">
+        <h1 className="pt-20 text-center text-2xl font-bold text-white">
           NUESTROS PROCESOS
         </h1>
         <Slider {...settings}>
           {imagesSlider.map(({ id, data }) => (
-            <div key={id}>
+            <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-[370px] rounded-[3.5rem] lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] md:w-[370px] lg:mt-14"
                 src={data.img}
                 alt=""
               />
@@ -160,10 +229,12 @@ export const GplService = () => {
         </Slider>
       </section>
 
-      <main className="mx-32 py-20">
+      <main className="mx-6 py-10 md:mx-32 md:py-20">
         <section>
           <div>
-            <h1 className=" pb-4 text-2xl font-bold text-[#024873]">GPL 1</h1>
+            <h1 className="pb-8 text-center text-2xl font-bold text-[#024873] md:pb-4 md:text-start">
+              GPL 1
+            </h1>
             <p className="text-justify text-lg font-light">
               El programa en el que podrás llegar a bajar hasta el 10% de tu
               peso, es decir, si pesas 120 kg en 26 días bajarás 12 kilos.
@@ -186,21 +257,22 @@ export const GplService = () => {
               </span>
             </p>
           </div>
-          <div className="absolute">
+          {/* MODAL */}
+          <div className="relative md:absolute">
             <div
-              className={`relative bottom-64 right-[52px] z-30 mx-14 w-[1100px] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl ${
+              className={`relative right-[7px] z-30 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:-right-[7px] md:bottom-64 md:w-[1100px] ${
                 btnModal ? "hidden" : "block"
               }`}
             >
               <header className="flex items-center justify-between border-b-2 border-[#024873]">
-                <h1 className=" pb-4 pl-8 text-2xl font-bold text-[#024873]">
+                <h1 className=" pb-4 pl-6 text-2xl font-bold text-[#024873]">
                   GPL 1
                 </h1>
-                <button className="mb-4 mr-8 text-3xl" onClick={handleBtnModal}>
+                <button className="mb-4 mr-6 text-3xl" onClick={handleBtnModal}>
                   <GrClose />
                 </button>
               </header>
-              <p className="p-8 text-justify font-light">
+              <p className="p-6 text-justify font-light">
                 El programa en el que podrás llegar a bajar hasta el 10% de tu
                 peso, es decir, si pesas 120 kg en 26 días bajarás 12 kilos.
                 Muchos pacientes con sobrepeso se vuelven escépticos frente a
@@ -237,112 +309,236 @@ export const GplService = () => {
 
           <button
             onClick={handleBtnModal}
-            className="mx-auto flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
+            className="mx-auto my-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
           >
             <FaAngleDoubleDown /> Continuar leyendo
           </button>
         </section>
         <hr className="mx-auto my-14 w-40 border" />
 
-        <section className="mx-28">
+        <section className="mx-10 md:mx-28">
           <h1 className="text-center text-[26px] font-bold text-[#024873]">
             PILARES
           </h1>
-          <div className="mt-6 flex justify-between">
-            <div>
-              <img className="w-[300px] " src={firstImageBotox} alt="" />
-              <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
-                “La mejor dieta del mundo es la que puedes hacer“
-              </h1>
+          <img className="my-10 md:hidden" src={firstImageBotox} alt="" />
+
+          <div className="relative md:absolute md:hidden">
+            <div
+              className={`relative right-11 z-30 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:bottom-64 md:right-[52px] md:w-[1100px] ${
+                btnModalMobile ? "hidden" : "block"
+              }`}
+            >
+              <header className="flex items-center justify-between border-b-2 border-[#024873]">
+                <h1 className=" pb-4 pl-8 text-2xl font-bold text-[#024873]">
+                  PILARES
+                </h1>
+                <button
+                  className="mb-4 mr-8 text-3xl"
+                  onClick={handleBtnModalMobile}
+                >
+                  <GrClose />
+                </button>
+              </header>
+              <div className="mx-6 mt-6">
+                <div className="text-center">
+                  <img className="w-[300px]" src={firstImageBotox} alt="" />
+                  <h1 className=" text-center font-bold text-[#04c4d9] ">
+                    “La mejor dieta del mundo es la que puedes hacer“
+                  </h1>
+                </div>
+                <div className=" text-center">
+                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                    AYUNO INTERMITENTE
+                  </h1>
+                  <p className=" text-justify font-light">
+                    Tras años de análisis y estudios en humanos y animales,
+                    grupos multidisciplinarios en salud llegan a una conclu-
+                    sión clave en nutrición, obesidad, antienvejecimiento,
+                    longevidad y controles contra el cáncer. Conscientes de los
+                    desafíos alimentarios de los pacientes, utilizan técni- cas
+                    novedosas para garantizar dietas personalizadas y adecuadas
+                    para cada individuo.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-6 mt-6">
+                <div className="text-center ">
+                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                    TECNOLOGÍA FARMACÉUTICA
+                  </h1>
+                  <p className=" text-justify font-light">
+                    Apoyados en los avances tecnológicos de la ciencia far-
+                    macológica estamos a la vanguardia de tratamientos médicos
+                    para pérdida de peso, control de la resistencia a la
+                    insulina, riesgo cardio vascular, hipertensión arterial y
+                    diabetes, logrando así un control metabólico rápido y
+                    efectivo que incentiva a continuar una sana vida a nues-
+                    tros pacientes.
+                  </p>
+                </div>
+                <div>
+                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <h1 className="text-center font-bold text-[#04c4d9] ">
+                    “No usar la tecnología es una estupidez”
+                  </h1>
+                </div>
+              </div>
+              <div className="mx-6 mt-6">
+                <div>
+                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <h1 className="text-center font-bold text-[#04c4d9] ">
+                    “Estamos programados genéticamente para comer 8 horas al día
+                    y movilizarnos 10 km diarios “
+                  </h1>
+                </div>
+                <div className="text-center ">
+                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                    ACTIVIDAD FÍSICA
+                  </h1>
+                  <p className=" text-justify font-light">
+                    Durante muchos años, los humanos se desplazaban largas
+                    distancias para obtener su alimento diario, lo que
+                    equilibraba los gastos energéticos con los consumidos. Sin
+                    embargo, con la llegada de la revolución agrícola hace
+                    10.000 años, nuestra vida se volvió sedentaria y aumentó el
+                    consumo de alimentos, lo que ha llevado a un progresivo
+                    aumento de peso y a problemas de salud como obesidad,
+                    diabetes, hipertensión y riesgo cardio- vascular, entre
+                    otros.
+                  </p>
+                </div>
+              </div>
+              <div className="mx-6 mt-6">
+                <div className=" text-center ">
+                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                    RESPIRAR Y BALANCE INTERIOR YOGA
+                  </h1>
+                  <p className=" text-justify font-light">
+                    Regulación, disciplina, estabilidad, regulación de la
+                    energía vital, interiorización, concentración, meditación,
+                    iluminación. Encaminados en las prácticas ancestrales del
+                    yoga como vía segura hacia el autoconocimiento y
+                    realización, encontramos importante que conozcas los
+                    beneficios de estos 8 lineamientos que complementan nuestro
+                    programa y te ayudarán a tener una vida más amable.
+                  </p>
+                </div>
+                <div>
+                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <h1 className=" text-center font-bold text-[#04c4d9] ">
+                    “El yoga no son poses, es una filosofía de vida “
+                  </h1>
+                </div>
+              </div>
+              <footer className="border-t-2 border-[#024873] pb-10 "></footer>
             </div>
-            <div className="w-[50%] text-center ">
-              <h1 className="py-10 text-xl font-bold text-[#024873] ">
-                AYUNO INTERMITENTE
-              </h1>
-              <p className=" text-justify font-light">
-                Tras años de análisis y estudios en humanos y animales, grupos
-                multidisciplinarios en salud llegan a una conclu- sión clave en
-                nutrición, obesidad, antienvejecimiento, longevidad y controles
-                contra el cáncer. Conscientes de los desafíos alimentarios de
-                los pacientes, utilizan técni- cas novedosas para garantizar
-                dietas personalizadas y adecuadas para cada individuo.
-              </p>
-            </div>
+
+            <button
+              onClick={handleBtnModalMobile}
+              className="mx-auto mt-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
+            >
+              <FaAngleDoubleDown /> Conocelos
+            </button>
           </div>
-          <div className="mt-6 flex justify-between">
-            <div className="w-[50%] text-center ">
-              <h1 className="py-10 text-xl font-bold text-[#024873] ">
-                TECNOLOGÍA FARMACÉUTICA
-              </h1>
-              <p className=" text-justify font-light">
-                Apoyados en los avances tecnológicos de la ciencia far-
-                macológica estamos a la vanguardia de tratamientos médicos para
-                pérdida de peso, control de la resistencia a la insulina, riesgo
-                cardio vascular, hipertensión arterial y diabetes, logrando así
-                un control metabólico rápido y efectivo que incentiva a
-                continuar una sana vida a nues- tros pacientes.
-              </p>
+
+          <div className="hidden md:block">
+            <div className="mt-6 flex justify-between">
+              <div>
+                <img className="w-[300px] " src={firstImageBotox} alt="" />
+                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+                  “La mejor dieta del mundo es la que puedes hacer“
+                </h1>
+              </div>
+              <div className="w-[50%] text-center ">
+                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  AYUNO INTERMITENTE
+                </h1>
+                <p className=" text-justify font-light">
+                  Tras años de análisis y estudios en humanos y animales, grupos
+                  multidisciplinarios en salud llegan a una conclu- sión clave
+                  en nutrición, obesidad, antienvejecimiento, longevidad y
+                  controles contra el cáncer. Conscientes de los desafíos
+                  alimentarios de los pacientes, utilizan técni- cas novedosas
+                  para garantizar dietas personalizadas y adecuadas para cada
+                  individuo.
+                </p>
+              </div>
             </div>
-            <div>
-              <img className="w-[300px] " src={firstImageBotox} alt="" />
-              <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
-                “No usar la tecnología es una estupidez”
-              </h1>
+            <div className="mt-6 flex justify-between">
+              <div className="w-[50%] text-center ">
+                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  TECNOLOGÍA FARMACÉUTICA
+                </h1>
+                <p className=" text-justify font-light">
+                  Apoyados en los avances tecnológicos de la ciencia far-
+                  macológica estamos a la vanguardia de tratamientos médicos
+                  para pérdida de peso, control de la resistencia a la insulina,
+                  riesgo cardio vascular, hipertensión arterial y diabetes,
+                  logrando así un control metabólico rápido y efectivo que
+                  incentiva a continuar una sana vida a nues- tros pacientes.
+                </p>
+              </div>
+              <div>
+                <img className="w-[300px] " src={firstImageBotox} alt="" />
+                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+                  “No usar la tecnología es una estupidez”
+                </h1>
+              </div>
             </div>
-          </div>
-          <div className="mt-6 flex justify-between">
-            <div>
-              <img className="w-[300px] " src={firstImageBotox} alt="" />
-              <h1 className="w-[323px] text-center font-bold text-[#04c4d9] ">
-                “Estamos programados genéticamente para comer 8 horas al día y
-                movilizarnos 10 km diarios “
-              </h1>
+            <div className="mt-6 flex justify-between">
+              <div>
+                <img className="w-[300px] " src={firstImageBotox} alt="" />
+                <h1 className="w-[323px] text-center font-bold text-[#04c4d9] ">
+                  “Estamos programados genéticamente para comer 8 horas al día y
+                  movilizarnos 10 km diarios “
+                </h1>
+              </div>
+              <div className="w-[50%] text-center ">
+                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  ACTIVIDAD FÍSICA
+                </h1>
+                <p className=" text-justify font-light">
+                  Durante muchos años, los humanos se desplazaban largas
+                  distancias para obtener su alimento diario, lo que equilibraba
+                  los gastos energéticos con los consumidos. Sin embargo, con la
+                  llegada de la revolución agrícola hace 10.000 años, nuestra
+                  vida se volvió sedentaria y aumentó el consumo de alimentos,
+                  lo que ha llevado a un progresivo aumento de peso y a
+                  problemas de salud como obesidad, diabetes, hipertensión y
+                  riesgo cardio- vascular, entre otros.
+                </p>
+              </div>
             </div>
-            <div className="w-[50%] text-center ">
-              <h1 className="py-10 text-xl font-bold text-[#024873] ">
-                ACTIVIDAD FÍSICA
-              </h1>
-              <p className=" text-justify font-light">
-                Durante muchos años, los humanos se desplazaban largas
-                distancias para obtener su alimento diario, lo que equilibraba
-                los gastos energéticos con los consumidos. Sin embargo, con la
-                llegada de la revolución agrícola hace 10.000 años, nuestra vida
-                se volvió sedentaria y aumentó el consumo de alimentos, lo que
-                ha llevado a un progresivo aumento de peso y a problemas de
-                salud como obesidad, diabetes, hipertensión y riesgo cardio-
-                vascular, entre otros.
-              </p>
-            </div>
-          </div>
-          <div className="mt-6 flex justify-between">
-            <div className="w-[50%] text-center ">
-              <h1 className="py-10 text-xl font-bold text-[#024873] ">
-                RESPIRAR Y BALANCE INTERIOR YOGA
-              </h1>
-              <p className=" text-justify font-light">
-                Regulación, disciplina, estabilidad, regulación de la energía
-                vital, interiorización, concentración, meditación, iluminación.
-                Encaminados en las prácticas ancestrales del yoga como vía
-                segura hacia el autoconocimiento y realización, encontramos
-                importante que conozcas los beneficios de estos 8 lineamientos
-                que complementan nuestro programa y te ayudarán a tener una vida
-                más amable.
-              </p>
-            </div>
-            <div>
-              <img className="w-[300px] " src={firstImageBotox} alt="" />
-              <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
-                “El yoga no son poses, es una filosofía de vida “
-              </h1>
+            <div className="mt-6 flex justify-between">
+              <div className="w-[50%] text-center ">
+                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  RESPIRAR Y BALANCE INTERIOR YOGA
+                </h1>
+                <p className=" text-justify font-light">
+                  Regulación, disciplina, estabilidad, regulación de la energía
+                  vital, interiorización, concentración, meditación,
+                  iluminación. Encaminados en las prácticas ancestrales del yoga
+                  como vía segura hacia el autoconocimiento y realización,
+                  encontramos importante que conozcas los beneficios de estos 8
+                  lineamientos que complementan nuestro programa y te ayudarán a
+                  tener una vida más amable.
+                </p>
+              </div>
+              <div>
+                <img className="w-[300px] " src={firstImageBotox} alt="" />
+                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+                  “El yoga no son poses, es una filosofía de vida “
+                </h1>
+              </div>
             </div>
           </div>
         </section>
       </main>
       <hr className="mx-auto mb-14 w-40 border" />
 
-      <footer className="mx-32 mb-24">
+      <footer className="mx-6 py-10 md:mx-32 md:mb-24">
         <section>
-          <h1 className=" pb-12 pl-8 text-center text-2xl font-bold text-[#024873]">
+          <h1 className=" pb-12 text-center text-2xl font-bold text-[#024873] md:pl-8">
             EFECTOS DEL AYUNO INTERMITENTE EN TU SALUD Y RALENTIZACÍON DEL
             ENVEJECIMIENTO
           </h1>
@@ -366,26 +562,26 @@ export const GplService = () => {
               ayuno diario de hasta 20 horas, durante el cual
             </span>
           </p>
-          <div className="absolute">
+          {/* MODAL */}
+          <div className="relative md:absolute">
             <div
-              className={`relative bottom-64 right-[52px] z-30 mx-14 w-[1100px] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl ${
+              className={`relative right-[60px] z-30 mx-14 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:bottom-64 md:right-[52px] md:w-[1100px] ${
                 btnModalTwo ? "hidden" : "block"
               }`}
             >
               <header className="flex items-center justify-between border-b-2 border-[#024873]">
-                <h1 className=" pb-4 pl-8 text-2xl font-bold text-[#024873]">
-                  EFECTOS DEL AYUNO INTERMITENTE EN TU SALUD Y RALENTIZACÍON DEL
-                  ENVEJECIMIENTO
+                <h1 className=" pb-4 pl-6 text-2xl font-bold text-[#024873]">
+                  EFECTOS DEL AYUNO
                 </h1>
                 <button
-                  className="mb-4 mr-8 text-3xl"
+                  className="mb-4 mr-6 text-3xl"
                   onClick={handleBtnModalTwo}
                 >
                   <GrClose />
                 </button>
               </header>
-              <main className=" px-8 pt-8">
-                <p className="h-[200px] overflow-scroll pb-4 text-justify font-light">
+              <main className=" px-6 pt-8">
+                <p className="h-[600px] overflow-scroll pb-4 text-justify font-light md:h-[350px]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Similique, fugiat quibusdam! At eligendi quisquam fugiat,
                   animi, iste corporis veniam optio quod amet laborum corrupti
@@ -519,13 +715,13 @@ export const GplService = () => {
           </div>
           <button
             onClick={handleBtnModalTwo}
-            className="mx-auto flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
+            className="mx-auto mt-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
           >
             <FaAngleDoubleDown /> Continuar leyendo
           </button>
         </section>
       </footer>
-      <hr className="relative left-[650px] top-[25px] w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] " />
+      <hr className="relative left-[650px] top-[25px] hidden w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] md:block " />
     </div>
   );
 };

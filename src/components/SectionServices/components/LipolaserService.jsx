@@ -68,10 +68,74 @@ const imagesSlider = [
   },
 ];
 
+const settingsOff = {
+  dots: true,
+  customPaging: () => (
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        background: "#024873",
+        margin: "0 5px",
+      }}
+    ></div>
+  ),
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  centerMode: true,
+  centerPadding: "10px",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: "-80px",
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "-0px",
+      },
+    },
+  ],
+};
+
 export const LipolaserService = () => {
   return (
     <div className="mb-6 mt-14">
-      <header className="mx-32 grid grid-cols-2 gap-y-28 pb-40">
+      {/* SLIDER MOBILE */}
+      <header className="md:hidden">
+        <Slider {...settingsOff}>
+          {LipolaserDetails.map(({ id, data }) => (
+            <Graph
+              key={id}
+              percentaje={data.percentaje}
+              description={data.description}
+            />
+          ))}
+        </Slider>
+      </header>
+
+      <header className="mx-32 hidden grid-cols-2 gap-y-28 pb-40 md:grid">
         {LipolaserDetails.map(({ id, data }) => (
           <Graph
             key={id}
@@ -80,17 +144,18 @@ export const LipolaserService = () => {
           />
         ))}
       </header>
-      <hr className="relative left-[650px] top-[4px] w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] " />
 
-      <section className=" bg-[#024873] py-20">
-        <h1 className="text-center text-2xl font-bold text-white">
+      <hr className="relative left-[650px] top-[4px] hidden w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] md:block " />
+
+      <section className="mt-20 bg-[#024873] pb-20 md:mt-0 md:pb-20">
+        <h1 className="pt-20 text-center text-2xl font-bold text-white">
           NUESTROS PROCESOS
         </h1>
         <Slider {...settings}>
           {imagesSlider.map(({ id, data }) => (
-            <div key={id}>
+            <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-[370px] rounded-[3.5rem] lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] md:w-[370px] lg:mt-14"
                 src={data.img}
                 alt=""
               />
@@ -99,8 +164,10 @@ export const LipolaserService = () => {
         </Slider>
       </section>
 
-      <main className="mx-32 py-20">
-        <h1 className="text-2xl font-bold text-[#024873] ">LASER</h1>
+      <main className="mx-6 py-10 md:mx-32 md:py-20">
+        <h1 className="text-center text-2xl font-bold text-[#024873] md:text-start ">
+          LASER
+        </h1>
         <p className="py-8 text-justify text-lg font-light">
           El láser es una intervención usada para la eliminación de grasa
           localizada en distintas partes del cuerpo, se extrae aproximadamente
@@ -115,23 +182,27 @@ export const LipolaserService = () => {
         <h2 className="text-center text-xl font-bold text-[#024873] ">
           Algunas ventajas de este procedimiento son:
         </h2>
-        <img className="mx-auto h-[550px]" src={firstImageBotox} alt="IMG" />
-        <div className="flex [&>ul]:mx-auto [&>ul]:w-[380px] [&>ul]:list-disc [&>ul]:space-y-5 [&>ul]:text-justify [&>ul]:text-lg ">
+        <img
+          className="mx-auto h-[400px] md:h-[550px]"
+          src={firstImageBotox}
+          alt="IMG"
+        />
+        <div className="md:flex [&>ul]:mx-auto [&>ul]:space-y-5 [&>ul]:text-justify [&>ul]:text-lg [&>ul]:font-light md:[&>ul]:w-[380px] md:[&>ul]:list-disc ">
           <ul>
             <li>
-              La recuperación es rápida y se pueden reto- mar las actividades
+              La recuperación es rápida y se pueden retomar las actividades
               diarias en poco tiempo.
             </li>
             <li>
               Es un procedimiento poco traumático, puede presentar mínimas
-              molestias, infla- maciones, dolores o hematomas.
+              molestias, inflamaciones, dolores o hematomas.
             </li>
             <li>
               Poca pérdida de sangre y los tejidos se man- tienen sin daños.
             </li>
           </ul>
           <ul>
-            <li>Consigue la retracción de la piel (evita la flaci- dez).</li>
+            <li>Consigue la retracción de la piel (evita la flacidez).</li>
             <li>
               Promueve la generación de nuevas fibras de colágeno por lo que
               mejora la firmeza de la piel.
@@ -150,8 +221,8 @@ export const LipolaserService = () => {
         <h3 className="text-center text-2xl font-bold text-[#024873]">
           Zonas corporales que pueden ser tratadas
         </h3>
-        <section className="flex items-center justify-center gap-4">
-          <div className="flex flex-col gap-20 [&>ul]:space-y-2 [&>ul]:text-xl [&>ul]:font-bold [&>ul]:text-[#024873] ">
+        <section className="flex flex-col items-center justify-center gap-4 md:flex-row">
+          <div className="order-2 flex flex-col gap-4 md:order-none md:gap-20 [&>ul]:text-xl [&>ul]:font-bold [&>ul]:text-[#024873] md:[&>ul]:space-y-2 ">
             <ul>
               <li>Abdomen.</li>
               <li>Marcación.</li>
@@ -164,9 +235,13 @@ export const LipolaserService = () => {
             </ul>
           </div>
           <div>
-            <img className="w-[500px] " src={firstImageBotox} alt="IMG" />
+            <img
+              className="order-1 w-[500px] md:order-none "
+              src={firstImageBotox}
+              alt="IMG"
+            />
           </div>
-          <div className="flex flex-col gap-20 [&>ul]:space-y-2 [&>ul]:text-xl [&>ul]:font-bold [&>ul]:text-[#024873] ">
+          <div className="order-3 flex flex-col gap-4 md:order-none md:gap-20 [&>ul]:text-xl [&>ul]:font-bold [&>ul]:text-[#024873] md:[&>ul]:space-y-2 ">
             <ul>
               <li>Polo superior del glúteo.</li>
               <li>Papada.</li>
@@ -179,13 +254,13 @@ export const LipolaserService = () => {
             </ul>
           </div>
         </section>
-        <p className="mt-10 text-center text-xl font-bold text-[#024873] ">
+        <p className="mt-16 text-justify text-xl font-bold text-[#024873] md:mt-10 md:text-center ">
           No es una cirugía para bajar de peso, es un recurso para moldear la
           figura corporal, mejorar la silueta y lograr las proporciones ideales
           de cada persona.
         </p>
       </main>
-      <hr className="relative left-[650px] top-[25px] w-16 rotate-90 rounded-full border-2 border-[#bfd6d9] " />
+      <hr className="relative left-[650px] top-[25px] hidden w-16 rotate-90 rounded-full border-2 border-[#bfd6d9] md:block " />
     </div>
   );
 };

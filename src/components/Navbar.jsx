@@ -42,7 +42,7 @@ export const Navbar = () => {
   const dropdown = locationHash === `#/servicios/${serviceTitle}`;
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-11 pt-4 shadow-lg lg:h-28">
+    <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
         <a href="/Gpl-Fasting/">LOGO</a>
 
@@ -85,11 +85,11 @@ export const Navbar = () => {
         {/* ==== */}
         <div
           className={`w-full gap-10 space-y-8 transition-all duration-500 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
-            isOpen ? "max-h-[500px]" : "max-h-0 lg:h-auto"
+            isOpen ? "h-[100vh] max-h-[100vh]" : "max-h-0 lg:h-auto"
           }`}
         >
           <ul
-            className={`w-full space-y-8 text-center text-[#191f40] lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
+            className={`mt-10 w-full space-y-20 text-center text-[#191f40] lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
               isOpen ? "block" : "hidden lg:block"
             }`}
           >

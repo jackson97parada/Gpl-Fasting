@@ -1,10 +1,98 @@
+import Slider from "react-slick";
+import "../../slick.css";
+import "../../slick-theme.css";
 import { firstImageBotox } from "../../../assets/imagesServices";
+
+const settingsOff = {
+  dots: true,
+  customPaging: () => (
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        background: "#024873",
+        margin: "0 5px",
+      }}
+    ></div>
+  ),
+  arrows: false,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  centerMode: true,
+  centerPadding: "10px",
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerPadding: "-80px",
+        autoplay: true,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerPadding: "-0px",
+      },
+    },
+  ],
+};
 
 export const BotoxService = () => {
   return (
-    <div className="mx-32 mb-28 mt-14">
-      <header className=" [&>div>p]:section-service">
-        <div className="flex items-center">
+    <div className="mx-6 mb-28 mt-14 md:mx-32">
+      {/* SLIDER MOBILE */}
+      <header className="md:hidden">
+        <Slider {...settingsOff}>
+          <div className="[&>p]:section-service">
+            <img className="w-72" src={firstImageBotox} alt="" />
+            <p className="bg-[#e6f9fb]">
+              Está aprobada su utilización en medicina estética por la Agencia
+              Española del Medicamento a partir de los 18 años porque lo que se
+              pretende es prevenir las arrugas de expresión.
+            </p>
+          </div>
+          <div className="[&>p]:section-service">
+            <img className="w-72" src={firstImageBotox} alt="" />
+            <p>
+              Se recomienda iniciar con el bótox a partir de los 30-35 años
+              porque es cuando comenzamos a notarnos esas arrugas de
+              gesticulación que van quedando marcadas.
+            </p>
+          </div>
+          <div className="[&>p]:section-service">
+            <img className="w-72" src={firstImageBotox} alt="" />
+            <p className="bg-[#e6f9fb]">
+              Los resultados se empiezan a ver a partir de 48-72h una vez
+              realizado el tratamiento, pero el efecto máximo tarda hasta 15
+              días en instaurarse.
+            </p>
+          </div>
+          <div className="[&>p]:section-service">
+            <img className="w-72" src={firstImageBotox} alt="" />
+            <p>Se recomienda una cada seis meses, dos veces al año.</p>
+          </div>
+        </Slider>
+      </header>
+
+      <header className="[&>div>p]:section-service hidden">
+        <div className="items-center">
           <img className="w-72" src={firstImageBotox} alt="" />
           <p className="bg-[#e6f9fb]">
             Está aprobada su utilización en medicina estética por la Agencia
@@ -12,7 +100,7 @@ export const BotoxService = () => {
             pretende es prevenir las arrugas de expresión.
           </p>
         </div>
-        <div className="flex items-center">
+        <div className="items-center">
           <p>
             Se recomienda iniciar con el bótox a partir de los 30-35 años porque
             es cuando comenzamos a notarnos esas arrugas de gesticulación que
@@ -20,7 +108,7 @@ export const BotoxService = () => {
           </p>
           <img className="w-72" src={firstImageBotox} alt="" />
         </div>
-        <div className="flex items-center">
+        <div className="items-center">
           <img className="w-72" src={firstImageBotox} alt="" />
           <p className="bg-[#e6f9fb]">
             Los resultados se empiezan a ver a partir de 48-72h una vez
@@ -28,14 +116,18 @@ export const BotoxService = () => {
             en instaurarse.
           </p>
         </div>
-        <div className="flex items-center justify-end gap-32">
+        <div className="items-center justify-end gap-32">
           <p>Se recomienda una cada seis meses, dos veces al año.</p>
           <img className="w-72" src={firstImageBotox} alt="" />
         </div>
       </header>
-      <hr className="mx-auto my-14 w-40 border border-[#d8e6e8] " />
-      <main className="space-y-12">
-        <h1 className="text-2xl font-bold text-[#024873] ">BOTOX</h1>
+
+      <hr className="mx-auto my-14 hidden w-40 border border-[#d8e6e8] md:block " />
+
+      <main className=" space-y-12 pt-32 md:pt-0">
+        <h1 className="text-center text-2xl font-bold text-[#024873] md:text-start ">
+          BOTOX
+        </h1>
         <p className="text-justify text-lg font-light ">
           El tratamiento de Botox o toxina botulínica consiste en pequeñas
           inyecciones en las áreas a tratar, que consiguen bloquear de forma
@@ -49,10 +141,14 @@ export const BotoxService = () => {
         <h2 className="text-center text-2xl font-bold text-[#024873]">
           BENEFICIOS
         </h2>
-        <img className="mx-auto h-[600px]" src={firstImageBotox} alt="" />
+        <img
+          className="mx-auto h-[400px] md:h-[600px]"
+          src={firstImageBotox}
+          alt=""
+        />
       </main>
-      <footer className="flex gap-24">
-        <ul className="list-disc space-y-6 text-[17px] font-medium text-[#024873] ">
+      <footer className="mx-6 md:mx-0 md:flex md:gap-24">
+        <ul className="list-disc space-y-2 pb-2 text-[17px] font-medium text-[#024873] md:space-y-6 md:pb-0 ">
           <li>No requiere anestesia.</li>
           <li>No requiere hospitalización posterior.</li>
           <li>
@@ -65,7 +161,7 @@ export const BotoxService = () => {
           </li>
           <li>Se adapta a cada rostro y forma de gesticular.</li>
         </ul>
-        <ul className="list-disc space-y-6 text-[17px] font-medium text-[#024873]">
+        <ul className="list-disc space-y-2 text-[17px] font-medium text-[#024873] md:space-y-6">
           <li>
             El tratamiento es reversible. Por si los efectos no han sido los
             esperados.
@@ -82,7 +178,7 @@ export const BotoxService = () => {
           </li>
         </ul>
       </footer>
-      <hr className="relative left-[530px] top-[112px] w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] " />
+      <hr className="relative left-[530px] top-[112px] hidden w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] md:block " />
     </div>
   );
 };
