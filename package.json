@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "10.15.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "prettier-plugin-tailwindcss": "^0.4.1",

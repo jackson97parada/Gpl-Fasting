@@ -1,15 +1,16 @@
+import { firstProfile } from "../../assets/imagesAboutUs";
+
 import {
-  firstProfile,
-  firstAbout,
-  twoAbout,
-  thirdAbout,
-} from "../../assets/imagesAboutUs";
+  ilustracion5,
+  ilustracion6,
+  ilustracion7,
+} from "../../assets/ilustraciones";
 
 export const AboutUsDetails = [
   {
     id: 1,
     data: {
-      imgAbout: firstAbout,
+      imgAbout: ilustracion5,
       title: "¿QUIÉNES SOMOS?",
       description:
         "Somos un equipo multidisciplinario dedicado a desarrollar técnicas y tratamientos para el control de la obesidad, ansiedad y ralentizando el envejecimiento basándonos en conocimientos y tecnología de van- guardia.",
@@ -20,7 +21,7 @@ export const AboutUsDetails = [
   {
     id: 2,
     data: {
-      imgAbout: twoAbout,
+      imgAbout: ilustracion6,
       title: "NUESTRA FILOSOFIA",
       description:
         "La filosofía que implementamos está en contra de promover imáge- nes corporales pobres y estereotipadas o dietas inalcanzables, bajas en calorías y de sacrificio extremo, precisamente porque nuestra larga experiencia nos ha demostrado que las restricciones extremas no son sostenibles en el tiempo y finalmente los pacientes vuelven a recaer en antiguos hábitos. Proponemos y defendemos fielmente el logar un cambio permanente donde se tenga un estilo de vida salu- dable, flexible, equilibrado y lenteciendo el envejecimiento celular, basado en teorías y conocimientos científicos probados, la imple- mentación de tecnología farmacéutica de punta y/o procedimientos estéticos mínimamente invasivos de detalle usando equipos de última generación.",
@@ -31,7 +32,7 @@ export const AboutUsDetails = [
   {
     id: 3,
     data: {
-      imgAbout: thirdAbout,
+      imgAbout: ilustracion7,
       title: "¿CÓMO TRABAJAMOS?",
       description:
         "A lo largo de nuestra experiencia, hemos venido reconociendo que prima el individuo sobre la sociedad, por lo que trazamos objetivos personalizados y alcanzables con cada uno de los pacientes. Así mismo, hemos venido trabajando en la construcción, desarrollo, diseño y actualización constante del programa GPL1, mezclando tecnología farmacéutica junto a un estilo de vida saludable, ayuno intermitente, actividad física con alternativa de Láser mínimamente invasivo de detalle.",

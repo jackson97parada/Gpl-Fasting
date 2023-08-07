@@ -13,7 +13,7 @@ export const Graph = ({ percentaje, description }) => {
       setShowDiv(true);
       setShowText(true);
       setShowDescription(true);
-    }, 1990);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,7 +27,7 @@ export const Graph = ({ percentaje, description }) => {
           </div>
         )}
       </div>
-      <div className="absolute z-20 h-[220px] w-[230px] ">
+      <div className="absolute z-20 h-[220px] w-[230px]">
         {showText && (
           <span className="relative left-[170px] top-24 text-[23px] font-bold text-[#024873] md:left-[89px]">
             {percentaje}

@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "../../slick.css";
 import "../../slick-theme.css";
-import { settings } from "../../";
+import { settings } from "../..";
 
 import { useState } from "react";
 
@@ -11,7 +11,14 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 
 import { secondCard } from "../../../assets/cardsHeader";
-import { firstImageBotox } from "../../../assets/imagesServices";
+import {
+  ilustracion8,
+  ilustracion9,
+  ilustracion10,
+  ilustracion11,
+} from "../../../assets/ilustraciones";
+
+import { motion } from "framer-motion";
 
 const GplDetails = [
   {
@@ -170,6 +177,11 @@ const settingsOff = {
   ],
 };
 
+const variants = {
+  hidden: { opacity: 0, y: "-100%", transition: { duration: 2 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export const GplService = () => {
   const [btnModal, setBtnModal] = useState(true);
   const [btnModalTwo, setBtnModalTwo] = useState(true);
@@ -189,16 +201,6 @@ export const GplService = () => {
 
   return (
     <div className="md:mb-6 md:mt-14">
-      <header className="hidden gap-y-40 pb-52 md:mx-32 md:grid md:grid-cols-2 md:gap-y-28">
-        {GplDetails.map(({ id, data }) => (
-          <Graph
-            key={id}
-            percentaje={data.percentaje}
-            description={data.description}
-          />
-        ))}
-      </header>
-
       {/* SLIDER MOBILE */}
       <header className="md:hidden">
         <Slider {...settingsOff}>
@@ -210,6 +212,16 @@ export const GplService = () => {
             />
           ))}
         </Slider>
+      </header>
+
+      <header className="hidden gap-y-40 pb-52 md:mx-32 md:grid md:grid-cols-2 md:gap-y-28">
+        {GplDetails.map(({ id, data }) => (
+          <Graph
+            key={id}
+            percentaje={data.percentaje}
+            description={data.description}
+          />
+        ))}
       </header>
 
       <section className="mt-20 bg-[#024873] pb-20 md:mt-0 md:pb-20">
@@ -258,7 +270,12 @@ export const GplService = () => {
             </p>
           </div>
           {/* MODAL */}
-          <div className="relative md:absolute">
+          <motion.div
+            initial="hidden"
+            animate={btnModal ? "hidden" : "visible"}
+            variants={variants}
+            className="relative md:absolute"
+          >
             <div
               className={`relative right-[7px] z-30 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:-right-[7px] md:bottom-64 md:w-[1100px] ${
                 btnModal ? "hidden" : "block"
@@ -305,7 +322,7 @@ export const GplService = () => {
               </p>
               <footer className="border-t-2 border-[#024873] pb-10 "></footer>
             </div>
-          </div>
+          </motion.div>
 
           <button
             onClick={handleBtnModal}
@@ -320,9 +337,14 @@ export const GplService = () => {
           <h1 className="text-center text-[26px] font-bold text-[#024873]">
             PILARES
           </h1>
-          <img className="my-10 md:hidden" src={firstImageBotox} alt="" />
+          <img className="my-10 md:hidden" src={ilustracion8} alt="" />
 
-          <div className="relative md:absolute md:hidden">
+          <motion.div
+            initial="hidden"
+            animate={btnModalMobile ? "hidden" : "visible"}
+            variants={variants}
+            className="relative md:absolute md:hidden"
+          >
             <div
               className={`relative right-11 z-30 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:bottom-64 md:right-[52px] md:w-[1100px] ${
                 btnModalMobile ? "hidden" : "block"
@@ -341,7 +363,7 @@ export const GplService = () => {
               </header>
               <div className="mx-6 mt-6">
                 <div className="text-center">
-                  <img className="w-[300px]" src={firstImageBotox} alt="" />
+                  <img className="w-[300px]" src={ilustracion8} alt="" />
                   <h1 className=" text-center font-bold text-[#04c4d9] ">
                     “La mejor dieta del mundo es la que puedes hacer“
                   </h1>
@@ -377,7 +399,7 @@ export const GplService = () => {
                   </p>
                 </div>
                 <div>
-                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <img className="w-[300px] " src={ilustracion8} alt="" />
                   <h1 className="text-center font-bold text-[#04c4d9] ">
                     “No usar la tecnología es una estupidez”
                   </h1>
@@ -385,7 +407,7 @@ export const GplService = () => {
               </div>
               <div className="mx-6 mt-6">
                 <div>
-                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <img className="w-[300px] " src={ilustracion8} alt="" />
                   <h1 className="text-center font-bold text-[#04c4d9] ">
                     “Estamos programados genéticamente para comer 8 horas al día
                     y movilizarnos 10 km diarios “
@@ -424,7 +446,7 @@ export const GplService = () => {
                   </p>
                 </div>
                 <div>
-                  <img className="w-[300px] " src={firstImageBotox} alt="" />
+                  <img className="w-[300px] " src={ilustracion8} alt="" />
                   <h1 className=" text-center font-bold text-[#04c4d9] ">
                     “El yoga no son poses, es una filosofía de vida “
                   </h1>
@@ -432,28 +454,27 @@ export const GplService = () => {
               </div>
               <footer className="border-t-2 border-[#024873] pb-10 "></footer>
             </div>
+          </motion.div>
+          <button
+            onClick={handleBtnModalMobile}
+            className="mx-auto mt-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white md:hidden"
+          >
+            <FaAngleDoubleDown /> Conocelos
+          </button>
 
-            <button
-              onClick={handleBtnModalMobile}
-              className="mx-auto mt-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"
-            >
-              <FaAngleDoubleDown /> Conocelos
-            </button>
-          </div>
-
-          <div className="hidden md:block">
-            <div className="mt-6 flex justify-between">
-              <div>
-                <img className="w-[300px] " src={firstImageBotox} alt="" />
-                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+          <div className="hidden space-y-16 md:block">
+            <div className="mt-6 flex items-center justify-between">
+              <div className="text-center lg:pl-20">
+                <img className="w-[300px]" src={ilustracion8} alt="" />
+                <h1 className="w-[300px] text-center font-bold text-[#04c4d9] lg:pt-6 ">
                   “La mejor dieta del mundo es la que puedes hacer“
                 </h1>
               </div>
               <div className="w-[50%] text-center ">
-                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                <h1 className="pb-10 text-xl font-bold text-[#024873] ">
                   AYUNO INTERMITENTE
                 </h1>
-                <p className=" text-justify font-light">
+                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Tras años de análisis y estudios en humanos y animales, grupos
                   multidisciplinarios en salud llegan a una conclu- sión clave
                   en nutrición, obesidad, antienvejecimiento, longevidad y
@@ -464,12 +485,12 @@ export const GplService = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-6 flex justify-between">
+            <div className="mt-6 flex items-center justify-between">
               <div className="w-[50%] text-center ">
                 <h1 className="py-10 text-xl font-bold text-[#024873] ">
                   TECNOLOGÍA FARMACÉUTICA
                 </h1>
-                <p className=" text-justify font-light">
+                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Apoyados en los avances tecnológicos de la ciencia far-
                   macológica estamos a la vanguardia de tratamientos médicos
                   para pérdida de peso, control de la resistencia a la insulina,
@@ -478,17 +499,21 @@ export const GplService = () => {
                   incentiva a continuar una sana vida a nues- tros pacientes.
                 </p>
               </div>
-              <div>
-                <img className="w-[300px] " src={firstImageBotox} alt="" />
-                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+              <div className="text-center lg:pr-20">
+                <img className="w-[220px] " src={ilustracion9} alt="" />
+                <h1 className="w-56 text-center font-bold text-[#04c4d9] lg:pt-6 ">
                   “No usar la tecnología es una estupidez”
                 </h1>
               </div>
             </div>
-            <div className="mt-6 flex justify-between">
-              <div>
-                <img className="w-[300px] " src={firstImageBotox} alt="" />
-                <h1 className="w-[323px] text-center font-bold text-[#04c4d9] ">
+            <div className="mt-6 flex items-center justify-between">
+              <div className="text-center lg:pl-20">
+                <img
+                  className="w-[220px] lg:ml-11"
+                  src={ilustracion10}
+                  alt=""
+                />
+                <h1 className="w-[320px] text-center font-bold text-[#04c4d9] lg:pt-6 ">
                   “Estamos programados genéticamente para comer 8 horas al día y
                   movilizarnos 10 km diarios “
                 </h1>
@@ -497,7 +522,7 @@ export const GplService = () => {
                 <h1 className="py-10 text-xl font-bold text-[#024873] ">
                   ACTIVIDAD FÍSICA
                 </h1>
-                <p className=" text-justify font-light">
+                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Durante muchos años, los humanos se desplazaban largas
                   distancias para obtener su alimento diario, lo que equilibraba
                   los gastos energéticos con los consumidos. Sin embargo, con la
@@ -509,12 +534,12 @@ export const GplService = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-6 flex justify-between">
+            <div className="mt-6 flex items-center justify-between">
               <div className="w-[50%] text-center ">
                 <h1 className="py-10 text-xl font-bold text-[#024873] ">
                   RESPIRAR Y BALANCE INTERIOR YOGA
                 </h1>
-                <p className=" text-justify font-light">
+                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Regulación, disciplina, estabilidad, regulación de la energía
                   vital, interiorización, concentración, meditación,
                   iluminación. Encaminados en las prácticas ancestrales del yoga
@@ -524,9 +549,9 @@ export const GplService = () => {
                   tener una vida más amable.
                 </p>
               </div>
-              <div>
-                <img className="w-[300px] " src={firstImageBotox} alt="" />
-                <h1 className="w-56 text-center font-bold text-[#04c4d9] ">
+              <div className="text-center lg:pr-20">
+                <img className="w-[250px] " src={ilustracion11} alt="" />
+                <h1 className="w-56 text-center font-bold text-[#04c4d9] lg:pt-6 ">
                   “El yoga no son poses, es una filosofía de vida “
                 </h1>
               </div>
@@ -563,7 +588,12 @@ export const GplService = () => {
             </span>
           </p>
           {/* MODAL */}
-          <div className="relative md:absolute">
+          <motion.div
+            initial="hidden"
+            animate={btnModalTwo ? "hidden" : "visible"}
+            variants={variants}
+            className="relative md:absolute"
+          >
             <div
               className={`relative right-[60px] z-30 mx-14 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:bottom-64 md:right-[52px] md:w-[1100px] ${
                 btnModalTwo ? "hidden" : "block"
@@ -712,7 +742,7 @@ export const GplService = () => {
               </main>
               <footer className="border-t-2 border-[#024873] pb-10 "></footer>
             </div>
-          </div>
+          </motion.div>
           <button
             onClick={handleBtnModalTwo}
             className="mx-auto mt-6 flex items-center gap-2 rounded-full bg-[#024873] px-7 py-1.5 font-bold text-white"

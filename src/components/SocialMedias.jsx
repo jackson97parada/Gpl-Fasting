@@ -37,7 +37,7 @@ export const SocialMedias = () => {
               />
             </svg>
           ) : (
-            <BsWhatsapp className="h-8 w-8 text-[#024873]" />
+            <BsWhatsapp className="h-8 w-8 text-[#04c4d9]" />
           )}
         </button>
         <div
@@ -49,7 +49,7 @@ export const SocialMedias = () => {
             href="tel:+30012213432"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#024873]"
+            className="bg-[#04c4d9]"
           >
             <IoCall />
           </a>
@@ -57,12 +57,12 @@ export const SocialMedias = () => {
             href="https://www.instagram.com/gpl1fasting/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#024873]"
+            className="bg-[#04c4d9]"
           >
             <BsInstagram />
           </a>
           <a
-            className="cursor-pointer bg-[#024873]"
+            className="cursor-pointer bg-[#04c4d9]"
             onClick={() => setIsWOpen(!isWOpen)}
           >
             <BsWhatsapp />

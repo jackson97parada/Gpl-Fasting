@@ -1,10 +1,10 @@
 import Slider from "react-slick";
 import "../../slick.css";
 import "../../slick-theme.css";
-import { settings } from "../../";
+import { settings } from "../..";
 
 import { Graph } from "./Graph";
-import { firstImageBotox } from "../../../assets/imagesServices";
+import { ilustracion12, ilustracion13 } from "../../../assets/ilustraciones";
 import { secondCard } from "../../../assets/cardsHeader";
 
 const LipolaserDetails = [
@@ -179,12 +179,12 @@ export const LipolaserService = () => {
           un breve periodo de observación, además no necesita de post
           operatorios.
         </p>
-        <h2 className="text-center text-xl font-bold text-[#024873] ">
+        <h2 className="text-center text-xl font-bold text-[#024873] lg:pb-8 ">
           Algunas ventajas de este procedimiento son:
         </h2>
         <img
-          className="mx-auto h-[400px] md:h-[550px]"
-          src={firstImageBotox}
+          className="mx-auto h-[400px] md:h-[550px] lg:mb-8"
+          src={ilustracion12}
           alt="IMG"
         />
         <div className="md:flex [&>ul]:mx-auto [&>ul]:space-y-5 [&>ul]:text-justify [&>ul]:text-lg [&>ul]:font-light md:[&>ul]:w-[380px] md:[&>ul]:list-disc ">
@@ -236,8 +236,8 @@ export const LipolaserService = () => {
           </div>
           <div>
             <img
-              className="order-1 w-[500px] md:order-none "
-              src={firstImageBotox}
+              className="order-1 w-[500px]  md:order-none lg:m-14"
+              src={ilustracion13}
               alt="IMG"
             />
           </div>
@@ -260,6 +260,7 @@ export const LipolaserService = () => {
           de cada persona.
         </p>
       </main>
+
       <hr className="relative left-[650px] top-[25px] hidden w-16 rotate-90 rounded-full border-2 border-[#bfd6d9] md:block " />
     </div>
   );

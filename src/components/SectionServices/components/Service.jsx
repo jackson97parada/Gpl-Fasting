@@ -21,7 +21,7 @@ export const Service = () => {
       <main>
         <header className="box-content h-[91vh] w-auto bg-black/20 bg-heroService bg-cover lg:h-[580px]">
           <div className="flex flex-col space-y-20 px-10 pt-52 lg:px-20">
-            <h1 className="text-5xl font-bold text-white lg:text-[51px] lg:leading-tight">
+            <h1 className="text-4xl font-bold text-white lg:text-[51px] lg:leading-tight">
               {thisService.data.subTitle}
             </h1>
             <div className="flex" aria-label="Breadcrumb">

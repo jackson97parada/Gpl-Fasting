@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { createServiceRoute } from "../constants/routes";
 import { ServiceDetail } from "./SectionServices/components/ServiceDetail";
+import { logo } from "./../assets";
+
+import { AnimatePresence, motion } from "framer-motion";
 
 const links = [
   { name: "INICIO" },
@@ -17,6 +20,12 @@ const links = [
 const Service = ServiceDetail.map((service) => {
   service.data.subTitle;
 });
+
+const variants = {
+  hidden: { opacity: 0, x: "-100%" },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+  exit: { opacity: 0, x: "100%", transition: { duration: 0.4 } },
+};
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +43,10 @@ export const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
+  const handleToggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   const locationHash = window.location.hash;
   const serviceTitle = ServiceDetail.find(
     ({ data }) => `#/servicios/${data.title}` === locationHash
@@ -44,10 +57,12 @@ export const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
-        <a href="/Gpl-Fasting/">LOGO</a>
+        <Link to="/">
+          <img className="relative w-28 lg:top-1 lg:w-40" src={logo} alt="" />
+        </Link>
 
         {/* MENU */}
-        <button className="h-full lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+        <button className="h-full  lg:hidden" onClick={handleToggleOpen}>
           {isOpen ? (
             <svg
               className="h-10 w-10 text-black"
@@ -83,15 +98,101 @@ export const Navbar = () => {
           )}
         </button>
         {/* ==== */}
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={variants}
+              className={`w-full gap-10 space-y-8 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
+                isOpen ? "h-[100vh] max-h-[100vh]" : "max-h-0 lg:h-auto"
+              }`}
+              onExitComplete={() => setIsOpen(false)} // Actualiza el estado isOpen a false antes de realizar la transición de salida
+            >
+              <ul
+                className={`mt-10 w-full space-y-20 text-center text-[#191f40] md:mt-0 lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
+                  isOpen ? "block" : "hidden lg:block"
+                }
+            `}
+              >
+                {links.map(({ name }) => (
+                  <li
+                    key={name}
+                    onMouseEnter={
+                      name === "SERVICIOS" && dropdown ? handleHover : undefined
+                    }
+                    onMouseLeave={
+                      name === "SERVICIOS" && dropdown ? handleLeave : undefined
+                    }
+                  >
+                    <HashLink
+                      className="border-[#04c4d9] pb-1 font-bold duration-75 hover:border-b-2"
+                      to={`/#${name.toLowerCase()}`}
+                      smooth
+                      scroll={(el) =>
+                        el.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        })
+                      }
+                    >
+                      {name}
+                    </HashLink>
+                    {Service && Service.length > 0 && (
+                      // DROPDOWN
+                      <div className="absolute">
+                        <ul
+                          className={`dropdown w-[200px] lg:relative lg:-top-1 lg:right-16 lg:space-y-4 lg:rounded-3xl lg:bg-white lg:px-4 lg:py-5 lg:shadow-xl ${
+                            showDropdown && name === "SERVICIOS"
+                              ? "block"
+                              : "hidden"
+                          }`}
+                        >
+                          {ServiceDetail.map(({ id, data }) => (
+                            <li
+                              className="border-[#04c4d9] font-bold duration-75 hover:border-b-2"
+                              key={id}
+                            >
+                              <Link
+                                to={createServiceRoute(data.title)}
+                                onClick={handleLinkClick}
+                              >
+                                {data.subTitle}
+                              </Link>
+                            </li>
+                          ))}
+                          <li className="border-[#04c4d9] hover:border-b-2">
+                            <a
+                              href="https://www.instagram.com/gpl1fasting/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className=" font-bold duration-75 "
+                            >
+                              POST OP
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <div
-          className={`w-full gap-10 space-y-8 transition-all duration-500 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
+          className={`hidden w-full gap-10 space-y-8 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
             isOpen ? "h-[100vh] max-h-[100vh]" : "max-h-0 lg:h-auto"
           }`}
         >
           <ul
             className={`mt-10 w-full space-y-20 text-center text-[#191f40] md:mt-0 lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${
               isOpen ? "block" : "hidden lg:block"
-            }`}
+            }
+            `}
           >
             {links.map(({ name }) => (
               <li

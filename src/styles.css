@@ -4,12 +4,8 @@
 
 @layer components {
 .div-card {
-   @apply mx-auto w-auto lg:w-[386px] max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl p-10 pt-12;
+   @apply mx-auto w-auto lg:w-[386px] max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl px-7 pt-10 lg:p-10 lg:pt-12;
  }
-
-.div-card-img {
-  @apply mt-16 -ml-3;
-}
 
 /* Iconos fb, ig, wp */
 .icons {
@@ -30,11 +26,11 @@
 
 /* Seccion de About Us */
 .section-about-div {
-  @apply flex items-center justify-center gap-10
+  @apply flex items-center justify-between lg:mx-10
 }
 
 .section-about-div-div {
-  @apply w-[40%] space-y-10 text-center
+  @apply w-[45%] space-y-10 text-center
 }
 
 .section-about-div-h1 {

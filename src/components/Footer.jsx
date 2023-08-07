@@ -52,7 +52,7 @@ export const Footer = () => {
           href="https://wa.me/+3001221432"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-lg border-2 border-[#0378a6] px-6 py-3 text-2xl font-bold text-white transition duration-300 hover:bg-[#0378a6] hover:shadow-lg hover:shadow-gray-600"
+          className="rounded-lg border-2 border-[#0378a6] px-6 py-3 text-2xl font-bold text-white transition duration-300 hover:bg-[#0378a6]"
         >
           AGENDA TU CITA !
         </a>

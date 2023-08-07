@@ -1,4 +1,4 @@
-import { BotoxService, GplService, LipolaserService } from "./";
+import { BotoxService, GplService, LipolaserService, SueroService } from ".";
 
 import { secondCard } from "../../../assets/cardsHeader";
 import { firstService } from "../../../assets/imagesServices";
@@ -13,7 +13,7 @@ export const ServiceDetail = [
   {
     id: 1,
     data: {
-      title: "gpl-fasting",
+      title: "gpl1",
       subTitle: "GPL1",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputa- te velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
@@ -28,7 +28,7 @@ export const ServiceDetail = [
   {
     id: 2,
     data: {
-      title: "belleza-estetica",
+      title: "lipo-laser",
       subTitle: "LIPO LASER",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputa- te velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
@@ -43,7 +43,7 @@ export const ServiceDetail = [
   {
     id: 3,
     data: {
-      title: "cuidado-post",
+      title: "botox",
       subTitle: "BOTOX",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputa- te velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
@@ -58,8 +58,8 @@ export const ServiceDetail = [
   {
     id: 4,
     data: {
-      title: "sueros-heel",
-      subTitle: "SUEROS HEEL",
+      title: "sueroterapia",
+      subTitle: "SUEROTERAPIA",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputa- te velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi",
       imageStatus: secondCard,
@@ -67,6 +67,7 @@ export const ServiceDetail = [
       imgService: firstService,
       descriptionStatus:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo con- sequat",
+      body: <SueroService />,
     },
   },
 ];

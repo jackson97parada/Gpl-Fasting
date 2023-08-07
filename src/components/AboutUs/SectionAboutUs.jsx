@@ -7,6 +7,8 @@ import "../slick-theme.css";
 import { AboutUsDetails, ImagesAboutUs } from "./AboutUsDetails";
 import { settings } from "../";
 
+import { motion } from "framer-motion";
+
 const images = ImagesAboutUs.map((image) => image.data.imgProfile);
 
 const dataTitle = AboutUsDetails.map((aboutUs) => aboutUs.data.title);
@@ -14,6 +16,11 @@ const dataDescription = AboutUsDetails.map(
   (aboutUs) => aboutUs.data.description
 );
 const dataImage = AboutUsDetails.map((aboutUs) => aboutUs.data.imgAbout);
+
+const modalAnimation = {
+  hidden: { opacity: 0, y: "-100%", transition: { duration: 2 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export const SectionAboutUs = () => {
   const [btnModal, setBtnModal] = useState(true);
@@ -23,10 +30,7 @@ export const SectionAboutUs = () => {
   };
 
   return (
-    <section
-      id="nosotros"
-      className="px-6 py-20 lg:mx-32 lg:px-10 lg:py-20 lg:pt-28"
-    >
+    <section id="nosotros" className="px-6 py-20 lg:mx-32 lg:px-10 lg:py-28">
       <div className="justify-between pb-20 lg:flex lg:pb-0">
         <div className="space-y-5 text-center lg:text-start">
           <h1 className="pt-3 text-4xl font-extrabold text-[#024873] lg:text-6xl">
@@ -43,12 +47,16 @@ export const SectionAboutUs = () => {
             <FaAngleDoubleDown /> Ver más
           </button>
 
-          <div
-            className={`z-20 max-w-[386px] rounded-[2.5rem] pt-5 shadow-2xl ${
-              btnModal ? "hidden" : "block"
-            }`}
+          <motion.div
+            initial="hidden"
+            animate={btnModal ? "hidden" : "visible"}
+            variants={modalAnimation}
           >
-            <div>
+            <div
+              className={`z-20 max-w-[386px] rounded-[2.5rem] pt-5 shadow-2xl ${
+                btnModal ? "hidden" : ""
+              }`}
+            >
               <header className="flex items-center justify-between border-b-2 border-[#024873]">
                 <h1 className=" pb-4 pl-8 text-2xl font-bold text-[#024873]">
                   Nosotros
@@ -70,7 +78,7 @@ export const SectionAboutUs = () => {
                 ))}
               </main>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -95,12 +103,12 @@ export const SectionAboutUs = () => {
         ))}
       </Slider>
 
-      <hr className="relative -left-24 top-10 z-10 hidden w-14 border-2 border-[#024873] lg:block" />
+      <hr className="relative -left-24 top-10 z-10 hidden w-16 rounded-full border-2 border-[#024873] lg:block" />
 
       <div className="mt-20 hidden lg:block">
-        <section className="[&>div]:section-about-div [&>div>div]:section-about-div-div [&>div>div>h1]:section-about-div-h1 space-y-10 [&>div>div>p]:text-justify [&>div>div>p]:font-light [&>div>img]:w-[529px]">
+        <section className="[&>div]:section-about-div [&>div>div]:section-about-div-div [&>div>div>h1]:section-about-div-h1 space-y-20 [&>div>div>p]:text-justify [&>div>div>p]:font-light">
           <div>
-            <img src={dataImage[0]} alt="" />
+            <img className="w-[350px]" src={dataImage[0]} alt="" />
             <div>
               <h1>{dataTitle[0]}</h1>
               <p>{dataDescription[0]}</p>
@@ -111,17 +119,17 @@ export const SectionAboutUs = () => {
               <h1>{dataTitle[1]}</h1>
               <p>{dataDescription[1]}</p>
             </div>
-            <img src={dataImage[1]} alt="" />
+            <img className="w-[230px]" src={dataImage[1]} alt="" />
           </div>
           <div>
-            <img src={dataImage[2]} alt="" />
+            <img className="w-[350px]" src={dataImage[2]} alt="" />
             <div>
               <h1>{dataTitle[2]}</h1>
               <p>{dataDescription[2]}</p>
             </div>
           </div>
         </section>
-        <hr className="relative left-[45%] top-20 w-16 rotate-90 rounded-full border-[2.9px] border-[#0378a6]" />
+        <hr className="relative left-[45%] top-28 w-16 rotate-90 rounded-full border-[2.9px] border-[#0378a6]" />
       </div>
     </section>
   );

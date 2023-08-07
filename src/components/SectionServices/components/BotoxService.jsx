@@ -1,7 +1,13 @@
 import Slider from "react-slick";
 import "../../slick.css";
 import "../../slick-theme.css";
-import { firstImageBotox } from "../../../assets/imagesServices";
+import {
+  ilustracion14,
+  ilustracion15,
+  ilustracion16,
+  ilustracion17,
+  ilustracion18,
+} from "../../../assets/ilustraciones";
 
 const settingsOff = {
   dots: true,
@@ -61,7 +67,7 @@ export const BotoxService = () => {
       <header className="md:hidden">
         <Slider {...settingsOff}>
           <div className="[&>p]:section-service">
-            <img className="w-72" src={firstImageBotox} alt="" />
+            <img className="w-72" src={ilustracion14} alt="" />
             <p className="bg-[#e6f9fb]">
               Está aprobada su utilización en medicina estética por la Agencia
               Española del Medicamento a partir de los 18 años porque lo que se
@@ -69,7 +75,7 @@ export const BotoxService = () => {
             </p>
           </div>
           <div className="[&>p]:section-service">
-            <img className="w-72" src={firstImageBotox} alt="" />
+            <img className="w-72" src={ilustracion15} alt="" />
             <p>
               Se recomienda iniciar con el bótox a partir de los 30-35 años
               porque es cuando comenzamos a notarnos esas arrugas de
@@ -77,7 +83,7 @@ export const BotoxService = () => {
             </p>
           </div>
           <div className="[&>p]:section-service">
-            <img className="w-72" src={firstImageBotox} alt="" />
+            <img className="w-72" src={ilustracion16} alt="" />
             <p className="bg-[#e6f9fb]">
               Los resultados se empiezan a ver a partir de 48-72h una vez
               realizado el tratamiento, pero el efecto máximo tarda hasta 15
@@ -85,15 +91,15 @@ export const BotoxService = () => {
             </p>
           </div>
           <div className="[&>p]:section-service">
-            <img className="w-72" src={firstImageBotox} alt="" />
+            <img className="w-72" src={ilustracion17} alt="" />
             <p>Se recomienda una cada seis meses, dos veces al año.</p>
           </div>
         </Slider>
       </header>
 
-      <header className="[&>div>p]:section-service hidden md:block">
+      <header className="[&>div>p]:section-service hidden md:block lg:space-y-14">
         <div className="flex items-center">
-          <img className="w-72" src={firstImageBotox} alt="" />
+          <img className="w-52 lg:mr-10" src={ilustracion14} alt="" />
           <p className="bg-[#e6f9fb]">
             Está aprobada su utilización en medicina estética por la Agencia
             Española del Medicamento a partir de los 18 años porque lo que se
@@ -106,10 +112,10 @@ export const BotoxService = () => {
             es cuando comenzamos a notarnos esas arrugas de gesticulación que
             van quedando marcadas.
           </p>
-          <img className="w-72" src={firstImageBotox} alt="" />
+          <img className="w-52 lg:ml-20" src={ilustracion15} alt="" />
         </div>
         <div className="flex items-center">
-          <img className="w-72" src={firstImageBotox} alt="" />
+          <img className="lg:mr-10" src={ilustracion16} alt="" />
           <p className="bg-[#e6f9fb]">
             Los resultados se empiezan a ver a partir de 48-72h una vez
             realizado el tratamiento, pero el efecto máximo tarda hasta 15 días
@@ -118,7 +124,7 @@ export const BotoxService = () => {
         </div>
         <div className="flex items-center justify-end gap-32">
           <p>Se recomienda una cada seis meses, dos veces al año.</p>
-          <img className="w-72" src={firstImageBotox} alt="" />
+          <img className="lg:ml-10" src={ilustracion17} alt="" />
         </div>
       </header>
 
@@ -142,12 +148,12 @@ export const BotoxService = () => {
           BENEFICIOS
         </h2>
         <img
-          className="mx-auto h-[400px] md:h-[600px]"
-          src={firstImageBotox}
+          className="mx-auto w-[550px] lg:pb-14"
+          src={ilustracion18}
           alt=""
         />
       </main>
-      <footer className="mx-6 md:mx-0 md:flex md:gap-24">
+      <footer className="mx-6 md:mx-32 md:flex md:gap-24">
         <ul className="list-disc space-y-2 pb-2 text-[17px] font-medium text-[#024873] md:space-y-6 md:pb-0 ">
           <li>No requiere anestesia.</li>
           <li>No requiere hospitalización posterior.</li>
