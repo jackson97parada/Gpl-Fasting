@@ -25,8 +25,8 @@ const GplDetails = [
     id: 1,
     data: {
       percentaje: "85%",
-      description:
-        "De los pacientes al terminar el programa tienen los niveles de azúcar en sangre, colesterol y triglicéridos en los niveles adecuados",
+      description: `De los pacientes al terminar el programa tienen los niveles de azúcar en sangre, colesterol y triglicéridos en los niveles adecuados
+      `,
       title: "GPL 1",
       descriptionProgram: `El programa en el que podrás llegar a bajar hasta el 10% de tu peso, es decir, si pesas 120 kg en 26 días bajarás 12 kilos. Muchos pacientes con sobrepeso se vuelven escépticos frente a las posibles soluciones, mucho más cuando han recibido tratamientos o ayuda. Desconocen que al estar en sobrepeso por largos periodos sus cuerpos entran en un estado de inflamación crónica, sus cerebros perciben esto como un estado de supervivencia y bloquea cualquier cambio, ya que el cerebro considera que se debe gastar poca energía para sobrevivir. El equipo de GPL1 tomó esto como una razón suficiente para aceptar el reto de cambiar realidades y crear un tratamiento efectivo con resultados reales.
       
@@ -58,46 +58,6 @@ const GplDetails = [
     },
   },
 ];
-
-// const GplPilars = [
-//   {
-//     id: 1,
-//     data: {
-//       title: "AYUNO INTERMITENTE",
-//       subtitle: "La mejor dieta del mundo es la que puedes hacer",
-//       description:
-//         "Tras años de análisis y estudios en humanos y animales, grupos multidisciplinarios en salud llegan a una conclu- sión clave en nutrición, obesidad, antienvejecimiento, longevidad y controles contra el cáncer. Conscientes de los desafíos alimentarios de los pacientes, utilizan técni- cas novedosas para garantizar dietas personalizadas y adecuadas para cada individuo.",
-//     },
-//   },
-//   {
-//     id: 2,
-//     data: {
-//       title: "TECNOLOGÍA FARMACÉUTICA",
-//       subtitle: "No usar la tecnología es una estupidez",
-//       description:
-//         "Apoyados en los avances tecnológicos de la ciencia farmacológica estamos a la vanguardia de tratamientos médicos para pérdida de peso, control de la resistencia a la insulina, riesgo cardio vascular, hipertensión arterial y diabetes, logrando así un control metabólico rápido y efectivo que incentiva a continuar una sana vida a nuestros pacientes.",
-//     },
-//   },
-//   {
-//     id: 3,
-//     data: {
-//       title: "ACTIVIDAD FÍSICA",
-//       subtitle:
-//         "Estamos programados genéticamente para comer 8 horas al día y movilizarnos 10 km diarios",
-//       description:
-//         "Durante muchos años, los humanos se desplazaban largas distancias para obtener su alimento diario, lo que equilibraba los gastos energéticos con los consumidos. Sin embargo, con la llegada de la revolución agrícola hace 10.000 años, nuestra vida se volvió sedentaria y aumentó el consumo de alimentos, lo que ha llevado a un progresivo aumento de peso y a problemas de salud como obesidad, diabetes, hipertensión y riesgo cardiovascular, entre otros.",
-//     },
-//   },
-//   {
-//     id: 4,
-//     data: {
-//       title: "RESPIRAR Y BALANCE INTERIOR YOGA",
-//       subtitle: "El yoga no son poses, es una filosofía de vida",
-//       description:
-//         "Regulación, disciplina, estabilidad, regulación de la energía vital, interiorización, concentración, meditación, iluminación. Encaminados en las prácticas ancestrales del yoga como vía segura hacia el autoconocimiento y realización, encontramos importante que conozcas los beneficios de estos 8 lineamientos que complementan nuestro programa y te ayudarán a tener una vida más amable.",
-//     },
-//   },
-// ];
 
 const imagesSlider = [
   {
@@ -178,7 +138,7 @@ const settingsOff = {
 };
 
 const variants = {
-  hidden: { opacity: 0, y: "-100%", transition: { duration: 2 } },
+  hidden: { opacity: 0, y: "-20%", transition: { duration: 2 } },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
@@ -200,7 +160,7 @@ export const GplService = () => {
   };
 
   return (
-    <div className="md:mb-6 md:mt-14">
+    <div className="font-futura md:mb-6 md:mt-14">
       {/* SLIDER MOBILE */}
       <header className="md:hidden">
         <Slider {...settingsOff}>
@@ -241,13 +201,13 @@ export const GplService = () => {
         </Slider>
       </section>
 
-      <main className="mx-6 py-10 md:mx-32 md:py-20">
+      <main className="mx-6 py-10 font-futuraLigth md:mx-32 md:py-20">
         <section>
           <div>
-            <h1 className="pb-8 text-center text-2xl font-bold text-[#024873] md:pb-4 md:text-start">
+            <h1 className="pb-8 text-center font-futura text-2xl font-bold text-[#024873] md:pb-4 md:text-start">
               GPL 1
             </h1>
-            <p className="text-justify text-lg font-light">
+            <p className="text-justify text-xl font-light leading-6">
               El programa en el que podrás llegar a bajar hasta el 10% de tu
               peso, es decir, si pesas 120 kg en 26 días bajarás 12 kilos.
               Muchos pacientes con sobrepeso se vuelven escépticos frente a las
@@ -282,14 +242,14 @@ export const GplService = () => {
               }`}
             >
               <header className="flex items-center justify-between border-b-2 border-[#024873]">
-                <h1 className=" pb-4 pl-6 text-2xl font-bold text-[#024873]">
+                <h1 className=" pb-4 pl-6 font-futura text-2xl font-bold text-[#024873]">
                   GPL 1
                 </h1>
                 <button className="mb-4 mr-6 text-3xl" onClick={handleBtnModal}>
                   <GrClose />
                 </button>
               </header>
-              <p className="p-6 text-justify font-light">
+              <p className="p-6 text-justify text-lg font-light">
                 El programa en el que podrás llegar a bajar hasta el 10% de tu
                 peso, es decir, si pesas 120 kg en 26 días bajarás 12 kilos.
                 Muchos pacientes con sobrepeso se vuelven escépticos frente a
@@ -334,7 +294,7 @@ export const GplService = () => {
         <hr className="mx-auto my-14 w-40 border" />
 
         <section className="mx-10 md:mx-28">
-          <h1 className="text-center text-[26px] font-bold text-[#024873]">
+          <h1 className="text-center font-futura text-[26px] font-bold text-[#024873]">
             PILARES
           </h1>
           <img className="my-10 md:hidden" src={ilustracion8} alt="" />
@@ -369,7 +329,7 @@ export const GplService = () => {
                   </h1>
                 </div>
                 <div className=" text-center">
-                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                     AYUNO INTERMITENTE
                   </h1>
                   <p className=" text-justify font-light">
@@ -466,15 +426,15 @@ export const GplService = () => {
             <div className="mt-6 flex items-center justify-between">
               <div className="text-center lg:pl-20">
                 <img className="w-[300px]" src={ilustracion8} alt="" />
-                <h1 className="w-[300px] text-center font-bold text-[#04c4d9] lg:pt-6 ">
+                <h1 className="w-[300px] text-center font-futura font-bold text-[#04c4d9] lg:pt-6 ">
                   “La mejor dieta del mundo es la que puedes hacer“
                 </h1>
               </div>
-              <div className="w-[50%] text-center ">
-                <h1 className="pb-10 text-xl font-bold text-[#024873] ">
+              <div className="w-[50%] text-center">
+                <h1 className="pb-10 font-futura text-xl font-bold text-[#024873] ">
                   AYUNO INTERMITENTE
                 </h1>
-                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
+                <p className=" text-justify text-lg font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Tras años de análisis y estudios en humanos y animales, grupos
                   multidisciplinarios en salud llegan a una conclu- sión clave
                   en nutrición, obesidad, antienvejecimiento, longevidad y
@@ -487,10 +447,10 @@ export const GplService = () => {
             </div>
             <div className="mt-6 flex items-center justify-between">
               <div className="w-[50%] text-center ">
-                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                   TECNOLOGÍA FARMACÉUTICA
                 </h1>
-                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
+                <p className=" text-justify text-lg font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Apoyados en los avances tecnológicos de la ciencia far-
                   macológica estamos a la vanguardia de tratamientos médicos
                   para pérdida de peso, control de la resistencia a la insulina,
@@ -501,7 +461,7 @@ export const GplService = () => {
               </div>
               <div className="text-center lg:pr-20">
                 <img className="w-[220px] " src={ilustracion9} alt="" />
-                <h1 className="w-56 text-center font-bold text-[#04c4d9] lg:pt-6 ">
+                <h1 className="w-56 text-center font-futura font-bold text-[#04c4d9] lg:pt-6 ">
                   “No usar la tecnología es una estupidez”
                 </h1>
               </div>
@@ -513,16 +473,16 @@ export const GplService = () => {
                   src={ilustracion10}
                   alt=""
                 />
-                <h1 className="w-[320px] text-center font-bold text-[#04c4d9] lg:pt-6 ">
+                <h1 className="w-[320px] text-center font-futura font-bold text-[#04c4d9] lg:pt-6 ">
                   “Estamos programados genéticamente para comer 8 horas al día y
                   movilizarnos 10 km diarios “
                 </h1>
               </div>
               <div className="w-[50%] text-center ">
-                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                   ACTIVIDAD FÍSICA
                 </h1>
-                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
+                <p className=" text-justify text-lg font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Durante muchos años, los humanos se desplazaban largas
                   distancias para obtener su alimento diario, lo que equilibraba
                   los gastos energéticos con los consumidos. Sin embargo, con la
@@ -536,10 +496,10 @@ export const GplService = () => {
             </div>
             <div className="mt-6 flex items-center justify-between">
               <div className="w-[50%] text-center ">
-                <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                   RESPIRAR Y BALANCE INTERIOR YOGA
                 </h1>
-                <p className=" text-justify font-light leading-5 lg:mx-auto lg:w-[80%]">
+                <p className=" text-justify text-lg font-light leading-5 lg:mx-auto lg:w-[80%]">
                   Regulación, disciplina, estabilidad, regulación de la energía
                   vital, interiorización, concentración, meditación,
                   iluminación. Encaminados en las prácticas ancestrales del yoga
@@ -551,7 +511,7 @@ export const GplService = () => {
               </div>
               <div className="text-center lg:pr-20">
                 <img className="w-[250px] " src={ilustracion11} alt="" />
-                <h1 className="w-56 text-center font-bold text-[#04c4d9] lg:pt-6 ">
+                <h1 className="w-56 text-center font-futura font-bold text-[#04c4d9] lg:pt-6 ">
                   “El yoga no son poses, es una filosofía de vida “
                 </h1>
               </div>
@@ -567,7 +527,7 @@ export const GplService = () => {
             EFECTOS DEL AYUNO INTERMITENTE EN TU SALUD Y RALENTIZACÍON DEL
             ENVEJECIMIENTO
           </h1>
-          <p className="text-justify font-light ">
+          <p className="text-justify font-futuraLigth text-lg font-light ">
             Según Weindruch y Sohal en un artículo de 1997 en el Journal, la
             reducción de la disponibilidad de alimentos a lo largo de la vida
             (restricción calórica) tiene efectos notables sobre el
@@ -611,7 +571,7 @@ export const GplService = () => {
                 </button>
               </header>
               <main className=" px-6 pt-8">
-                <p className="h-[600px] overflow-scroll pb-4 text-justify font-light md:h-[350px]">
+                <p className="h-[600px] overflow-scroll pb-4 text-justify font-futuraLigth text-lg font-light md:h-[350px]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Similique, fugiat quibusdam! At eligendi quisquam fugiat,
                   animi, iste corporis veniam optio quod amet laborum corrupti

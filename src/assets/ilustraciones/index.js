@@ -1,3 +1,4 @@
+import logoBg from "./logo-bg.png";
 import ilustracion1 from "./IL.1.png";
 import ilustracion2 from "./IL.2.png";
 import ilustracion3 from "./IL.3.png";
@@ -28,8 +29,19 @@ import ilustracion27 from "./IL.27.png";
 import ilustracion28 from "./IL.28.png";
 import ilustracion29 from "./IL.29.png";
 import ilustracion30 from "./IL.30.png";
+import ilustracion31 from "./IL.31.png";
+import ilustracion32 from "./IL.32.png";
+import ilustracion33 from "./IL.33.png";
+import ilustracion34 from "./IL.34.png";
+import ilustracion35 from "./IL.35.png";
+import ilustracion36 from "./IL.36.png";
+import ilustracion37 from "./IL.37.png";
+import ilustracion38 from "./IL.38.png";
+import ilustracion39 from "./IL.39.png";
+import ilustracion40 from "./IL.40.png";
 
 export {
+  logoBg,
   ilustracion1,
   ilustracion2,
   ilustracion3,
@@ -60,4 +72,14 @@ export {
   ilustracion28,
   ilustracion29,
   ilustracion30,
+  ilustracion31,
+  ilustracion32,
+  ilustracion33,
+  ilustracion34,
+  ilustracion35,
+  ilustracion36,
+  ilustracion37,
+  ilustracion38,
+  ilustracion39,
+  ilustracion40,
 };

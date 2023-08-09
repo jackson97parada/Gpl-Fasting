@@ -47,7 +47,7 @@ const currentYear = new Date().getFullYear();
 export const Footer = () => {
   return (
     <footer id="contacto">
-      <div className="space-y-8 bg-[#024873] pb-6 pt-16 text-center lg:space-y-0 lg:px-32 lg:pb-14 lg:pt-28">
+      <div className="space-y-8 bg-[#024873] pb-6 pt-16 text-center font-futura lg:space-y-0 lg:px-32 lg:pb-14 lg:pt-28">
         <a
           href="https://wa.me/+3001221432"
           target="_blank"
@@ -74,10 +74,10 @@ export const Footer = () => {
         {CONTACTUSDETAILS.map((data, id) => (
           <div key={id} className="md:w-[67%]">
             <h1 className="pb-4 font-bold text-white">{data.title}</h1>
-            <div className=" flex-col [&>h1]:text-xs [&>h1]:font-light [&>h1]:text-white ">
+            <div className="flex-col font-futuraLigth [&>h1]:text-xs [&>h1]:font-light [&>h1]:text-white ">
               <h1>{data.cell}</h1>
               <h1>{data.cellTwo}</h1>
-              <h2 className="relative top-2 text-xs font-medium text-white">
+              <h2 className="relative top-2 text-xs font-bold text-white">
                 {data.email}
               </h2>
             </div>
@@ -95,7 +95,7 @@ export const Footer = () => {
         ))}
       </div>
 
-      <h5 className="bg-black p-10 text-center text-sm font-bold text-white">
+      <h5 className="bg-black p-10 text-center font-futura text-sm font-bold text-white">
         {`${currentYear}, todos los derechos reservados.`}
       </h5>
       <SocialMedias />

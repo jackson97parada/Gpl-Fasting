@@ -15,9 +15,9 @@ export const Service = () => {
   );
 
   return (
-    <section className="container mx-auto mt-20 w-full max-w-[1380px]">
+    <section className="container mx-auto mt-16 w-full max-w-[1380px] lg:mt-20">
       <Navbar />
-      <hr className="relative left-10 top-[140px] w-14 border-[2.5px] border-[#0378a6] lg:left-[80px] lg:block" />
+      <hr className="relative left-10 top-[140px] w-14 rounded-full border-[2.5px] border-[#0378a6] lg:left-[80px] lg:block" />
       <main>
         <header className="box-content h-[91vh] w-auto bg-black/20 bg-heroService bg-cover lg:h-[580px]">
           <div className="flex flex-col space-y-20 px-10 pt-52 lg:px-20">

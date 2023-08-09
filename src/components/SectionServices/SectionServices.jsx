@@ -5,7 +5,7 @@ import { settings } from "../";
 import { Card } from "./components/Card";
 import { ServiceDetail } from "./components/ServiceDetail";
 
-import { firstService } from "./../../assets/imagesServices";
+import { fifthservice } from "./../../assets/imagesServices";
 
 export const SectionServices = () => {
   return (
@@ -14,11 +14,11 @@ export const SectionServices = () => {
       className="bg-[#024873] px-6 py-24 pb-32 lg:px-10 lg:ps-16 lg:pt-32"
     >
       <div className="space-y-8 text-center lg:flex lg:items-center lg:justify-between lg:space-y-0">
-        <div className="space-y-5 pb-6 text-center lg:mx-32 lg:text-start">
+        <div className="space-y-5 pb-6 text-center font-futura lg:mx-32 lg:text-start">
           <h1 className="text-3xl font-extrabold text-white lg:text-[40px]">
             SERVICIOS
           </h1>
-          <h2 className="text-base font-bold text-white">
+          <h2 className="font-bold text-white md:text-xl">
             ¿Estás listo para transformar tu vida?
           </h2>
         </div>
@@ -42,7 +42,7 @@ export const SectionServices = () => {
             <img
               className="-z-10 mx-auto mt-12 h-[370px] rounded-[3.5rem] duration-300 hover:shadow-lg hover:shadow-[#0378a6] lg:mt-14 lg:w-[370px]"
               width={320}
-              src={firstService}
+              src={fifthservice}
               alt="image-carrousel"
             />
             <h1 className="relative bottom-48 z-10 text-center text-2xl font-bold text-white">

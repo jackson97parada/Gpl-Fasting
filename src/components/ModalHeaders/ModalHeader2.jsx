@@ -2,7 +2,11 @@ import { motion } from "framer-motion";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 
-import { ilustracion1 } from "../../assets/ilustraciones";
+import {
+  ilustracion34,
+  ilustracion35,
+  logoBg,
+} from "../../assets/ilustraciones";
 
 const variants = {
   hidden: { opacity: 0, y: "-20%", transition: { duration: 2 } },
@@ -37,12 +41,12 @@ export const ModalHeader2 = () => {
         </button>
       </header>
       {/* MAIN MODAL*/}
-      <main className="flex items-center gap-10 py-14 pl-28 pr-10">
+      <main className="flex items-center gap-10 pl-28 pr-10 pt-14">
         <div className="w-[60%] space-y-6">
           {/* 1 */}
-          <div className="flex items-center justify-between gap-20">
-            <p className="w-[310px] text-center text-sm font-medium text-[#191f40]">
-              Por cada 15 kilos extra de peso aumenta el{" "}
+          <div className="flex items-center justify-between gap-10">
+            <p className="w-[1010px] text-center text-[15px] font-medium text-[#191f40]">
+              Por cada 15 kilos extra de peso aumenta el <br />{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 riesgo de muerte temprana en un 30 %.
               </span>{" "}
@@ -54,25 +58,29 @@ export const ModalHeader2 = () => {
                 en la vida adulta.
               </span>
             </p>
-            <img className="w-60" src={ilustracion1} alt="" />
+            <img
+              className="relative left-14 w-[300px]"
+              src={ilustracion34}
+              alt=""
+            />
           </div>
           {/* 2 */}
-          <div className="flex items-center justify-between gap-20">
-            <p className="w-[45%] text-justify text-sm font-medium text-[#191f40]">
+          <div className="flex items-center justify-between gap-10">
+            <p className="relative bottom-24 w-[1010px] text-center text-[15px] font-medium text-[#191f40]">
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 Cada año mueren 2.8 millones de personas
               </span>{" "}
               en el mundo por obesidad y/o las enfermedades que provoca.
             </p>
             <img
-              className="relative left-20 top-10 w-64"
-              src={ilustracion1}
+              className="relative left-32 top-10 w-[300px]"
+              src={ilustracion35}
               alt=""
             />
           </div>
           {/* 3 */}
           <div className="flex items-center justify-between gap-20">
-            <p className="w-[296.8px] text-center text-sm font-medium text-[#191f40]">
+            <p className="relative bottom-28 left-5 w-[296.8px] text-center text-[15px] font-medium text-[#191f40]">
               El numero de personas con sobrepeso en el mundo se ha duplicado en
               los ultimos 30 años, lo que hace que mas de mil millones de
               personas hoy en dia sufran de obesidad
@@ -81,7 +89,7 @@ export const ModalHeader2 = () => {
         </div>
         {/* DIV IMG */}
         <div className="w-[40%]">
-          <img src={ilustracion1} alt="" />
+          <img className="opacity-10 md:w-[1000px]" src={logoBg} alt="" />
         </div>
       </main>
       {/* FOOTER MODAL*/}

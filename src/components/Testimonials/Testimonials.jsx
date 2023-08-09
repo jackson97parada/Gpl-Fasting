@@ -1,5 +1,4 @@
 import Slider from "react-slick";
-import { firstService } from "../../assets/imagesServices";
 import { testimonialsData } from "./testimonialsData";
 
 const settings = {
@@ -37,12 +36,12 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonios"
-      className="bg-[#191f40] px-6 pb-10 pt-0 lg:px-10 lg:pb-16 lg:pt-10"
+      className="bg-[#191f40] px-6 pb-10 pt-0 font-futura lg:px-10 lg:pb-16 lg:pt-10"
     >
       <div className="relative top-[500px] space-y-4 lg:left-[48%] lg:top-32 lg:w-[50%]">
-        <hr className="relative bottom-5 w-16 border-2 border-[#0378a6]" />
+        <hr className="relative bottom-5 w-16 rounded-full border-2 border-[#0378a6]" />
 
-        <h1 className="w-[80%] text-3xl font-bold text-white lg:w-auto lg:text-4xl">
+        <h1 className="w-[80%] text-3xl font-bold text-white lg:w-auto lg:text-[38px]">
           Lo que dicen nuestros clientes
         </h1>
         <h1 className="text-xs font-bold text-[#bfd6d9] lg:text-base">
@@ -56,15 +55,15 @@ export const Testimonials = () => {
             <div className="flex flex-wrap gap-16 lg:flex-nowrap">
               <img
                 className="h-[336px] rounded-[3.5rem] px-4 lg:h-[500px] lg:w-[386px] lg:rounded-xl lg:px-0"
-                src={firstService}
+                src={data.userImg}
                 alt={data.user}
               />
               <div className="mt-36 space-y-4">
-                <p className="mx-4 pt-4 text-justify text-xs text-white lg:mx-0 lg:w-[70%] lg:pt-10 lg:text-sm lg:font-medium">
+                <p className="mx-4 whitespace-pre-line pt-6 text-justify text-xs text-white lg:mx-0 lg:w-[70%] lg:pt-10 lg:text-lg">
                   {data.description}
                 </p>
-                <hr className="relative -right-4 top-8 w-8 border border-[#0378a6] md:block" />
-                <h1 className="pb-5 pt-10 text-sm font-bold text-white lg:text-white">
+                <hr className="relative -right-0 top-8 w-8 border border-[#0378a6] md:block" />
+                <h1 className="pb-5 pt-10 text-sm font-bold text-[#bfd6d9]">
                   {data.user}
                 </h1>
               </div>
@@ -74,7 +73,7 @@ export const Testimonials = () => {
         ))}
       </Slider>
 
-      <hr className="mx-auto mt-10 w-[80%] border border-[#0378a6] lg:mt-28" />
+      <hr className="mx-auto mt-10 w-[80%] border border-[#5a5358] lg:mt-28" />
     </section>
   );
 };

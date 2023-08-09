@@ -121,7 +121,7 @@ const settingsOff = {
 
 export const LipolaserService = () => {
   return (
-    <div className="mb-6 mt-14">
+    <div className="mb-6 mt-14 font-futura">
       {/* SLIDER MOBILE */}
       <header className="md:hidden">
         <Slider {...settingsOff}>
@@ -168,7 +168,7 @@ export const LipolaserService = () => {
         <h1 className="text-center text-2xl font-bold text-[#024873] md:text-start ">
           LASER
         </h1>
-        <p className="py-8 text-justify text-lg font-light">
+        <p className="py-8 text-justify font-futuraLigth text-xl font-light">
           El láser es una intervención usada para la eliminación de grasa
           localizada en distintas partes del cuerpo, se extrae aproximadamente
           un litro de grasa por zona del cuerpo a trabajar, comúnmente llamado
@@ -187,7 +187,7 @@ export const LipolaserService = () => {
           src={ilustracion12}
           alt="IMG"
         />
-        <div className="md:flex [&>ul]:mx-auto [&>ul]:space-y-5 [&>ul]:text-justify [&>ul]:text-lg [&>ul]:font-light md:[&>ul]:w-[380px] md:[&>ul]:list-disc ">
+        <div className="md:flex [&>ul]:mx-auto [&>ul]:space-y-5 [&>ul]:text-justify [&>ul]:font-futuraLigth [&>ul]:text-xl [&>ul]:font-bold [&>ul]:leading-6 md:[&>ul]:w-[380px] md:[&>ul]:list-disc ">
           <ul>
             <li>
               La recuperación es rápida y se pueden retomar las actividades
@@ -211,7 +211,7 @@ export const LipolaserService = () => {
           </ul>
         </div>
         <hr className="mx-auto my-14 w-40 border" />
-        <p className="pb-14 text-justify text-lg font-light ">
+        <p className="pb-14 text-justify font-futuraLigth text-xl font-light leading-6 ">
           Para este procedimiento es indispensable el uso de faja de compresión
           espumas y tabla que deberá ser usada de tres a cuatro semanas, pero en
           ocasiones es común que su uso se extienda hasta tres meses. Las

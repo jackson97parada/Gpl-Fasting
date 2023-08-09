@@ -1,6 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: url('../src/assets/fonts/ITC Avant Garde Gothic Bold.otf') format('truetype');
+  /* Agrega más formatos y definiciones de fuente si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../src/assets/fonts/Futura\ Heavy\ font.ttf') format('truetype');
+  /* Agrega más formatos y definiciones de fuente si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura ligth';
+  src: url('../src/assets/fonts/futura\ light\ bt.ttf') format('truetype');
+  /* Agrega más formatos y definiciones de fuente si es necesario */
+  font-weight: normal;
+  font-style: normal;
+}
 
 @layer components {
 .div-card {
@@ -35,6 +61,10 @@
 
 .section-about-div-h1 {
   @apply text-2xl font-bold text-[#191f40]
+}
+
+.section-about-div-p {
+  @apply text-justify font-futuraLigth text-xl text-[#3f3e3e] leading-6
 }
 
 /* SECTION SERVICE BOTOX */

@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 import { GrClose } from "react-icons/gr";
 import { useState } from "react";
 
-import { ilustracion1 } from "../../assets/ilustraciones";
+import {
+  ilustracion31,
+  ilustracion32,
+  ilustracion33,
+  logoBg,
+} from "../../assets/ilustraciones";
 
 const variants = {
   hidden: { opacity: 0, y: "-30%", transition: { duration: 2 } },
@@ -23,7 +28,7 @@ export const ModalHeader1 = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className={`relative bottom-[340px] right-11 z-50 w-[1300px] rounded-[50px] bg-white shadow-xl ${
+      className={`relative bottom-[340px] right-9 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:right-11 md:w-[1300px] ${
         btnModal ? "hidden" : "block"
       }`}
     >
@@ -35,21 +40,25 @@ export const ModalHeader1 = () => {
         </button>
       </header>
       {/* MAIN MODAL*/}
-      <main className="flex items-center gap-10 py-14 pl-28 pr-10">
-        <div className="w-[60%] space-y-10">
+      <main className="items-center gap-10 p-6 py-14 md:flex md:pl-28 md:pr-10">
+        <div className="space-y-10 md:w-[60%]">
           {/* 1 */}
-          <div className="flex items-center justify-between gap-20">
-            <p className="w-[310px] text-center text-sm font-medium text-[#191f40]">
+          <div className="items-center justify-between gap-20 md:flex">
+            <p className="text-center text-[15px] text-[#191f40] md:w-[340px]">
               El día de hoy un niño de 8 años ya se comió todo{" "}
               <span className="rounded-lg bg-[#b2edf3] pb-1">
                 el azúcar que comió su abuelo en toda su vida
               </span>
             </p>
-            <img className="w-44" src={ilustracion1} alt="" />
+            <img
+              className="mx-auto md:mx-0 md:w-60"
+              src={ilustracion31}
+              alt=""
+            />
           </div>
           {/* 2 */}
-          <div className="flex items-center justify-between gap-20">
-            <p className="w-[45%] text-justify text-sm font-medium text-[#191f40]">
+          <div className="items-center justify-between gap-20 md:flex">
+            <p className="text-justify text-[15px] font-medium text-[#191f40] md:w-[330px]">
               Las bebidas azucaradas son la principal fuente de azúcares.{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 6 de cada 10 muertes causadas
@@ -58,11 +67,15 @@ export const ModalHeader1 = () => {
                 por el azúcar se atribuyen a su consumo
               </span>
             </p>
-            <img className="w-44" src={ilustracion1} alt="" />
+            <img
+              className="mx-auto md:mx-0 md:mr-10 md:w-44"
+              src={ilustracion32}
+              alt=""
+            />
           </div>
           {/* 3 */}
-          <div className="flex items-center justify-between gap-20">
-            <p className="w-[296.8px] text-center text-sm font-medium text-[#191f40]">
+          <div className="items-center justify-between gap-20 md:flex">
+            <p className="text-center text-[15px] font-medium text-[#191f40] md:w-[296.8px]">
               Actualmente se consume en promedio más de 22 cucharadas al día,{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 no hay ingesta{" "}
@@ -71,12 +84,16 @@ export const ModalHeader1 = () => {
                 diaria recomendada
               </span>
             </p>
-            <img className="w-44" src={ilustracion1} alt="" />
+            <img
+              className="mx-auto md:mx-0 md:mr-4 md:w-44"
+              src={ilustracion33}
+              alt=""
+            />
           </div>
         </div>
         {/* DIV IMG */}
-        <div className="w-[40%]">
-          <img src={ilustracion1} alt="" />
+        <div className="hidden w-[40%] md:block">
+          <img className="opacity-10 md:w-[1000px] " src={logoBg} alt="" />
         </div>
       </main>
       {/* FOOTER MODAL*/}

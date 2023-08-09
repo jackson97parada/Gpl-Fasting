@@ -9,7 +9,7 @@ import { settings } from "../";
 
 import { motion } from "framer-motion";
 
-const images = ImagesAboutUs.map((image) => image.data.imgProfile);
+const images = AboutUsDetails.map((image) => image.data.imgProfile);
 
 const dataTitle = AboutUsDetails.map((aboutUs) => aboutUs.data.title);
 const dataDescription = AboutUsDetails.map(
@@ -18,7 +18,7 @@ const dataDescription = AboutUsDetails.map(
 const dataImage = AboutUsDetails.map((aboutUs) => aboutUs.data.imgAbout);
 
 const modalAnimation = {
-  hidden: { opacity: 0, y: "-100%", transition: { duration: 2 } },
+  hidden: { opacity: 0, y: "-20%", transition: { duration: 2 } },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
@@ -30,13 +30,16 @@ export const SectionAboutUs = () => {
   };
 
   return (
-    <section id="nosotros" className="px-6 py-20 lg:mx-32 lg:px-10 lg:py-28">
+    <section
+      id="nosotros"
+      className="px-6 py-20 font-futura lg:mx-32 lg:px-10 lg:py-28"
+    >
       <div className="justify-between pb-20 lg:flex lg:pb-0">
-        <div className="space-y-5 text-center lg:text-start">
+        <div className="space-y-5 text-center font-futura lg:text-start">
           <h1 className="pt-3 text-4xl font-extrabold text-[#024873] lg:text-6xl">
             Nosotros
           </h1>
-          <h2 className="text-[11px] font-bold text-[#191f40] lg:text-base">
+          <h2 className="text-[11px] text-[#191f40] lg:text-xl">
             “EL QUE NO VIVE PARA SERVIR NO SIRVE PARA VIVIR”
           </h2>
 
@@ -106,7 +109,7 @@ export const SectionAboutUs = () => {
       <hr className="relative -left-24 top-10 z-10 hidden w-16 rounded-full border-2 border-[#024873] lg:block" />
 
       <div className="mt-20 hidden lg:block">
-        <section className="[&>div]:section-about-div [&>div>div]:section-about-div-div [&>div>div>h1]:section-about-div-h1 space-y-20 [&>div>div>p]:text-justify [&>div>div>p]:font-light">
+        <section className="[&>div]:section-about-div [&>div>div]:section-about-div-div [&>div>div>h1]:section-about-div-h1 [&>div>div>p]:section-about-div-p space-y-20">
           <div>
             <img className="w-[350px]" src={dataImage[0]} alt="" />
             <div>
@@ -122,7 +125,7 @@ export const SectionAboutUs = () => {
             <img className="w-[230px]" src={dataImage[1]} alt="" />
           </div>
           <div>
-            <img className="w-[350px]" src={dataImage[2]} alt="" />
+            <img className="w-[400px]" src={dataImage[2]} alt="" />
             <div>
               <h1>{dataTitle[2]}</h1>
               <p>{dataDescription[2]}</p>

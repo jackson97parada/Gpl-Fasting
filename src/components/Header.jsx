@@ -1,4 +1,9 @@
-import { ilustracion1, ilustracion6 } from "../assets/ilustraciones";
+import {
+  ilustracion1,
+  ilustracion3,
+  ilustracion4,
+  ilustracion38,
+} from "../assets/ilustraciones";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { ModalHeader1, ModalHeader2, ModalHeader3 } from "./ModalHeaders";
 import { useState } from "react";
@@ -26,14 +31,14 @@ export const Header = () => {
       <hr className="relative left-[45%] top-[120.7rem] z-10 w-16 rotate-90 rounded-full border-[2.5px] border-[#0378a6] lg:left-[48%] lg:top-[1325px]" />
       <div className="lg:mx-32 lg:mb-32 lg:flex">
         <div className="z-30 text-center lg:px-10 lg:text-start ">
-          <h1 className="px-6 pb-16 pt-10 text-center text-[35px] font-bold leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pr-40 lg:pt-0 lg:text-start lg:text-[50px] lg:leading-tight">
+          <h1 className="px-6 pb-16 pt-10 text-center font-avantGarde text-[35px] font-medium leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pr-40 lg:pt-0 lg:text-start lg:text-[50px] lg:leading-tight">
             CONVIERTETE EN LO QUE SUEÑAS!
           </h1>
           <a
             href="https://wa.me/+3001221432"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border-4 border-[#024873] px-24 py-4 text-xl font-bold text-[#024873] transition duration-500 hover:bg-[#024873] hover:text-white hover:shadow-2xl lg:px-6 lg:text-4xl"
+            className="rounded-lg border-4 border-[#024873] px-24 py-4 font-futura text-xl font-bold text-[#024873] transition duration-500 hover:bg-[#024873] hover:text-white hover:shadow-2xl lg:px-6 lg:text-4xl"
           >
             HABLEMOS!
           </a>
@@ -44,12 +49,12 @@ export const Header = () => {
         />
       </div>
 
-      <h1 className="mt-32 text-center text-4xl font-bold text-[#191f40] md:pb-14 lg:mt-0">
+      <h1 className="mt-32 text-center font-avantGarde text-4xl font-light text-[#191f40] md:pb-14 lg:mt-0">
         ¿SABIAS QUE?
       </h1>
-      <div className="[&>div]:div-card relative bottom-[80px] mt-44 space-y-10 px-6 lg:mt-0 lg:flex lg:space-y-0 lg:px-0 lg:pt-20 [&>div>h1]:text-2xl [&>div>h1]:font-bold">
+      <div className="[&>div]:div-card relative bottom-[80px] mt-44 space-y-10 px-6 font-futura lg:mt-0 lg:flex lg:space-y-0 lg:px-0 lg:pt-20 [&>div>h1]:text-2xl [&>div>h1]:font-bold">
         <div className="space-y-4 text-center">
-          <img className="mx-auto w-[200px]" src={ilustracion6} alt="" />
+          <img className="mx-auto w-[195px]" src={ilustracion38} alt="" />
           <p className="text-sm font-bold text-[#024873]">
             El azúcar ya se considera una droga por su adicción, daños y el
             síndrome de abstinencia que provoca
@@ -64,7 +69,7 @@ export const Header = () => {
         </div>
 
         <div className="space-y-4 text-center">
-          <img className="mx-auto w-[200px]" src={ilustracion6} alt="" />
+          <img className="mx-auto w-[190px]" src={ilustracion3} alt="" />
           <p className="text-sm font-bold text-[#024873]">
             Mujeres con perímetro abdominal mayor a 70 cm y hombre mayor a 80 cm
             están en sobrepeso.
@@ -79,7 +84,7 @@ export const Header = () => {
         </div>
 
         <div className="space-y-4 text-center">
-          <img className="mx-auto w-[200px]" src={ilustracion6} alt="" />
+          <img className="mx-auto w-[170px]" src={ilustracion4} alt="" />
           <p className="text-sm font-bold text-[#024873]">
             Se estima que entre 50 y 70% de las mujeres mayores de 30 años
             expresan inconformidad con su peso corporal.
@@ -93,7 +98,7 @@ export const Header = () => {
           {viewModal3 && <ModalHeader3 />}
         </div>
       </div>
-      <h2 className="mb-10 text-center text-xl font-bold text-[#024873] lg:mb-32 lg:pt-6 lg:text-3xl lg:text-[#0378a6]">
+      <h2 className="mb-10 text-center font-avantGarde text-xl text-[#024873] lg:mb-32 lg:pt-6 lg:text-[27px] lg:text-[#0378a6]">
         ¡CUIDA DE TU CUERPO ES EL ÚNICO LUGAR QUE TIENES PARA VIVIR!
       </h2>
     </div>

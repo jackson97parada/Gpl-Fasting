@@ -22,14 +22,18 @@ const Service = ServiceDetail.map((service) => {
 });
 
 const variants = {
-  hidden: { opacity: 0, x: "-100%" },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
-  exit: { opacity: 0, x: "100%", transition: { duration: 0.4 } },
+  hidden: { opacity: 0, y: "-20%" },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  exit: { opacity: 0, y: "20%", transition: { duration: 0.3 } },
 };
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleNavLinkClick = () => {
+    setIsOpen(false);
+  };
 
   const handleHover = () => {
     setShowDropdown(true);
@@ -55,7 +59,7 @@ export const Navbar = () => {
   const dropdown = locationHash === `#/servicios/${serviceTitle}`;
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 shadow-lg lg:h-28">
+    <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 font-futura shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
         <Link to="/">
           <img className="relative w-28 lg:top-1 lg:w-40" src={logo} alt="" />
@@ -137,6 +141,7 @@ export const Navbar = () => {
                           block: "start",
                         })
                       }
+                      onClick={handleNavLinkClick}
                     >
                       {name}
                     </HashLink>

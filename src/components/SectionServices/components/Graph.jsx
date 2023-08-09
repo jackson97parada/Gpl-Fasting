@@ -36,7 +36,7 @@ export const Graph = ({ percentaje, description }) => {
       </div>
       <div className="absolute z-20">
         {showDescription && (
-          <p className="relative -right-8 top-56 w-[300px] text-justify text-lg font-bold text-[#024873] md:right-20 lg:w-[400px] ">
+          <p className="relative -right-8 top-56 w-[300px] text-justify text-lg font-bold leading-6 text-[#024873] md:right-20 lg:w-[400px] ">
             {description}
           </p>
         )}
