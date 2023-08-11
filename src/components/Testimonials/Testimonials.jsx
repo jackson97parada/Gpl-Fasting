@@ -59,7 +59,7 @@ export const Testimonials = () => {
                 alt={data.user}
               />
               <div className="mt-36 space-y-4">
-                <p className="mx-4 whitespace-pre-line pt-6 text-justify text-xs text-white lg:mx-0 lg:w-[70%] lg:pt-10 lg:text-lg">
+                <p className="whitespace-pre-line pr-4 pt-6 text-justify text-sm text-white lg:mx-0 lg:w-[70%] lg:pt-10 lg:text-lg">
                   {data.description}
                 </p>
                 <hr className="relative -right-0 top-8 w-8 border border-[#0378a6] md:block" />

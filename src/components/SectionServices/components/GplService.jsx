@@ -10,7 +10,15 @@ import { Graph } from "./Graph";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 
-import { secondCard } from "../../../assets/cardsHeader";
+import {
+  gpl1,
+  gpl2,
+  gpl3,
+  gpl4,
+  gpl5,
+  gpl6,
+} from "../../../assets/imagesServices";
+
 import {
   ilustracion8,
   ilustracion9,
@@ -63,25 +71,37 @@ const imagesSlider = [
   {
     id: 1,
     data: {
-      img: secondCard,
+      img: gpl1,
     },
   },
   {
     id: 2,
     data: {
-      img: secondCard,
+      img: gpl2,
     },
   },
   {
     id: 3,
     data: {
-      img: secondCard,
+      img: gpl3,
     },
   },
   {
     id: 4,
     data: {
-      img: secondCard,
+      img: gpl4,
+    },
+  },
+  {
+    id: 5,
+    data: {
+      img: gpl5,
+    },
+  },
+  {
+    id: 6,
+    data: {
+      img: gpl6,
     },
   },
 ];
@@ -192,7 +212,7 @@ export const GplService = () => {
           {imagesSlider.map(({ id, data }) => (
             <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] md:w-[370px] lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] lg:mt-14"
                 src={data.img}
                 alt=""
               />
@@ -570,7 +590,7 @@ export const GplService = () => {
                   <GrClose />
                 </button>
               </header>
-              <main className=" px-6 pt-8">
+              <main className="px-6 pt-8">
                 <p className="h-[600px] overflow-scroll pb-4 text-justify font-futuraLigth text-lg font-light md:h-[350px]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Similique, fugiat quibusdam! At eligendi quisquam fugiat,

@@ -5,7 +5,13 @@ import { settings } from "../..";
 
 import { Graph } from "./Graph";
 import { ilustracion12, ilustracion13 } from "../../../assets/ilustraciones";
-import { secondCard } from "../../../assets/cardsHeader";
+import {
+  laser1,
+  laser2,
+  laser3,
+  laser4,
+  laser5,
+} from "../../../assets/imagesServices";
 
 const LipolaserDetails = [
   {
@@ -45,25 +51,31 @@ const imagesSlider = [
   {
     id: 1,
     data: {
-      img: secondCard,
+      img: laser1,
     },
   },
   {
     id: 2,
     data: {
-      img: secondCard,
+      img: laser2,
     },
   },
   {
     id: 3,
     data: {
-      img: secondCard,
+      img: laser3,
     },
   },
   {
     id: 4,
     data: {
-      img: secondCard,
+      img: laser4,
+    },
+  },
+  {
+    id: 5,
+    data: {
+      img: laser5,
     },
   },
 ];
@@ -155,7 +167,7 @@ export const LipolaserService = () => {
           {imagesSlider.map(({ id, data }) => (
             <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] md:w-[370px] lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] lg:mt-14"
                 src={data.img}
                 alt=""
               />

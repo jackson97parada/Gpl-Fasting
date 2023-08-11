@@ -6,12 +6,20 @@ import { Navbar, Footer /* settings */ } from "../../";
 // import Slider from "react-slick";
 import { ServiceDetail } from "./ServiceDetail";
 
+// import {
+//   firstservice,
+//   secondservice,
+//   thirdservice,
+//   fourthservice,
+//   fifthservice,
+// } from "../../../assets/imagesServices";
+
 import { RxSlash } from "react-icons/rx";
 
 export const Service = () => {
   const { serviceId } = useParams();
   const thisService = ServiceDetail.find(
-    (service) => service.data.title === serviceId
+    (service) => service.data.title === serviceId && service.data.imgService
   );
 
   return (
@@ -19,8 +27,15 @@ export const Service = () => {
       <Navbar />
       <hr className="relative left-10 top-[140px] w-14 rounded-full border-[2.5px] border-[#0378a6] lg:left-[80px] lg:block" />
       <main>
-        <header className="box-content h-[91vh] w-auto bg-black/20 bg-heroService bg-cover lg:h-[580px]">
-          <div className="flex flex-col space-y-20 px-10 pt-52 lg:px-20">
+        <header className={`h-[91vh] w-auto lg:h-[580px]`}>
+          <div className="box-content w-full bg-black/20">
+            <img
+              className="absolute -z-10 box-content h-[91vh] max-h-[580px] md:w-[1380px]"
+              src={thisService.data.imgService}
+              alt=""
+            />
+          </div>
+          <div className="z-40 flex flex-col space-y-20 px-10 pt-52 lg:px-20">
             <h1 className="text-4xl font-bold text-white lg:text-[51px] lg:leading-tight">
               {thisService.data.subTitle}
             </h1>

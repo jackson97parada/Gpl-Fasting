@@ -28,7 +28,7 @@ export const ModalHeader1 = () => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className={`relative bottom-[340px] right-9 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:right-11 md:w-[1300px] ${
+      className={`relative bottom-[340px] right-9 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:right-11 md:h-auto md:w-[1300px] ${
         btnModal ? "hidden" : "block"
       }`}
     >
@@ -41,7 +41,7 @@ export const ModalHeader1 = () => {
       </header>
       {/* MAIN MODAL*/}
       <main className="items-center gap-10 p-6 py-14 md:flex md:pl-28 md:pr-10">
-        <div className="space-y-10 md:w-[60%]">
+        <div className="h-[60vh] space-y-10 overflow-scroll md:h-auto md:w-[60%] md:overflow-hidden">
           {/* 1 */}
           <div className="items-center justify-between gap-20 md:flex">
             <p className="text-center text-[15px] text-[#191f40] md:w-[340px]">
@@ -58,7 +58,7 @@ export const ModalHeader1 = () => {
           </div>
           {/* 2 */}
           <div className="items-center justify-between gap-20 md:flex">
-            <p className="text-justify text-[15px] font-medium text-[#191f40] md:w-[330px]">
+            <p className="pb-10 text-justify text-[15px] font-medium text-[#191f40] md:w-[330px] md:pb-0">
               Las bebidas azucaradas son la principal fuente de azúcares.{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 6 de cada 10 muertes causadas
@@ -75,7 +75,7 @@ export const ModalHeader1 = () => {
           </div>
           {/* 3 */}
           <div className="items-center justify-between gap-20 md:flex">
-            <p className="text-center text-[15px] font-medium text-[#191f40] md:w-[296.8px]">
+            <p className="pb-10 text-center text-[15px] font-medium text-[#191f40] md:w-[296.8px] md:pb-0">
               Actualmente se consume en promedio más de 22 cucharadas al día,{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 no hay ingesta{" "}

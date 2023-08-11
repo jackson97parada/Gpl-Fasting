@@ -55,7 +55,7 @@ export const Header = () => {
       <div className="[&>div]:div-card relative bottom-[80px] mt-44 space-y-10 px-6 font-futura lg:mt-0 lg:flex lg:space-y-0 lg:px-0 lg:pt-20 [&>div>h1]:text-2xl [&>div>h1]:font-bold">
         <div className="space-y-4 text-center">
           <img className="mx-auto w-[195px]" src={ilustracion38} alt="" />
-          <p className="text-sm font-bold text-[#024873]">
+          <p className="text-xs font-bold text-[#024873] md:text-sm">
             El azúcar ya se considera una droga por su adicción, daños y el
             síndrome de abstinencia que provoca
           </p>
@@ -70,7 +70,7 @@ export const Header = () => {
 
         <div className="space-y-4 text-center">
           <img className="mx-auto w-[190px]" src={ilustracion3} alt="" />
-          <p className="text-sm font-bold text-[#024873]">
+          <p className="text-xs font-bold text-[#024873] md:text-sm">
             Mujeres con perímetro abdominal mayor a 70 cm y hombre mayor a 80 cm
             están en sobrepeso.
           </p>
@@ -85,7 +85,7 @@ export const Header = () => {
 
         <div className="space-y-4 text-center">
           <img className="mx-auto w-[170px]" src={ilustracion4} alt="" />
-          <p className="text-sm font-bold text-[#024873]">
+          <p className="text-xs font-bold text-[#024873] md:text-sm">
             Se estima que entre 50 y 70% de las mujeres mayores de 30 años
             expresan inconformidad con su peso corporal.
           </p>
@@ -98,7 +98,7 @@ export const Header = () => {
           {viewModal3 && <ModalHeader3 />}
         </div>
       </div>
-      <h2 className="mb-10 text-center font-avantGarde text-xl text-[#024873] lg:mb-32 lg:pt-6 lg:text-[27px] lg:text-[#0378a6]">
+      <h2 className="mb-10 text-center font-avantGarde text-lg text-[#024873] md:text-xl lg:mb-32 lg:pt-6 lg:text-[27px] lg:text-[#0378a6]">
         ¡CUIDA DE TU CUERPO ES EL ÚNICO LUGAR QUE TIENES PARA VIVIR!
       </h2>
     </div>

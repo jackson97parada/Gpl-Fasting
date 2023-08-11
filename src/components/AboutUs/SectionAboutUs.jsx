@@ -39,7 +39,7 @@ export const SectionAboutUs = () => {
           <h1 className="pt-3 text-4xl font-extrabold text-[#024873] lg:text-6xl">
             Nosotros
           </h1>
-          <h2 className="text-[11px] text-[#191f40] lg:text-xl">
+          <h2 className="text-[14px] text-[#191f40] lg:text-xl">
             “EL QUE NO VIVE PARA SERVIR NO SIRVE PARA VIVIR”
           </h2>
 
@@ -74,7 +74,7 @@ export const SectionAboutUs = () => {
                     <h1 className="text-lg font-bold text-[#191f40] ">
                       {data.title}
                     </h1>
-                    <p className="pb-4 text-justify text-sm">
+                    <p className="pb-4 text-justify font-futuraLigth text-lg leading-6">
                       {data.description}
                     </p>
                   </div>
