@@ -1,5 +1,4 @@
 import { FaFacebookF } from "react-icons/fa";
-import { AiOutlineTwitter } from "react-icons/ai";
 import { SlSocialInstagram } from "react-icons/sl";
 import { SocialMedias } from "./SocialMedias";
 
@@ -7,10 +6,6 @@ const FOOTERDETAILS = [
   {
     link: "https://www.facebook.com",
     icon: <FaFacebookF />,
-  },
-  {
-    link: "https://www.twitter.com",
-    icon: <AiOutlineTwitter />,
   },
   {
     link: "https://www.instagram.com",

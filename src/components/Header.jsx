@@ -28,10 +28,10 @@ export const Header = () => {
   return (
     <div className="pb-10 pt-32 lg:pt-48" id="inicio">
       <hr className="relative left-6 top-4 z-10 w-16 rounded-full border-2 border-[#0378a6] md:left-10" />
-      <hr className="relative left-[45%] top-[120.7rem] z-10 w-16 rotate-90 rounded-full border-[2.5px] border-[#0378a6] lg:left-[48%] lg:top-[1325px]" />
+      <hr className="relative left-[45%] top-[120.7rem] z-10 w-16 rotate-90 rounded-full border-[2.5px] border-[#0378a6] lg:left-[48%] lg:top-[1315px]" />
       <div className="lg:mx-32 lg:mb-32 lg:flex">
         <div className="z-30 text-center lg:px-10 lg:text-start ">
-          <h1 className="px-6 pb-16 pt-10 text-center font-avantGarde text-[35px] font-medium leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pr-40 lg:pt-0 lg:text-start lg:text-[50px] lg:leading-tight">
+          <h1 className="max-w-[630px] px-6 pb-16 pt-10 text-center font-avantGarde text-[35px] font-medium leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pr-40 lg:pt-0 lg:text-start lg:text-[50px] lg:leading-tight">
             CONVIERTETE EN LO QUE SUEÑAS!
           </h1>
           <a
@@ -54,7 +54,11 @@ export const Header = () => {
       </h1>
       <div className="[&>div]:div-card relative bottom-[80px] mt-44 space-y-10 px-6 font-futura lg:mt-0 lg:flex lg:space-y-0 lg:px-0 lg:pt-20 [&>div>h1]:text-2xl [&>div>h1]:font-bold">
         <div className="space-y-4 text-center">
-          <img className="mx-auto w-[195px]" src={ilustracion38} alt="" />
+          <img
+            className="mx-auto w-[195px] md:h-[190px]"
+            src={ilustracion38}
+            alt=""
+          />
           <p className="text-xs font-bold text-[#024873] md:text-sm">
             El azúcar ya se considera una droga por su adicción, daños y el
             síndrome de abstinencia que provoca
@@ -84,7 +88,11 @@ export const Header = () => {
         </div>
 
         <div className="space-y-4 text-center">
-          <img className="mx-auto w-[170px]" src={ilustracion4} alt="" />
+          <img
+            className="mx-auto w-[170px] md:h-[190px]"
+            src={ilustracion4}
+            alt=""
+          />
           <p className="text-xs font-bold text-[#024873] md:text-sm">
             Se estima que entre 50 y 70% de las mujeres mayores de 30 años
             expresan inconformidad con su peso corporal.

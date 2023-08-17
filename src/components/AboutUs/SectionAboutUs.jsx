@@ -4,7 +4,7 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import "../slick.css";
 import "../slick-theme.css";
-import { AboutUsDetails, ImagesAboutUs } from "./AboutUsDetails";
+import { AboutUsDetails, ImagesAbout, ImagesAboutUs } from "./AboutUsDetails";
 import { settings } from "../";
 
 import { motion } from "framer-motion";
@@ -89,17 +89,17 @@ export const SectionAboutUs = () => {
         <div className="relative top-[50px]">
           <img src={images[0]} className="w-[290px]" alt="" />
         </div>
-        <div className="flex gap-24 pb-20 pt-32 [&>div>img]:w-[360px]">
+        <div className="flex gap-24 pb-20 pt-32 [&>div>img]:w-[300px]">
           {ImagesAboutUs.map(({ id, data }) => (
             <div key={id}>
-              <img src={data.imgProfile} />
+              <img className="w-[290px]" src={data.imgProfile} />
             </div>
           ))}
         </div>
       </div>
 
       <Slider {...settings} className="lg:hidden">
-        {ImagesAboutUs.map(({ id, data }) => (
+        {ImagesAbout.map(({ id, data }) => (
           <div key={id}>
             <img src={data.imgProfile} alt="" />
           </div>
@@ -111,7 +111,11 @@ export const SectionAboutUs = () => {
       <div className="mt-20 hidden lg:block">
         <section className="[&>div]:section-about-div [&>div>div]:section-about-div-div [&>div>div>h1]:section-about-div-h1 [&>div>div>p]:section-about-div-p space-y-20">
           <div>
-            <img className="w-[350px]" src={dataImage[0]} alt="" />
+            <img
+              className="relative w-[350px] md:left-[50px]"
+              src={dataImage[0]}
+              alt=""
+            />
             <div>
               <h1>{dataTitle[0]}</h1>
               <p>{dataDescription[0]}</p>
@@ -122,10 +126,18 @@ export const SectionAboutUs = () => {
               <h1>{dataTitle[1]}</h1>
               <p>{dataDescription[1]}</p>
             </div>
-            <img className="w-[230px]" src={dataImage[1]} alt="" />
+            <img
+              className="relative w-[230px] md:right-[100px]"
+              src={dataImage[1]}
+              alt=""
+            />
           </div>
           <div>
-            <img className="w-[400px]" src={dataImage[2]} alt="" />
+            <img
+              className="relative w-[400px] md:left-[15px]"
+              src={dataImage[2]}
+              alt=""
+            />
             <div>
               <h1>{dataTitle[2]}</h1>
               <p>{dataDescription[2]}</p>

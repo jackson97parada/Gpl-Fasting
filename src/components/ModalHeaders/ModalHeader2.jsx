@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GrClose } from "react-icons/gr";
+import { CgClose } from "react-icons/cg";
 import { useState } from "react";
 
 import {
@@ -36,17 +36,17 @@ export const ModalHeader2 = () => {
         <h1 className="pl-6 text-lg font-bold text-[#024873] md:pl-8 md:text-2xl">
           Actuemos contra la obesidad
         </h1>
-        <button className="pr-8 text-3xl" onClick={handleModal}>
-          <GrClose />
+        <button className="pr-8 text-4xl" onClick={handleModal}>
+          <CgClose />
         </button>
       </header>
       {/* MAIN MODAL*/}
       <main className="items-center gap-10 p-6 py-14 md:flex md:pl-28 md:pr-10">
         <div className="h-[60vh] space-y-10 overflow-scroll md:h-auto md:w-[60%] md:overflow-hidden">
           {/* 1 */}
-          <div className="items-center justify-between gap-20 md:flex">
-            <p className="text-center text-[13px] text-[#191f40] md:w-[340px] md:text-[15px]">
-              Por cada 15 kilos extra de peso aumenta el <br />{" "}
+          <div className="items-center justify-between gap-12 md:flex">
+            <p className="text-center text-[13px] text-[#191f40] md:w-[360px] md:text-[15px]">
+              Por cada 15 kilos extra de peso aumenta el{" "}
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 riesgo de muerte temprana en un 30 %.
               </span>{" "}
@@ -65,15 +65,15 @@ export const ModalHeader2 = () => {
             />
           </div>
           {/* 2 */}
-          <div className="items-center justify-between gap-20 md:flex">
-            <p className="text-center text-[13px] font-medium text-[#191f40] md:relative md:bottom-24 md:w-[1010px] md:text-[15px]">
+          <div className="items-center gap-10 md:flex">
+            <p className="text-center text-[13px] font-medium text-[#191f40] md:relative md:bottom-24 md:w-full md:text-[15px]">
               <span className="rounded-lg bg-[#b2edf3] p-1">
                 Cada año mueren 2.8 millones de personas
               </span>{" "}
               en el mundo por obesidad y/o las enfermedades que provoca.
             </p>
             <img
-              className="mx-auto my-10 md:relative md:left-32 md:top-10 md:mx-0 md:my-0 md:w-[300px]"
+              className="mx-auto my-10 md:relative md:left-10 md:top-10 md:mx-0 md:my-0 md:w-[300px]"
               src={ilustracion35}
               alt=""
             />

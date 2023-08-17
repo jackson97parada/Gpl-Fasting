@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GrClose } from "react-icons/gr";
+import { CgClose } from "react-icons/cg";
 import { useState } from "react";
 
 import {
@@ -36,15 +36,15 @@ export const ModalHeader3 = () => {
         <h1 className="pl-6 text-lg font-bold text-[#024873] md:pl-8 md:text-2xl">
           Actuemos contra la obesidad
         </h1>
-        <button className="pr-8 text-3xl" onClick={handleModal}>
-          <GrClose />
+        <button className="pr-8 text-4xl" onClick={handleModal}>
+          <CgClose />
         </button>
       </header>
       {/* MAIN MODAL*/}
-      <main className="items-center gap-10 p-6 py-14 md:flex md:pl-28 md:pr-10">
-        <div className="h-[60vh] space-y-10 overflow-scroll md:h-auto md:w-[60%] md:overflow-hidden">
+      <main className="items-center p-6 py-14 md:flex md:pl-28 md:pr-10">
+        <div className="h-[60vh] space-y-10 overflow-scroll md:relative md:h-auto md:overflow-hidden">
           {/* 1 */}
-          <div className="items-center justify-between gap-20 md:flex">
+          <div className="items-center justify-between gap-10 md:flex">
             <p className="text-center text-[13px] font-medium text-[#191f40] md:w-[1010px] md:text-[15px]">
               La obesidad se encuentra relacionada con la depresión, la baja
               autoestima, disminución de la productividad, trastornos de la
@@ -54,13 +54,13 @@ export const ModalHeader3 = () => {
               </span>
             </p>
             <img
-              className="mx-auto md:relative md:left-14 md:mx-0 md:w-[300px]"
+              className="mx-auto md:relative md:mx-0 md:w-[300px]"
               src={ilustracion36}
               alt=""
             />
           </div>
           {/* 2 */}
-          <div className="items-center justify-between gap-20 md:flex">
+          <div className="items-center gap-4 md:flex md:space-x-20">
             <p className="text-center text-[13px] font-medium text-[#191f40] md:relative md:top-10 md:w-[1010px] md:text-[15px]">
               Se estima que entre 30 y 70 % de las mujeres mayores de 30 años
               <span className="rounded-lg bg-[#b2edf3] p-1">
@@ -69,14 +69,14 @@ export const ModalHeader3 = () => {
               con su peso corporal.
             </p>
             <img
-              className="mx-auto md:relative md:left-32 md:top-10 md:mx-0 md:w-[300px]"
+              className="mx-auto md:relative md:top-10 md:w-[300px]"
               src={ilustracion37}
               alt=""
             />
           </div>
         </div>
         {/* DIV IMG */}
-        <div className="hidden w-[40%] md:block">
+        <div className="hidden w-[70%] md:block">
           <img className="opacity-10 md:w-[1000px]" src={logoBg} alt="" />
         </div>
       </main>

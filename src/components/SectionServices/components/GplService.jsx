@@ -331,7 +331,7 @@ export const GplService = () => {
               }`}
             >
               <header className="flex items-center justify-between border-b-2 border-[#024873]">
-                <h1 className=" pb-4 pl-8 text-2xl font-bold text-[#024873]">
+                <h1 className=" pb-4 pl-8 font-futura text-2xl text-[#024873]">
                   PILARES
                 </h1>
                 <button
@@ -343,8 +343,12 @@ export const GplService = () => {
               </header>
               <div className="mx-6 mt-6">
                 <div className="text-center">
-                  <img className="w-[300px]" src={ilustracion8} alt="" />
-                  <h1 className=" text-center font-bold text-[#04c4d9] ">
+                  <img
+                    className="mx-auto md:w-[300px]"
+                    src={ilustracion8}
+                    alt=""
+                  />
+                  <h1 className=" text-center font-futura font-bold text-[#04c4d9] ">
                     “La mejor dieta del mundo es la que puedes hacer“
                   </h1>
                 </div>
@@ -365,7 +369,7 @@ export const GplService = () => {
               </div>
               <div className="mx-6 mt-6">
                 <div className="text-center ">
-                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                     TECNOLOGÍA FARMACÉUTICA
                   </h1>
                   <p className=" text-justify font-light">
@@ -379,22 +383,30 @@ export const GplService = () => {
                   </p>
                 </div>
                 <div>
-                  <img className="w-[300px] " src={ilustracion8} alt="" />
-                  <h1 className="text-center font-bold text-[#04c4d9] ">
+                  <img
+                    className="mx-auto my-6 md:my-0 md:w-[300px]"
+                    src={ilustracion9}
+                    alt=""
+                  />
+                  <h1 className="text-center font-futura font-bold text-[#04c4d9] ">
                     “No usar la tecnología es una estupidez”
                   </h1>
                 </div>
               </div>
-              <div className="mx-6 mt-6">
-                <div>
-                  <img className="w-[300px] " src={ilustracion8} alt="" />
-                  <h1 className="text-center font-bold text-[#04c4d9] ">
+              <div className="mx-6 mt-6 flex flex-col md:block">
+                <div className="order-2 md:order-none">
+                  <img
+                    className="mx-auto my-6 md:my-0 md:w-[300px]"
+                    src={ilustracion10}
+                    alt=""
+                  />
+                  <h1 className="text-center font-futura font-bold text-[#04c4d9] ">
                     “Estamos programados genéticamente para comer 8 horas al día
                     y movilizarnos 10 km diarios “
                   </h1>
                 </div>
-                <div className="text-center ">
-                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                <div className="order-1 text-center md:order-none">
+                  <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                     ACTIVIDAD FÍSICA
                   </h1>
                   <p className=" text-justify font-light">
@@ -412,7 +424,7 @@ export const GplService = () => {
               </div>
               <div className="mx-6 mt-6">
                 <div className=" text-center ">
-                  <h1 className="py-10 text-xl font-bold text-[#024873] ">
+                  <h1 className="py-10 font-futura text-xl font-bold text-[#024873] ">
                     RESPIRAR Y BALANCE INTERIOR YOGA
                   </h1>
                   <p className=" text-justify font-light">
@@ -426,8 +438,12 @@ export const GplService = () => {
                   </p>
                 </div>
                 <div>
-                  <img className="w-[300px] " src={ilustracion8} alt="" />
-                  <h1 className=" text-center font-bold text-[#04c4d9] ">
+                  <img
+                    className="mx-auto my-6 md:my-0 md:w-[300px]"
+                    src={ilustracion11}
+                    alt=""
+                  />
+                  <h1 className=" pb-6 text-center font-futura font-bold text-[#04c4d9] md:pb-0 ">
                     “El yoga no son poses, es una filosofía de vida “
                   </h1>
                 </div>
@@ -541,7 +557,7 @@ export const GplService = () => {
       </main>
       <hr className="mx-auto mb-14 w-40 border" />
 
-      <footer className="mx-6 py-10 md:mx-32 md:mb-24">
+      <footer className="mx-6 pb-10 md:mx-32 md:mb-24 md:py-10 md:pb-0">
         <section>
           <h1 className=" pb-12 text-center text-2xl font-bold text-[#024873] md:pl-8">
             EFECTOS DEL AYUNO INTERMITENTE EN TU SALUD Y RALENTIZACÍON DEL
@@ -592,132 +608,17 @@ export const GplService = () => {
               </header>
               <main className="px-6 pt-8">
                 <p className="h-[600px] overflow-scroll pb-4 text-justify font-futuraLigth text-lg font-light md:h-[350px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Similique, fugiat quibusdam! At eligendi quisquam fugiat,
-                  animi, iste corporis veniam optio quod amet laborum corrupti
-                  dignissimos doloremque, ut eos fuga provident tempora ipsum
-                  vel eum cupiditate sapiente vero! Dolor sapiente quod,
-                  repellat magni aperiam eligendi blanditiis excepturi officiis
-                  sit distinctio? Itaque, nisi. Officia dolore sapiente quaerat
-                  tenetur veniam pariatur modi eveniet provident recusandae
-                  molestiae a tempore nisi quidem inventore hic ullam dolorum
-                  libero, repellat error aliquid? Commodi, delectus explicabo!
-                  Molestias est consequatur possimus amet aliquid debitis
-                  aliquam unde expedita architecto, ducimus nemo doloribus ad
-                  adipisci hic fugiat neque enim nihil incidunt harum. Laborum
-                  enim numquam sunt, labore neque unde? Aliquid sequi deleniti
-                  corporis incidunt ipsum! Dolores adipisci voluptatum quo
-                  voluptatibus aperiam temporibus commodi laborum perspiciatis
-                  voluptate officia nemo, dolore eligendi eveniet alias illum
-                  nisi nobis, minima tenetur? Veritatis modi alias reprehenderit
-                  dignissimos quos aut. Debitis totam perspiciatis inventore
-                  porro magni odio alias sit corrupti veritatis incidunt ex,
-                  officia vel illo delectus blanditiis aut maxime? Facere ut
-                  totam, et dolor eveniet qui voluptates esse repellendus.
-                  Veniam officia porro omnis. Vel accusamus exercitationem,
-                  praesentium eum nobis et recusandae optio eos debitis est
-                  vitae facere tempore ab libero, sequi pariatur dolor! Numquam
-                  minima, veritatis similique modi tenetur labore dicta nemo
-                  deserunt earum eum beatae provident cumque cum nostrum eos ad
-                  voluptatum ea tempora nam officia repudiandae placeat
-                  asperiores repellat? Eos illum facilis tempore atque dolorem
-                  ex totam at. Quidem eius consequuntur dolorum minima, maxime
-                  odit nam pariatur, culpa eveniet obcaecati qui explicabo sequi
-                  amet. Odit quaerat sequi, veritatis fugit animi voluptatem
-                  officia tempore mollitia quasi molestiae vel in, reiciendis
-                  quibusdam commodi magnam nemo dolor alias voluptatibus unde!
-                  Repellendus sequi aspernatur unde quo dolores ex neque
-                  voluptatum, quasi nisi tenetur fuga placeat tempora voluptate,
-                  laudantium dicta sunt voluptatem id nemo consequuntur
-                  reprehenderit! Aliquid porro aliquam ratione minima
-                  consequuntur quibusdam laboriosam, labore quia facere
-                  explicabo voluptates sapiente odio aperiam culpa dolorum
-                  commodi temporibus eligendi cupiditate repellat eius quas
-                  dolor repellendus! Dignissimos ex culpa unde reprehenderit
-                  mollitia non magni eos voluptas obcaecati totam, repudiandae
-                  laudantium voluptatibus possimus ipsam, itaque necessitatibus
-                  quod explicabo fugit eum? Laudantium obcaecati aliquam
-                  molestiae iste, nemo amet accusamus nulla animi sunt possimus
-                  voluptas, sit magnam libero quisquam, neque ab repudiandae
-                  rem! Explicabo, itaque aut. Soluta, nemo quos voluptas
-                  eligendi veritatis ipsum nisi voluptate, fuga totam quibusdam
-                  cum sapiente labore laborum molestias ipsa ab optio delectus
-                  fugiat dolore distinctio assumenda aperiam itaque
-                  necessitatibus. Enim, labore quidem minus expedita sunt quod,
-                  velit exercitationem consequatur natus ducimus eaque qui quis
-                  ea, molestias vitae possimus omnis in nulla voluptatum ab ex
-                  tempora voluptatem aut! Labore veniam illum suscipit id
-                  deserunt incidunt, soluta porro! Sit harum modi odio animi
-                  impedit nam, consequatur distinctio quasi repellendus sapiente
-                  odit, ipsum vitae. Necessitatibus ratione recusandae maxime id
-                  autem atque nisi quisquam culpa, cupiditate mollitia eaque
-                  tempore maiores ab fuga architecto facilis. Delectus, ut
-                  recusandae. Quasi deserunt quas, nemo libero deleniti enim
-                  repellendus earum ipsa aut laborum possimus aspernatur
-                  perferendis consequatur, inventore blanditiis magni illo amet
-                  vitae maxime cumque quisquam dolor ab id a! Ullam excepturi
-                  perferendis adipisci. Veniam ipsum magni, facilis ea fugit id
-                  laboriosam, reiciendis commodi tempora possimus eveniet
-                  consectetur obcaecati recusandae porro illo quis adipisci.
-                  Laudantium nostrum vitae voluptatum debitis delectus ratione
-                  temporibus quasi nam architecto facilis magni corrupti nulla
-                  totam fuga tenetur, ex rerum rem nemo quos harum
-                  necessitatibus sapiente. Officiis, molestias corporis mollitia
-                  laudantium hic dolorem! Facilis, doloremque esse. Laborum
-                  error molestias odit facere, voluptas rem nihil optio? A, at
-                  nam, praesentium voluptatibus in quaerat magni, suscipit
-                  aspernatur rem sunt repudiandae velit nostrum quisquam neque
-                  cupiditate. Consequatur, culpa delectus excepturi quos
-                  molestias dicta exercitationem aliquam vero officiis quidem et
-                  veritatis error, voluptate cum ipsa voluptas architecto omnis.
-                  Fugiat amet laboriosam ipsam obcaecati quasi tempora minus
-                  quaerat perferendis ab quia nesciunt illo voluptates, hic, nam
-                  pariatur tenetur dolor consequatur non quam repudiandae
-                  debitis nostrum quis quidem. Natus ipsa at, laudantium modi
-                  sunt nesciunt aliquam nobis ea nisi iste iure debitis dolores
-                  porro! Dolorum maiores ex odio! Saepe labore delectus neque
-                  cumque provident magni odit aperiam placeat, dolor voluptate
-                  maxime vero veniam fuga officia ab modi. Ex quidem porro, odit
-                  culpa ab natus deserunt eum vel dolore doloribus odio pariatur
-                  quaerat deleniti unde nesciunt, aliquid dicta est? Esse
-                  sapiente maiores nam amet ullam aliquid aliquam, laudantium
-                  sed ratione! Harum deserunt cum fuga pariatur eos nulla
-                  officiis animi laudantium tempora atque excepturi id quas
-                  repudiandae delectus amet quos, possimus qui? Illo maiores
-                  officiis cum commodi tempore aliquid? Fugit, aliquam dolor. Ea
-                  accusantium nesciunt quidem nihil, obcaecati illum eligendi
-                  soluta quisquam odio nam repellat deserunt maxime architecto
-                  laboriosam cumque suscipit adipisci itaque, officia alias
-                  autem. Consequuntur nostrum distinctio quas! Magni sint iusto
-                  corporis quam quidem nemo, obcaecati eligendi mollitia
-                  explicabo doloribus possimus minima harum aut placeat
-                  repellendus quos iste quod in nam ex. Distinctio pariatur et,
-                  tenetur suscipit vel mollitia enim. Voluptas quam inventore
-                  itaque dignissimos ipsum iste odit iure cupiditate error
-                  doloremque aperiam, cum blanditiis expedita consequuntur modi
-                  ab numquam quisquam eos dicta nobis repellat molestias aliquid
-                  eius! Doloribus, obcaecati aliquid laudantium provident optio
-                  at sint veritatis incidunt eveniet nemo vitae ut eaque
-                  aspernatur asperiores aperiam aut. Nesciunt laudantium
-                  mollitia ut numquam soluta, ipsam necessitatibus, quas iste
-                  sapiente recusandae natus minima odio praesentium ea sequi
-                  unde tenetur! Fugit, mollitia? Earum in deserunt repellendus
-                  sunt quibusdam reprehenderit a cum fugiat saepe dolores dolor
-                  voluptate officiis natus dolore, tempora dignissimos vel
-                  error, voluptatum debitis accusantium. Harum, facilis
-                  voluptas? Unde molestias nemo possimus nobis debitis iure,
-                  incidunt quos minima placeat, odit enim impedit nam voluptatum
-                  quidem dolorum non quibusdam! Ullam, nemo! Unde molestiae
-                  eveniet delectus nesciunt quo blanditiis, sint doloremque
-                  natus magni, magnam eum incidunt odio, dolorem ab voluptatibus
-                  consectetur quia quis soluta necessitatibus rerum itaque!
-                  Magnam necessitatibus odit illo. Quas quaerat, magni, nostrum
-                  voluptatibus unde nemo quam quod, aliquam numquam illum
-                  perferendis natus eius officia dignissimos! Animi facere fuga
-                  cupiditate nisi sit cum rerum quam nobis vel, mollitia eum.
-                  Optio dolores quaerat tempora corrupti neque nam consequuntur,
-                  repellat voluptas voluptatibus accusamus inventore iure vitae
-                  nihil deleniti atque a rerum fugit saepe blanditiis?
+                  Según Weindruch y Sohal en un artículo de 1997 en el Journal,
+                  la reducción de la disponibilidad de alimentos a lo largo de
+                  la vida (restricción calórica) tiene efectos notables sobre el
+                  envejecimiento y la vida útil de los animales. Los autores
+                  propusieron que los beneficios para la salud de la restricción
+                  calórica resultan de una reducción pasiva en la producción de
+                  radicales libres de oxígeno dañinos. Debido a que los roedores
+                  con restricción calórica generalmente consumen toda su
+                  asignación diaria de alimentos unas pocas horas después de su
+                  provisión, tienen un período de ayuno diario de hasta 20
+                  horas, durante el cual
                 </p>
               </main>
               <footer className="border-t-2 border-[#024873] pb-10 "></footer>

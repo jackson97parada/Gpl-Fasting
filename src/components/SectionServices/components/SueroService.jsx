@@ -1,5 +1,17 @@
 import { FaAngleDoubleDown } from "react-icons/fa";
-import { ilustracion6 } from "../../../assets/ilustraciones";
+import {
+  ilustracion20,
+  ilustracion21,
+  ilustracion22,
+  ilustracion23,
+  ilustracion24,
+  ilustracion25,
+  ilustracion26,
+  ilustracion27,
+  ilustracion28,
+  ilustracion29,
+  ilustracion30,
+} from "../../../assets/ilustraciones";
 import { useState } from "react";
 
 export const SueroService = () => {
@@ -18,7 +30,7 @@ export const SueroService = () => {
         </h1>
         <img
           className="mx-auto w-auto lg:w-[400px]"
-          src={ilustracion6}
+          src={ilustracion20}
           alt=""
         />
         {/* LISTS */}
@@ -84,7 +96,7 @@ export const SueroService = () => {
         <div className="flex flex-col items-center justify-between md:flex-row">
           <img
             className="order-2 mt-4 md:order-none md:mt-0"
-            src={ilustracion6}
+            src={ilustracion21}
             alt=""
           />
           <div className="order-1 space-y-5 text-center md:order-none lg:space-y-3">
@@ -115,7 +127,7 @@ export const SueroService = () => {
           </div>
           <img
             className="order-2 mt-4 hidden md:order-none md:mt-0 md:flex"
-            src={ilustracion6}
+            src={ilustracion22}
             alt=""
           />
         </div>
@@ -138,7 +150,7 @@ export const SueroService = () => {
           <div className="flex flex-col items-center justify-between md:flex-row">
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion23}
               alt=""
             />
             <div className="order-1 space-y-5 text-center md:order-none lg:space-y-3">
@@ -170,7 +182,7 @@ export const SueroService = () => {
             </div>
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion24}
               alt=""
             />
           </div>
@@ -179,7 +191,7 @@ export const SueroService = () => {
           <div className="flex flex-col items-center justify-between md:flex-row">
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion25}
               alt=""
             />
             <div className="order-1 space-y-5 text-center md:order-none lg:space-y-3">
@@ -209,7 +221,7 @@ export const SueroService = () => {
             </div>
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion26}
               alt=""
             />
           </div>
@@ -218,7 +230,7 @@ export const SueroService = () => {
           <div className="flex flex-col items-center justify-between md:flex-row">
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion27}
               alt=""
             />
             <div className="order-1 space-y-5 text-center md:order-none lg:space-y-3">
@@ -246,7 +258,7 @@ export const SueroService = () => {
             </div>
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion28}
               alt=""
             />
           </div>
@@ -255,7 +267,7 @@ export const SueroService = () => {
           <div className="flex flex-col items-center justify-between md:flex-row">
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion29}
               alt=""
             />
             <div className="order-1 space-y-5 text-center md:order-none lg:space-y-3">
@@ -284,7 +296,7 @@ export const SueroService = () => {
             </div>
             <img
               className="order-2 mt-4 md:order-none md:mt-0"
-              src={ilustracion6}
+              src={ilustracion30}
               alt=""
             />
           </div>

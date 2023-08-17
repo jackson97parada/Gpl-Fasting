@@ -61,9 +61,17 @@ export const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 font-futura shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
-        <Link to="/">
+        <HashLink
+          to="/#inicio"
+          scroll={(el) =>
+            el.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            })
+          }
+        >
           <img className="relative w-28 lg:top-1 lg:w-40" src={logo} alt="" />
-        </Link>
+        </HashLink>
 
         {/* MENU */}
         <button className="h-full  lg:hidden" onClick={handleToggleOpen}>
@@ -113,7 +121,7 @@ export const Navbar = () => {
               className={`w-full gap-10 space-y-8 md:flex md:justify-between md:space-y-0 md:pt-0 lg:w-auto ${
                 isOpen ? "h-[100vh] max-h-[100vh]" : "max-h-0 lg:h-auto"
               }`}
-              onExitComplete={() => setIsOpen(false)} // Actualiza el estado isOpen a false antes de realizar la transición de salida
+              onExitComplete={() => setIsOpen(false)}
             >
               <ul
                 className={`mt-10 w-full space-y-20 text-center text-[#191f40] md:mt-0 lg:flex lg:w-auto lg:gap-24 lg:space-y-0 ${

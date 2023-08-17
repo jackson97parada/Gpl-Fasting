@@ -2,6 +2,7 @@ import {
   firstProfile,
   secondProfile,
   thirdProfile,
+  fourthProfile,
 } from "../../assets/imagesAboutUs";
 
 import {
@@ -63,7 +64,34 @@ export const ImagesAboutUs = [
   {
     id: 3,
     data: {
+      imgProfile: fourthProfile,
+    },
+  },
+];
+
+export const ImagesAbout = [
+  {
+    id: 1,
+    data: {
       imgProfile: firstProfile,
+    },
+  },
+  {
+    id: 2,
+    data: {
+      imgProfile: secondProfile,
+    },
+  },
+  {
+    id: 3,
+    data: {
+      imgProfile: thirdProfile,
+    },
+  },
+  {
+    id: 4,
+    data: {
+      imgProfile: fourthProfile,
     },
   },
 ];
