@@ -131,7 +131,7 @@ export const BotoxService = () => {
           <img className="w-52 lg:ml-20" src={ilustracion15} alt="" />
         </div>
         <div className="flex items-center">
-          <img className="lg:mr-10" src={ilustracion16} alt="" />
+          <img className="lg:mr-10 lg:w-52" src={ilustracion16} alt="" />
           <p className="bg-[#e6f9fb]">
             Los resultados se empiezan a ver a partir de 48-72h una vez
             realizado el tratamiento, pero el efecto máximo tarda hasta 15 días
@@ -140,7 +140,7 @@ export const BotoxService = () => {
         </div>
         <div className="flex items-center justify-end gap-32">
           <p>Se recomienda una cada seis meses, dos veces al año.</p>
-          <img className="lg:ml-10" src={ilustracion17} alt="" />
+          <img className="lg:ml-10 lg:w-52" src={ilustracion17} alt="" />
         </div>
       </header>
 

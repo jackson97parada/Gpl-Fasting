@@ -51,7 +51,7 @@ export const Testimonials = () => {
           <div key={id} className="relative lg:left-[13.5%]">
             <div className="flex flex-wrap items-center gap-32 lg:flex-nowrap">
               <img
-                className="h-[336px] w-auto rounded-[3.5rem] px-4 lg:h-[400px] lg:w-[300px] lg:rounded-xl lg:px-0"
+                className="h-[336px] w-full rounded-[3.5rem] object-cover px-4 lg:h-[400px] lg:w-[300px] lg:rounded-xl lg:px-0"
                 src={data.userImg}
                 alt={data.user}
               />

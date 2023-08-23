@@ -35,12 +35,12 @@ export const SectionServices = () => {
         ))}
         <div className="duration-300 hover:translate-y-3">
           <a
-            href="https://www.instagram.com/gpl1fasting/"
+            href="https://instagram.com/postop_cuidados?igshid=MzRlODBiNWFlZA=="
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="-z-10 mx-auto mt-12 h-[370px] rounded-[3.5rem] brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] lg:mt-14 lg:w-[370px]"
+              className="-z-10 mx-auto mt-12 h-[370px] w-full rounded-[3.5rem] object-cover brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] md:object-none lg:mt-14 lg:w-[370px]"
               width={320}
               src={fifthservice}
               alt="image-carrousel"

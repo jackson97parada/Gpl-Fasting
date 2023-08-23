@@ -2,17 +2,8 @@ import { useParams } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
-import { Navbar, Footer /* settings */ } from "../../";
-// import Slider from "react-slick";
+import { Navbar, Footer } from "../../";
 import { ServiceDetail } from "./ServiceDetail";
-
-// import {
-//   firstservice,
-//   secondservice,
-//   thirdservice,
-//   fourthservice,
-//   fifthservice,
-// } from "../../../assets/imagesServices";
 
 import { RxSlash } from "react-icons/rx";
 
@@ -23,14 +14,14 @@ export const Service = () => {
   );
 
   return (
-    <section className="container mx-auto mt-16 w-full max-w-[1380px] lg:mt-20">
+    <section className="container mx-auto mt-16 w-full max-w-screen-2xl lg:mt-20">
       <Navbar />
       <hr className="relative left-10 top-[140px] w-14 rounded-full border-[2.5px] border-[#0378a6] lg:left-[80px] lg:block" />
       <main>
-        <header className={`h-[75vh] w-auto lg:h-[580px]`}>
+        <header className={`h-[70vh] w-auto lg:h-[580px]`}>
           <div className="box-content w-full bg-black/20">
             <img
-              className="absolute -z-10 box-content h-[91vh] max-h-[580px] brightness-50 md:w-[1380px]"
+              className="absolute -z-10 h-[100vh] max-h-[580px] w-screen object-cover brightness-50 md:max-w-screen-2xl md:object-center"
               src={thisService.data.imgService}
               alt=""
             />

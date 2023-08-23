@@ -65,8 +65,8 @@ export const Graph = ({ percentaje, description }) => {
       <div className="absolute z-20" ref={refDiv}>
         {showDiv && (
           <div
-            className={`relative left-24 top-14 rotate-[120deg] md:left-4 ${
-              inViewDiv ? "animate__fadeInLeft" : ""
+            className={`relative left-20 top-14 rotate-[120deg] md:left-4 ${
+              inViewDiv ? "" : ""
             }`}
           >
             <TbTriangleFilled className="text-[80px] text-[#17568e]" />
@@ -76,8 +76,8 @@ export const Graph = ({ percentaje, description }) => {
       <div className="absolute z-20 h-[220px] w-[230px]" ref={refText}>
         {showText && (
           <span
-            className={`relative left-[170px] top-24 text-[23px] font-bold text-[#024873] md:left-[89px] ${
-              inViewText ? "animate__fadeInRight" : ""
+            className={`relative left-[160px] top-24 text-[23px] font-bold text-[#024873] md:left-[89px] ${
+              inViewText ? "" : ""
             }`}
           >
             {percentaje}
@@ -88,7 +88,7 @@ export const Graph = ({ percentaje, description }) => {
         {showDescription && (
           <p
             className={`relative -right-8 top-56 w-[300px] text-justify text-lg font-bold leading-6 text-[#024873] md:right-20 lg:w-[400px] ${
-              inViewDescription ? "animate__fadeInUp" : ""
+              inViewDescription ? "" : ""
             }`}
           >
             {description}
@@ -97,7 +97,7 @@ export const Graph = ({ percentaje, description }) => {
       </div>
       <div
         ref={ref}
-        className="relative left-20 w-[230px] rotate-[200deg] md:left-0 md:block"
+        className="relative left-16 mt-6 w-[230px] rotate-[200deg] md:left-0 md:mt-0 md:block"
       >
         {inView && <CircleChart />}
       </div>

@@ -165,7 +165,7 @@ export const Navbar = () => {
                         >
                           {ServiceDetail.map(({ id, data }) => (
                             <li
-                              className="border-[#04c4d9] font-bold duration-75 hover:border-b-2"
+                              className="hidden border-[#04c4d9] font-bold duration-75 hover:border-b-2 md:block"
                               key={id}
                             >
                               <Link
@@ -176,7 +176,7 @@ export const Navbar = () => {
                               </Link>
                             </li>
                           ))}
-                          <li className="border-[#04c4d9] hover:border-b-2">
+                          <li className="hidden border-[#04c4d9] hover:border-b-2 md:block">
                             <a
                               href="https://www.instagram.com/gpl1fasting/"
                               target="_blank"

@@ -126,6 +126,7 @@ const settingsOff = {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerPadding: "-0px",
+        autoplaySpeed: 2000,
       },
     },
   ],
@@ -167,7 +168,7 @@ export const LipolaserService = () => {
           {imagesSlider.map(({ id, data }) => (
             <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] object-cover lg:mt-14"
                 src={data.img}
                 alt=""
               />

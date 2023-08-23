@@ -4,11 +4,11 @@ import { SocialMedias } from "./SocialMedias";
 
 const FOOTERDETAILS = [
   {
-    link: "https://www.facebook.com",
+    link: "https://www.facebook.com/GPL1fasting?mibextid=LQQJ4d",
     icon: <FaFacebookF />,
   },
   {
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/gpl1fasting/",
     icon: <SlSocialInstagram />,
   },
 ];
@@ -32,8 +32,11 @@ const CONTACTUSDETAILS = [
   {
     title: "Mexíco.",
     city: "Morelia, Michoacán",
+    cityTwo: "Ciudad de Mexíco",
     address:
       "- Quirúrgico Ambulatorio Morelia (QAM), Fernando Montes de Oca 84, Chapultepec Nte., 58260.",
+    addressTwo:
+      "Av. Universidad 1080, Xoco, Benito Juárez, 03330 Ciudad de México, CDMX",
   },
 ];
 
@@ -44,7 +47,7 @@ export const Footer = () => {
     <footer id="contacto">
       <div className="space-y-8 bg-[#024873] pb-6 pt-16 text-center font-futura lg:space-y-0 lg:px-32 lg:pb-14 lg:pt-28">
         <a
-          href="https://wa.me/+3001221432"
+          href="https://wa.me/+573184613365"
           target="_blank"
           rel="noopener noreferrer"
           className="rounded-lg border-2 border-[#0378a6] px-6 py-3 text-2xl font-bold text-white transition duration-300 hover:bg-[#0378a6]"

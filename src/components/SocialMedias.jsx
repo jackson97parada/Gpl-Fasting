@@ -45,7 +45,7 @@ export const SocialMedias = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <a href="tel:+30012213432" target="_blank" rel="noopener noreferrer">
+          <a href="tel:+3002682513" target="_blank" rel="noopener noreferrer">
             <FiPhone className="text-3xl text-[#04c4d9] transition-all hover:text-green-500" />
           </a>
           <a
@@ -56,7 +56,7 @@ export const SocialMedias = () => {
             <BsInstagram className="text-[35px] text-[#04c4d9] transition-all hover:text-[#ef444c]" />
           </a>
           <a
-            href="https://wa.me/+3001221432"
+            href="https://wa.me/+573002682513"
             target="_blank"
             rel="noopener noreferrer"
           >

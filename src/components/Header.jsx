@@ -28,14 +28,14 @@ export const Header = () => {
   return (
     <div className="pb-10 pt-32 lg:pt-48" id="inicio">
       <hr className="relative left-6 top-4 z-10 w-16 rounded-full border-2 border-[#0378a6] md:left-10" />
-      <hr className="relative left-[45%] top-[120.7rem] z-10 w-16 rotate-90 rounded-full border-[2.5px] border-[#0378a6] lg:left-[48%] lg:top-[1315px]" />
+      <hr className="relative left-[45%] top-[120.7rem] z-10 w-16 rotate-90 rounded-full border-[2.5px] border-[#0378a6] lg:left-[48%] lg:top-[1360px]" />
       <div className="lg:mx-32 lg:mb-32 lg:flex">
         <div className="z-30 text-center lg:px-10 lg:text-start ">
           <h1 className="max-w-[630px] px-6 pb-16 pt-10 text-center font-avantGarde text-[35px] font-medium leading-10 text-[#191f40] lg:mt-20 lg:px-0 lg:pr-40 lg:pt-0 lg:text-start lg:text-[50px] lg:leading-tight">
             CONVIERTETE EN LO QUE SUEÑAS!
           </h1>
           <a
-            href="https://wa.me/+3001221432"
+            href="https://wa.me/+573002682513"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg border-4 border-[#024873] px-24 py-4 font-futura text-xl font-bold text-[#024873] transition duration-500 hover:bg-[#024873] hover:text-white hover:shadow-2xl lg:px-6 lg:text-4xl"
@@ -44,7 +44,7 @@ export const Header = () => {
           </a>
         </div>
         <img
-          className="hidden w-[350px] lg:block lg:w-[400px]"
+          className="hidden w-[350px] lg:block lg:h-[450px] lg:w-[470px]"
           src={ilustracion1}
         />
       </div>
@@ -106,7 +106,7 @@ export const Header = () => {
           {viewModal3 && <ModalHeader3 />}
         </div>
       </div>
-      <h2 className="mb-10 text-center font-avantGarde text-lg text-[#024873] md:text-xl lg:mb-32 lg:pt-6 lg:text-[27px] lg:text-[#0378a6]">
+      <h2 className="mb-10 max-w-[385px] text-center font-avantGarde text-lg text-[#024873] md:max-w-[1400px] md:text-xl lg:mb-28 lg:pt-8 lg:text-[27px] lg:text-[#0378a6]">
         ¡CUIDA DE TU CUERPO ES EL ÚNICO LUGAR QUE TIENES PARA VIVIR!
       </h2>
     </div>
