@@ -155,9 +155,9 @@ export const Navbar = () => {
                     </HashLink>
                     {Service && Service.length > 0 && (
                       // DROPDOWN
-                      <div className="absolute">
+                      <div className="md:absolute">
                         <ul
-                          className={`dropdown w-[200px] lg:relative lg:-top-1 lg:right-16 lg:space-y-4 lg:rounded-3xl lg:bg-white lg:px-4 lg:py-5 lg:shadow-xl ${
+                          className={`dropdown relative mx-auto w-[200px] space-y-4 pt-4 lg:-top-1 lg:right-16 lg:rounded-3xl lg:bg-white lg:px-4 lg:py-5 lg:shadow-xl ${
                             showDropdown && name === "SERVICIOS"
                               ? "block"
                               : "hidden"
@@ -165,7 +165,7 @@ export const Navbar = () => {
                         >
                           {ServiceDetail.map(({ id, data }) => (
                             <li
-                              className="hidden border-[#04c4d9] font-bold duration-75 hover:border-b-2 md:block"
+                              className="border-[#04c4d9] font-bold duration-75 md:block md:hover:border-b-2"
                               key={id}
                             >
                               <Link

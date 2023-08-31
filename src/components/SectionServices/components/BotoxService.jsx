@@ -170,7 +170,7 @@ export const BotoxService = () => {
         />
       </main>
       <footer className="mx-6 md:mx-32 md:flex md:gap-24">
-        <ul className="list-disc space-y-2 pt-10 text-[17px] font-medium text-[#024873] md:space-y-6 md:pb-0 md:pb-2 md:pt-0 ">
+        <ul className="list-disc space-y-2 pt-10 text-[17px] font-medium text-[#024873] md:space-y-6 md:pb-2 md:pt-0 ">
           <li>No requiere anestesia.</li>
           <li>No requiere hospitalización posterior.</li>
           <li>

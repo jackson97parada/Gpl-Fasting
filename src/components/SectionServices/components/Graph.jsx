@@ -2,20 +2,13 @@ import { useState, useEffect } from "react";
 import { PropTypes } from "prop-types";
 import { useInView } from "react-intersection-observer";
 import { CircleChart } from "../../../graphs/CircleChart";
-import { TbTriangleFilled } from "react-icons/tb";
 
 export const Graph = ({ percentaje, description }) => {
-  const [showDiv, setShowDiv] = useState(false);
   const [showText, setShowText] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
   const [showElements, setShowElements] = useState(false);
 
   const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 1,
-  });
-
-  const [refDiv, inViewDiv] = useInView({
     triggerOnce: true,
     threshold: 1,
   });
@@ -31,18 +24,10 @@ export const Graph = ({ percentaje, description }) => {
   });
 
   useEffect(() => {
-    if (showElements && inViewDiv) {
-      setTimeout(() => {
-        setShowDiv(true);
-      }, 2000);
-    }
-  }, [showElements, inViewDiv]);
-
-  useEffect(() => {
     if (showElements && inViewText) {
       setTimeout(() => {
         setShowText(true);
-      }, 2000);
+      }, 1500);
     }
   }, [showElements, inViewText]);
 
@@ -50,29 +35,18 @@ export const Graph = ({ percentaje, description }) => {
     if (showElements && inViewDescription) {
       setTimeout(() => {
         setShowDescription(true);
-      }, 2000);
+      }, 1500);
     }
   }, [showElements, inViewDescription]);
 
   useEffect(() => {
     setTimeout(() => {
       setShowElements(true);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (
     <div className="h-[390px] md:mx-auto md:h-auto">
-      <div className="absolute z-20" ref={refDiv}>
-        {showDiv && (
-          <div
-            className={`relative left-20 top-14 rotate-[120deg] md:left-4 ${
-              inViewDiv ? "" : ""
-            }`}
-          >
-            <TbTriangleFilled className="text-[80px] text-[#17568e]" />
-          </div>
-        )}
-      </div>
       <div className="absolute z-20 h-[220px] w-[230px]" ref={refText}>
         {showText && (
           <span
