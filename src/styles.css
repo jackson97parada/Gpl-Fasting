@@ -28,6 +28,10 @@
   font-style: normal;
 }
 
+.brightness-25 {
+  filter: brightness(0.25); /* Reducir el brillo al 25% */
+}
+
 @layer components {
 .div-card {
    @apply mx-auto w-auto lg:w-[386px] max-w-[386px] h-[386px] rounded-[4rem] shadow-2xl px-7 pt-10 lg:p-10 lg:pt-12;

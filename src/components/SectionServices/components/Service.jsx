@@ -21,7 +21,7 @@ export const Service = () => {
         <header className={`h-[70vh] w-auto lg:h-[580px]`}>
           <div className="box-content w-full bg-black/20">
             <img
-              className="absolute -z-10 h-[100vh] max-h-[580px] w-screen object-cover brightness-50 md:max-w-screen-2xl md:object-center"
+              className="brightness-25 absolute -z-10 h-[100vh] max-h-[580px] w-screen object-cover md:max-w-screen-2xl md:object-fill"
               src={thisService.data.imgService}
               alt=""
             />

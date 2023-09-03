@@ -27,7 +27,7 @@ export const Graph = ({ percentaje, description }) => {
     if (showElements && inViewText) {
       setTimeout(() => {
         setShowText(true);
-      }, 1500);
+      }, 300);
     }
   }, [showElements, inViewText]);
 
@@ -35,14 +35,14 @@ export const Graph = ({ percentaje, description }) => {
     if (showElements && inViewDescription) {
       setTimeout(() => {
         setShowDescription(true);
-      }, 1500);
+      }, 300);
     }
   }, [showElements, inViewDescription]);
 
   useEffect(() => {
     setTimeout(() => {
       setShowElements(true);
-    }, 1500);
+    }, 300);
   }, []);
 
   return (

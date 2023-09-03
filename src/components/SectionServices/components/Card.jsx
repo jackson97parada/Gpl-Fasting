@@ -10,7 +10,7 @@ export const Card = ({ imgService, serviceTitle, serviceSubtitle }) => {
     <div className="duration-300 hover:translate-y-3">
       <Link to={`/servicios/${serviceTitle}`} onClick={handleLinkClick}>
         <img
-          className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] object-cover brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] md:object-fill lg:mt-14 lg:w-[370px]"
+          className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] object-cover brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] md:object-center lg:mt-14 lg:w-[370px]"
           src={imgService}
           alt="image-carrousel"
         />

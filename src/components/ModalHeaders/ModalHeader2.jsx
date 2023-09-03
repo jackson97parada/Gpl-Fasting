@@ -40,7 +40,7 @@ export const ModalHeader2 = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className={`absolute -bottom-[500px] -left-8 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:-right-[500px] md:w-[1300px] ${
+        className={`absolute -bottom-[500px] -left-8 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:-left-[31rem] md:w-[1300px] ${
           btnModal ? "hidden" : "block"
         }`}
       >
