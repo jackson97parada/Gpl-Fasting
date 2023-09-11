@@ -212,7 +212,7 @@ export const GplService = () => {
           {imagesSlider.map(({ id, data }) => (
             <div key={id} className="px-6">
               <img
-                className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] object-cover lg:mt-14"
+                className="-z-10 mx-auto mt-12 h-[330px] w-auto rounded-[3.5rem] object-cover md:h-[370px] md:object-cover lg:mt-14"
                 src={data.img}
                 alt=""
               />
@@ -588,7 +588,7 @@ export const GplService = () => {
             initial="hidden"
             animate={btnModalTwo ? "hidden" : "visible"}
             variants={variants}
-            className="relative md:absolute"
+            className="relative z-50 md:absolute"
           >
             <div
               className={`relative right-[60px] z-30 mx-14 w-[90vw] max-w-[1200px] rounded-[2.5rem] bg-white pt-5 shadow-2xl md:bottom-64 md:right-[52px] md:w-[1100px] ${
@@ -618,7 +618,17 @@ export const GplService = () => {
                   con restricción calórica generalmente consumen toda su
                   asignación diaria de alimentos unas pocas horas después de su
                   provisión, tienen un período de ayuno diario de hasta 20
-                  horas, durante el cual
+                  horas, durante el cual ocurre la cetogénesis. Desde entonces,
+                  se han realizado cientos de estudios en animales y decenas de
+                  estudios clínicos de regímenes controlados de ayuno
+                  intermitente en los que el cambio metabólico de glucosa
+                  derivada del hígado a cetonas derivadas de células adiposas se
+                  produce diariamente o varios días a la semana. Aunque la
+                  magnitud del efecto del ayuno intermitente sobre la extensión
+                  de la vida es variable (influenciada por el sexo, la dieta y
+                  los factores genéticos), los estudios en ratones y primates no
+                  humanos muestran efectos consistentes de la restricción
+                  calórica en el período de salud.
                 </p>
               </main>
               <footer className="border-t-2 border-[#024873] pb-10 "></footer>

@@ -72,19 +72,19 @@ export const Footer = () => {
         {CONTACTUSDETAILS.map((data, id) => (
           <div key={id} className="md:w-[67%]">
             <h1 className="pb-4 font-bold text-white">{data.title}</h1>
-            <div className="flex-col font-futuraLigth [&>h1]:text-xs [&>h1]:font-light [&>h1]:text-white ">
+            <div className="flex-col font-futuraLigth [&>h1]:text-sm [&>h1]:font-light [&>h1]:text-white ">
               <h1>{data.cell}</h1>
               <h1>{data.cellTwo}</h1>
-              <h2 className="relative top-2 text-xs font-bold text-white">
+              <h2 className="relative top-2 text-sm font-bold text-white">
                 {data.email}
               </h2>
             </div>
             <div>
-              <p className="mx-auto w-[80%] text-justify text-xs font-light text-white">
+              <p className="mx-auto w-[80%] text-justify text-sm font-light text-white">
                 {" "}
                 <b className="font-medium">{data.city}</b> {data.address}
               </p>
-              <p className="mx-auto w-[80%] pt-4 text-justify text-xs font-light text-white">
+              <p className="mx-auto w-[80%] pt-4 text-justify text-sm font-light text-white">
                 {" "}
                 <b className="font-medium">{data.cityTwo}</b> {data.addressTwo}
               </p>

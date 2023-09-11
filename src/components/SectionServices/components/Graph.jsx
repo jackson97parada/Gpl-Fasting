@@ -50,7 +50,7 @@ export const Graph = ({ percentaje, description }) => {
       <div className="absolute z-20 h-[220px] w-[230px]" ref={refText}>
         {showText && (
           <span
-            className={`relative left-[160px] top-24 text-[23px] font-bold text-[#024873] md:left-[89px] ${
+            className={`relative left-[160px] top-24 font-bold text-[#024873] md:left-[89px] md:text-[20.5px] ${
               inViewText ? "" : ""
             }`}
           >

@@ -144,7 +144,7 @@ export const SectionAboutUs = () => {
             </div>
           </div>
         </section>
-        <hr className="relative left-[45%] top-28 w-16 rotate-90 rounded-full border-[2.9px] border-[#0378a6]" />
+        <hr className="relative top-28 mx-auto w-16 rotate-90 rounded-full border-[2.9px] border-[#0378a6]" />
       </div>
     </section>
   );

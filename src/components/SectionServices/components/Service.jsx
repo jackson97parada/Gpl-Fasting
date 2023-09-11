@@ -18,10 +18,10 @@ export const Service = () => {
       <Navbar />
       <hr className="relative left-10 top-[140px] w-14 rounded-full border-[2.5px] border-[#0378a6] lg:left-[80px] lg:block" />
       <main>
-        <header className={`h-[70vh] w-auto lg:h-[580px]`}>
+        <header className={`h-[100vh] w-auto lg:h-[100vh]`}>
           <div className="box-content w-full bg-black/20">
             <img
-              className="brightness-25 absolute -z-10 h-[100vh] max-h-[580px] w-screen object-cover md:max-w-screen-2xl md:object-fill"
+              className="brightness-25 absolute -z-10 h-[100vh] max-h-[100vh] w-screen object-cover md:max-w-screen-2xl md:object-fill"
               src={thisService.data.imgService}
               alt=""
             />

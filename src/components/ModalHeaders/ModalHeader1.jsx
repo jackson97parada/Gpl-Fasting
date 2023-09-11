@@ -41,13 +41,15 @@ export const ModalHeader1 = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className={`absolute -bottom-96 -left-8 z-50 w-[90vw] rounded-[50px] bg-white shadow-xl md:-left-[43px] md:w-[1300px] ${
+        className={`fixed left-10 right-10 top-32 z-[1055] mx-auto h-[78vh] max-h-[900px] w-auto overflow-y-auto overflow-x-hidden rounded-[50px] bg-white shadow-xl outline-none md:left-auto md:right-auto md:-ml-11 md:w-[1300px] ${
           btnModal ? "hidden" : "block"
         }`}
       >
         {/* HEADER MODAL*/}
         <header className="flex items-center justify-between py-4">
-          <h1 className="pl-8 text-2xl font-bold text-[#024873]">Azucar</h1>
+          <h1 className="mx-auto pl-8 text-2xl font-bold text-[#024873]">
+            Azucar
+          </h1>
           <button className="pr-8 text-4xl" onClick={handleModal}>
             <CgClose />
           </button>

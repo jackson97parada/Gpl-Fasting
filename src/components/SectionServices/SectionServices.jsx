@@ -40,7 +40,7 @@ export const SectionServices = () => {
             rel="noopener noreferrer"
           >
             <img
-              className="-z-10 mx-auto mt-12 h-[370px] w-full rounded-[3.5rem] object-cover brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] md:object-none lg:mt-14 lg:w-[370px]"
+              className="-z-10 mx-auto mt-12 h-[370px] w-auto rounded-[3.5rem] object-cover px-2 brightness-50 duration-300 hover:shadow-lg hover:shadow-[#0378a6] md:object-center md:px-0 lg:mt-14 lg:w-[370px]"
               width={320}
               src={fifthservice}
               alt="image-carrousel"
@@ -52,7 +52,7 @@ export const SectionServices = () => {
         </div>
       </Slider>
 
-      <hr className="relative left-[45%] top-32 w-16 rotate-90 rounded-full border-2 border-[#0378a6] lg:left-[47%]" />
+      <hr className="relative top-32 mx-auto w-16 rotate-90 rounded-full border-2 border-[#0378a6]" />
     </section>
   );
 };

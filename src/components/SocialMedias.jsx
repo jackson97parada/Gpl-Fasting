@@ -45,7 +45,7 @@ export const SocialMedias = () => {
             isOpen ? "block" : "hidden"
           }`}
         >
-          <a href="tel:+3002682513" target="_blank" rel="noopener noreferrer">
+          <a href="tel:+573002682513" target="_blank" rel="noopener noreferrer">
             <FiPhone className="text-3xl text-[#04c4d9] transition-all hover:text-green-500" />
           </a>
           <a

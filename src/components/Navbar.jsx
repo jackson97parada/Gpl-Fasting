@@ -51,13 +51,6 @@ export const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const locationHash = window.location.hash;
-  const serviceTitle = ServiceDetail.find(
-    ({ data }) => `#/servicios/${data.title}` === locationHash
-  )?.data.title;
-
-  const dropdown = locationHash === `#/servicios/${serviceTitle}`;
-
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 font-futura shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
@@ -133,10 +126,10 @@ export const Navbar = () => {
                   <li
                     key={name}
                     onMouseEnter={
-                      name === "SERVICIOS" && dropdown ? handleHover : undefined
+                      name === "SERVICIOS" ? handleHover : undefined
                     }
                     onMouseLeave={
-                      name === "SERVICIOS" && dropdown ? handleLeave : undefined
+                      name === "SERVICIOS" ? handleLeave : undefined
                     }
                   >
                     <HashLink
@@ -170,13 +163,13 @@ export const Navbar = () => {
                             >
                               <Link
                                 to={createServiceRoute(data.title)}
-                                onClick={handleLinkClick}
+                                onClick={handleNavLinkClick}
                               >
                                 {data.subTitle}
                               </Link>
                             </li>
                           ))}
-                          <li className="hidden border-[#04c4d9] hover:border-b-2 md:block">
+                          <li className="md:block md:border-[#04c4d9] md:hover:border-b-2">
                             <a
                               href="https://www.instagram.com/gpl1fasting/"
                               target="_blank"
@@ -210,12 +203,8 @@ export const Navbar = () => {
             {links.map(({ name }) => (
               <li
                 key={name}
-                onMouseEnter={
-                  name === "SERVICIOS" && dropdown ? handleHover : undefined
-                }
-                onMouseLeave={
-                  name === "SERVICIOS" && dropdown ? handleLeave : undefined
-                }
+                onMouseEnter={name === "SERVICIOS" ? handleHover : undefined}
+                onMouseLeave={name === "SERVICIOS" ? handleLeave : undefined}
               >
                 <HashLink
                   className="border-[#04c4d9] pb-1 font-bold duration-75 hover:border-b-2"

@@ -149,7 +149,7 @@ export const SueroService = () => {
           {/* 3 */}
           <div className="flex flex-col items-center justify-between md:flex-row">
             <img
-              className="order-2 mt-4 md:order-none md:mt-0"
+              className="order-2 mt-4 w-[300px] md:order-none md:mt-0"
               src={ilustracion23}
               alt=""
             />
@@ -302,7 +302,7 @@ export const SueroService = () => {
           </div>
         </div>
       </main>
-      <hr className="relative left-[45%] w-14 rotate-90 rounded-full border-2 border-[#bfd6d9] lg:left-[650px]" />
+      <hr className="relative mx-auto w-14 rotate-90 rounded-full border-2 border-[#bfd6d9]" />
     </section>
   );
 };
