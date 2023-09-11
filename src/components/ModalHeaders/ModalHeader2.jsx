@@ -40,7 +40,7 @@ export const ModalHeader2 = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className={`fixed left-10 right-10 top-32 z-[1055] mx-auto h-[78vh] max-h-[900px] w-auto overflow-y-auto overflow-x-hidden rounded-[50px] bg-white shadow-xl outline-none md:left-auto md:right-auto md:-ml-[31rem] md:w-[1300px] ${
+        className={`fixed left-4 right-4 top-32 z-[1055] mx-auto h-[78vh] max-h-[900px] w-auto overflow-y-auto overflow-x-hidden rounded-[50px] bg-white shadow-xl outline-none md:left-auto md:right-auto md:-ml-[31rem] md:w-[1300px] ${
           btnModal ? "hidden" : "block"
         }`}
       >
