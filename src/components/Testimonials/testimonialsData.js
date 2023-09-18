@@ -11,8 +11,8 @@ export const testimonialsData = [
     id: 1,
     data: {
       description:
-        "Hola soy Jazz, una amiga me referencio con el doctor, la verdad yo era delgada pero luego del embarazo quedé con pancita y un par de gorditos que me molestaban. Cuando conocí al Doctor Luis y me explicó de lo que se trataba el procedimiento de Lipo Laser supe que había encontrado lo que buscaba, muchas gracias doctor la verdad superó mis expectativas, estoy regia con mi cuerpazo, mi marcación quedó hermosa y muy natural!",
-      user: "JAZZ",
+        "GPL1 Fasting ha sido un cambio de juego en mi vida. La rapidez con la que he perdido peso me ha sorprendido gratamente. Me siento más saludable y enérgico, y mi confianza ha aumentado enormemente. Este tratamiento ha hecho que mi viaje hacia un estilo de vida más saludable sea mucho más fácil y efectivo. ¡Estoy agradecido por haberlo encontrado!",
+      user: "STEVEN",
       userImg: imgJazz,
     },
   },
@@ -20,8 +20,8 @@ export const testimonialsData = [
     id: 2,
     data: {
       description:
-        "Dr. Luis gracias a usted pude bajar 20 kilos en 2 meses rapidamente, sin esfuerzo, sin aguantar hambre, sin efecto rebote, aprendiendo a comer e integrando el ayuno a mi vida. Lo mejor de todo es que me siento como un joven de 20 años, con GPL1 quedé completamente feliz y satisfecho, , la vida es más facil y feliz ahora.",
-      user: "JAIRO",
+        "Dr. Luis gracias a usted pude bajar 20 kilos en 2 meses rapidamente, sin esfuerzo, sin aguantar hambre, sin efecto rebote, aprendiendo a comer e integrando el ayuno a mi vida. Lo mejor de todo es que me siento como una joven de 20 años, con GPL1 quedé completamente feliz y satisfecha, , la vida es más facil y feliz ahora.",
+      user: "MARIA",
       userImg: imgJairo,
     },
   },
@@ -38,8 +38,8 @@ export const testimonialsData = [
     id: 4,
     data: {
       description:
-        "La decisión más acertada es aquella que tu mismo eliges para transformar tu vida, yo la tomé y gracias al doctor y su tratamiento bajé 20 kilos. Ahora soy una mujer nueva, renovada, empoderada, segura, llena de vida, hermosa, me siento completamente feliz, volí a nacer!",
-      user: "SANDRA",
+        "El tratamiento GPL1 Fasting ha sido una verdadera bendición en mi vida. En poco tiempo, experimenté una pérdida de peso notable que me ha llenado de felicidad y confianza. Mi transformación ha sido asombrosa y me siento más saludable que nunca. Recomiendo sinceramente este tratamiento a cualquiera que busque resultados efectivos y duraderos en su viaje hacia una vida más saludable y feliz.",
+      user: "CARLOS",
       userImg: imgSandra,
     },
   },
