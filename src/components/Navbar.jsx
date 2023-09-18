@@ -55,7 +55,7 @@ export const Navbar = () => {
     <nav className="fixed left-0 right-0 top-0 z-50 w-[100vw] bg-white p-6 px-5 pt-4 font-futura shadow-lg lg:h-28">
       <menu className="mx-auto flex max-w-[1300px] flex-wrap items-center justify-between lg:h-[60px] lg:flex-nowrap">
         <HashLink
-          to="/#inicio"
+          to="/"
           scroll={(el) =>
             el.scrollIntoView({
               behavior: "smooth",
